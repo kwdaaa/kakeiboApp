@@ -17,6 +17,8 @@ class ViewController: UIViewController {
     
     
     @IBAction func kawada(_ sender: Any) {
+        print("川田")
+        
     }
     
 
