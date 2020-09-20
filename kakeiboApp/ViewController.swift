@@ -21,6 +21,9 @@ class ViewController: UIViewController {
         
     }
     
-
+    @IBAction func kawada02(_ sender: Any) {
+        print("おーい")
+    }
+    
 }
 
