@@ -31,7 +31,13 @@ struct testStruct {
     let girlOthersTotal = UserDefaults.standard.object(forKey: "GirlOthersTotal") as! Int
     
     
+    let boyTotalTotal = UserDefaults.standard.object(forKey: "botTotalSumSecond") as! Int
+    let girlTotalTotal = UserDefaults.standard.object(forKey: "girlTotalSecond") as? Int
+    
+    
 }
 struct categoryStruct {
     let categoryArray = ["食 費","日 用 品","娯 楽 費","固 定 費","そ の 他"]
 }
+
+

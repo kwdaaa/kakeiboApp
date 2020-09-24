@@ -32,7 +32,7 @@ class BothTotalSumViewController: UIViewController {
         let boyTotalSumSecond:String = String("\(boyTotalSum)")
         //        ラベルに表示
         boyTotalSumLabel.text = boyTotalSumSecond
-        //        ユーザーデフォルトでセット　ホームに持っていく
+        //        ユーザーデフォルトでセット　ホームに持って
         UserDefaults.standard.set(boyTotalSum, forKey: "boyTotalSumSecond")
         
         

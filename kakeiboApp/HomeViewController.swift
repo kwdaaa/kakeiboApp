@@ -27,6 +27,12 @@ class HomeViewController: UIViewController {
     //    合計のラベル
     @IBOutlet var bothTotalSumLabel:UILabel!
     
+    
+    
+    
+    
+    
+    
     override func viewWillAppear(_ animated: Bool) {
         //     食費
         let bothFoodTotalSum =  UserDefaults.standard.object(forKey: "bothFoodTotal")
@@ -39,15 +45,14 @@ class HomeViewController: UIViewController {
         //        その他
         let bothOthersTotalSum = UserDefaults.standard.object(forKey: "bothOthersTotal")
         //        合計を持ってくる
-        
-        //        値を持ってくる
-        let boyTotalSum =  UserDefaults.standard.object(forKey: "boyTotalSumSecond") as? Int
+
+        let boyTotalSum = UserDefaults.standard.object(forKey: "boyTotalSumSecond") as? Int
         let girlTotalSum = UserDefaults.standard.object(forKey: "girlTotalSumSecond") as? Int
+        
         //        足し算
         let bothTotalSum = boyTotalSum! + girlTotalSum!
-        //        型変換
+//        型変換
         let bothTotalSumThird:String = String("\(bothTotalSum)")
-        
         
         //       全てテキストに表示
         bothFoodTotalLabel.text = bothFoodTotalSum as? String

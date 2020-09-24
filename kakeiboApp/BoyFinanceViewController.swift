@@ -25,7 +25,8 @@ class BoyFinanceViewController: UIViewController {
     @IBOutlet var boyFinanceHousingLabel:UILabel!
     //   その他を表示するラベル
     @IBOutlet var boyFinanceOthersLabel:UILabel!
-    
+    //   合計を表示するラベル
+    @IBOutlet var boyFinanceTotalLabel:UILabel!
     
     
     override func viewWillAppear(_ animated: Bool) {
@@ -38,6 +39,7 @@ class BoyFinanceViewController: UIViewController {
         let boyFinanceLeisureSecond:String = String("\(boyFinance.boyLeisureTotal)")
         let boyFinanceHousingSecond:String = String("\(boyFinance.boyHousingTotal)")
         let boyFinanceOthersSecond:String = String("\(boyFinance.boyOthersTotal)")
+        let boyFinanceTotalSecond:String = String("\(boyFinance.boyTotalTotal)")
         
         
         boyFinanceFoodLabel.text = boyFinanceFoodSecond
@@ -45,6 +47,7 @@ class BoyFinanceViewController: UIViewController {
         boyFinanceLeisureLabel.text = boyFinanceLeisureSecond
         boyFinanceHousingLabel.text = boyFinanceHousingSecond
         boyFinanceOthersLabel.text = boyFinanceOthersSecond
+        boyFinanceTotalLabel.text = boyFinanceTotalSecond
     }
     
     //    ここからは、タップジェスチャーからの画面遷移

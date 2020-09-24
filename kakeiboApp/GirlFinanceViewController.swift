@@ -24,6 +24,8 @@ class GirlFinanceViewController: UIViewController {
     @IBOutlet var girlFinanceHousingLabel:UILabel!
     //   その他を表示するラベル
     @IBOutlet var girlFinanceOthersLabel:UILabel!
+    //   合計を表示するラベル
+    @IBOutlet var girlFinanceTotalLabel:UILabel!
     
     
     override func viewWillAppear(_ animated: Bool) {
@@ -36,6 +38,8 @@ class GirlFinanceViewController: UIViewController {
         let girlFinanceLeisureSecond:String = String("\(girlFinance.girlLeisureTotal)")
         let girlFinanceHousingSecond:String = String("\(girlFinance.girlHousingTotal)")
         let girlFinanceOthersSecond:String = String("\(girlFinance.girlOthersTotal)")
+        let girlFinanceTotalSecond:String = String("\(girlFinance.girlTotalTotal)")
+        
         
         
         girlFinanceFoodLabel.text = girlFinanceFoodSecond
@@ -43,6 +47,7 @@ class GirlFinanceViewController: UIViewController {
         girlFinanceLeisureLabel.text = girlFinanceLeisureSecond
         girlFinanceHousingLabel.text = girlFinanceHousingSecond
         girlFinanceOthersLabel.text = girlFinanceOthersSecond
+        girlFinanceTotalLabel.text = girlFinanceTotalSecond
     }
     
     

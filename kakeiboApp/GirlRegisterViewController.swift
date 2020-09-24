@@ -69,36 +69,84 @@ class GirlRegisterViewController: UIViewController,UIPickerViewDataSource,UIPick
     
     //    数字のボタンが押されたら、boyRegisterLabelに表示する
     //    ここには、ボタンの0から９とACを紐付ける。追加ボタンは別
-    @IBAction func girlNumButton(_ sender:
-        UIButton) {
-        switch sender.titleLabel?.text  {
-        case "0":
-            girlRegisterLabel.text = String(0)
-        case "1":
-            girlRegisterLabel.text = String(1)
-        case "2":
-            girlRegisterLabel.text = String(2)
-        case "3":
-            girlRegisterLabel.text = String(3)
-        case "4":
-            girlRegisterLabel.text = String(4)
-        case "5":
-            girlRegisterLabel.text = String(5)
-        case "6":
-            girlRegisterLabel.text = String(6)
-        case "7":
-            girlRegisterLabel.text = String(7)
-        case "8":
-            girlRegisterLabel.text = String(8)
-        case "9":
-            girlRegisterLabel.text = String(9)
-        default:
-            girlRegisterLabel.text  = String("")
-        }
-    }
+    
+    @IBAction func girlNumTap01(_ sender: Any) {
+          girlRegisterLabel.text = String(1)
+      }
+      
+      @IBAction func girlNumTap02(_ sender: Any) {
+          girlRegisterLabel.text = String(2)
+      }
+      
+      @IBAction func girlNumTap03(_ sender: Any) {
+           girlRegisterLabel.text = String(3)
+      }
+      
+      @IBAction func girlNumTap04(_ sender: Any) {
+           girlRegisterLabel.text = String(4)
+      }
+    
+      @IBAction func girlTap05(_ sender: Any) {
+           girlRegisterLabel.text = String(5)
+      }
+      
+      @IBAction func girlNumTap06(_ sender: Any) {
+           girlRegisterLabel.text = String(6)
+      }
+      
+      @IBAction func girlNumTap07(_ sender: Any) {
+           girlRegisterLabel.text = String(7)
+      }
+      
+      @IBAction func girlNumTap08(_ sender: Any) {
+           girlRegisterLabel.text = String(8)
+      }
+      
+      @IBAction func girlNumTap09(_ sender: Any) {
+           girlRegisterLabel.text = String(9)
+      }
+      
+      @IBAction func girlNumTap00(_ sender: Any) {
+           girlRegisterLabel.text = String(0)
+      }
+      
+      @IBAction func girlNumTapAC(_ sender: Any) {
+           girlRegisterLabel.text = ""
+      }
+    
+    
+    
+    
+//    @IBAction func girlNumButton(_ sender:
+//        UIButton) {
+//        switch sender.titleLabel?.text  {
+//        case "0":
+//            girlRegisterLabel.text = String(0)
+//        case "1":
+//            girlRegisterLabel.text = String(1)
+//        case "2":
+//            girlRegisterLabel.text = String(2)
+//        case "3":
+//            girlRegisterLabel.text = String(3)
+//        case "4":
+//            girlRegisterLabel.text = String(4)
+//        case "5":
+//            girlRegisterLabel.text = String(5)
+//        case "6":
+//            girlRegisterLabel.text = String(6)
+//        case "7":
+//            girlRegisterLabel.text = String(7)
+//        case "8":
+//            girlRegisterLabel.text = String(8)
+//        case "9":
+//            girlRegisterLabel.text = String(9)
+//        default:
+//            girlRegisterLabel.text  = String("")
+//        }
+//    }
     
     //    追加ボタン
-    @IBAction func boyAddButton(_sender:UIButton!){
+    @IBAction func boyAddButton(_sender:UITapGestureRecognizer!){
         if girlRegisterLabel.text != nil{
             girlRegisterLabel.text = "金額を入力してください。"
         }else{
