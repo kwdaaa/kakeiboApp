@@ -9,21 +9,65 @@
 /* Begin PBXBuildFile section */
 		C278DA7A251761020068B37B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C278DA79251761020068B37B /* AppDelegate.swift */; };
 		C278DA7C251761020068B37B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C278DA7B251761020068B37B /* SceneDelegate.swift */; };
-		C278DA7E251761020068B37B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C278DA7D251761020068B37B /* ViewController.swift */; };
+		C278DA7E251761020068B37B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C278DA7D251761020068B37B /* HomeViewController.swift */; };
 		C278DA81251761020068B37B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C278DA7F251761020068B37B /* Main.storyboard */; };
 		C278DA83251761030068B37B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C278DA82251761030068B37B /* Assets.xcassets */; };
 		C278DA86251761030068B37B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C278DA84251761030068B37B /* LaunchScreen.storyboard */; };
+		C2E4891F251C297A006B58A6 /* BoyRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E4891E251C297A006B58A6 /* BoyRegisterViewController.swift */; };
+		C2E48921251C2994006B58A6 /* GirlRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E48920251C2994006B58A6 /* GirlRegisterViewController.swift */; };
+		C2E48923251C29A4006B58A6 /* BoyFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E48922251C29A4006B58A6 /* BoyFoodViewController.swift */; };
+		C2E48925251C29B6006B58A6 /* BoyDailyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E48924251C29B6006B58A6 /* BoyDailyViewController.swift */; };
+		C2E48927251C29C9006B58A6 /* BoyLeisureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E48926251C29C9006B58A6 /* BoyLeisureViewController.swift */; };
+		C2E48929251C29DF006B58A6 /* BoyHousingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E48928251C29DF006B58A6 /* BoyHousingViewController.swift */; };
+		C2E4892B251C29F6006B58A6 /* BoyOthersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E4892A251C29F6006B58A6 /* BoyOthersViewController.swift */; };
+		C2E4892D251C2A05006B58A6 /* GirlFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E4892C251C2A05006B58A6 /* GirlFoodViewController.swift */; };
+		C2E4892F251C2A1B006B58A6 /* GirlDailyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E4892E251C2A1B006B58A6 /* GirlDailyViewController.swift */; };
+		C2E48931251C2A31006B58A6 /* GirlLeisureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E48930251C2A31006B58A6 /* GirlLeisureViewController.swift */; };
+		C2E48933251C2A4A006B58A6 /* GirlHousingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E48932251C2A4A006B58A6 /* GirlHousingViewController.swift */; };
+		C2E48935251C2A5F006B58A6 /* GirlOthersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E48934251C2A5F006B58A6 /* GirlOthersViewController.swift */; };
+		C2E48937251C2A71006B58A6 /* BothFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E48936251C2A71006B58A6 /* BothFoodViewController.swift */; };
+		C2E48939251C2A82006B58A6 /* BothDailyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E48938251C2A82006B58A6 /* BothDailyViewController.swift */; };
+		C2E4893B251C2A94006B58A6 /* BothLeisureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E4893A251C2A94006B58A6 /* BothLeisureViewController.swift */; };
+		C2E4893D251C2AAA006B58A6 /* BothHousingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E4893C251C2AAA006B58A6 /* BothHousingViewController.swift */; };
+		C2E4893F251C2ABB006B58A6 /* BothOthersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E4893E251C2ABB006B58A6 /* BothOthersViewController.swift */; };
+		C2E48941251C2AD4006B58A6 /* BothTotalSumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E48940251C2AD4006B58A6 /* BothTotalSumViewController.swift */; };
+		C2E48945251C2B22006B58A6 /* BoyFinanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E48944251C2B22006B58A6 /* BoyFinanceViewController.swift */; };
+		C2E48947251C2B49006B58A6 /* GirlFinanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E48946251C2B49006B58A6 /* GirlFinanceViewController.swift */; };
+		C2E48949251C2B63006B58A6 /* testFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E48948251C2B63006B58A6 /* testFile.swift */; };
+		C2E4894B251C2B77006B58A6 /* SetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E4894A251C2B77006B58A6 /* SetViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C278DA76251761010068B37B /* kakeiboApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kakeiboApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C278DA79251761020068B37B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C278DA7B251761020068B37B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C278DA7D251761020068B37B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C278DA7D251761020068B37B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C278DA80251761020068B37B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C278DA82251761030068B37B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C278DA85251761030068B37B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C278DA87251761030068B37B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2E4891E251C297A006B58A6 /* BoyRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoyRegisterViewController.swift; sourceTree = "<group>"; };
+		C2E48920251C2994006B58A6 /* GirlRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GirlRegisterViewController.swift; sourceTree = "<group>"; };
+		C2E48922251C29A4006B58A6 /* BoyFoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoyFoodViewController.swift; sourceTree = "<group>"; };
+		C2E48924251C29B6006B58A6 /* BoyDailyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoyDailyViewController.swift; sourceTree = "<group>"; };
+		C2E48926251C29C9006B58A6 /* BoyLeisureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoyLeisureViewController.swift; sourceTree = "<group>"; };
+		C2E48928251C29DF006B58A6 /* BoyHousingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoyHousingViewController.swift; sourceTree = "<group>"; };
+		C2E4892A251C29F6006B58A6 /* BoyOthersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoyOthersViewController.swift; sourceTree = "<group>"; };
+		C2E4892C251C2A05006B58A6 /* GirlFoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GirlFoodViewController.swift; sourceTree = "<group>"; };
+		C2E4892E251C2A1B006B58A6 /* GirlDailyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GirlDailyViewController.swift; sourceTree = "<group>"; };
+		C2E48930251C2A31006B58A6 /* GirlLeisureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GirlLeisureViewController.swift; sourceTree = "<group>"; };
+		C2E48932251C2A4A006B58A6 /* GirlHousingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GirlHousingViewController.swift; sourceTree = "<group>"; };
+		C2E48934251C2A5F006B58A6 /* GirlOthersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GirlOthersViewController.swift; sourceTree = "<group>"; };
+		C2E48936251C2A71006B58A6 /* BothFoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BothFoodViewController.swift; sourceTree = "<group>"; };
+		C2E48938251C2A82006B58A6 /* BothDailyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BothDailyViewController.swift; sourceTree = "<group>"; };
+		C2E4893A251C2A94006B58A6 /* BothLeisureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BothLeisureViewController.swift; sourceTree = "<group>"; };
+		C2E4893C251C2AAA006B58A6 /* BothHousingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BothHousingViewController.swift; sourceTree = "<group>"; };
+		C2E4893E251C2ABB006B58A6 /* BothOthersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BothOthersViewController.swift; sourceTree = "<group>"; };
+		C2E48940251C2AD4006B58A6 /* BothTotalSumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BothTotalSumViewController.swift; sourceTree = "<group>"; };
+		C2E48944251C2B22006B58A6 /* BoyFinanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoyFinanceViewController.swift; sourceTree = "<group>"; };
+		C2E48946251C2B49006B58A6 /* GirlFinanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GirlFinanceViewController.swift; sourceTree = "<group>"; };
+		C2E48948251C2B63006B58A6 /* testFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testFile.swift; sourceTree = "<group>"; };
+		C2E4894A251C2B77006B58A6 /* SetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +102,33 @@
 			children = (
 				C278DA79251761020068B37B /* AppDelegate.swift */,
 				C278DA7B251761020068B37B /* SceneDelegate.swift */,
-				C278DA7D251761020068B37B /* ViewController.swift */,
 				C278DA7F251761020068B37B /* Main.storyboard */,
-				C278DA82251761030068B37B /* Assets.xcassets */,
 				C278DA84251761030068B37B /* LaunchScreen.storyboard */,
 				C278DA87251761030068B37B /* Info.plist */,
+				C278DA82251761030068B37B /* Assets.xcassets */,
+				C278DA7D251761020068B37B /* HomeViewController.swift */,
+				C2E4891E251C297A006B58A6 /* BoyRegisterViewController.swift */,
+				C2E48920251C2994006B58A6 /* GirlRegisterViewController.swift */,
+				C2E48922251C29A4006B58A6 /* BoyFoodViewController.swift */,
+				C2E48924251C29B6006B58A6 /* BoyDailyViewController.swift */,
+				C2E48926251C29C9006B58A6 /* BoyLeisureViewController.swift */,
+				C2E48928251C29DF006B58A6 /* BoyHousingViewController.swift */,
+				C2E4892A251C29F6006B58A6 /* BoyOthersViewController.swift */,
+				C2E4892C251C2A05006B58A6 /* GirlFoodViewController.swift */,
+				C2E4892E251C2A1B006B58A6 /* GirlDailyViewController.swift */,
+				C2E48930251C2A31006B58A6 /* GirlLeisureViewController.swift */,
+				C2E48932251C2A4A006B58A6 /* GirlHousingViewController.swift */,
+				C2E48934251C2A5F006B58A6 /* GirlOthersViewController.swift */,
+				C2E48936251C2A71006B58A6 /* BothFoodViewController.swift */,
+				C2E48938251C2A82006B58A6 /* BothDailyViewController.swift */,
+				C2E4893A251C2A94006B58A6 /* BothLeisureViewController.swift */,
+				C2E4893C251C2AAA006B58A6 /* BothHousingViewController.swift */,
+				C2E4893E251C2ABB006B58A6 /* BothOthersViewController.swift */,
+				C2E48940251C2AD4006B58A6 /* BothTotalSumViewController.swift */,
+				C2E48944251C2B22006B58A6 /* BoyFinanceViewController.swift */,
+				C2E48946251C2B49006B58A6 /* GirlFinanceViewController.swift */,
+				C2E48948251C2B63006B58A6 /* testFile.swift */,
+				C2E4894A251C2B77006B58A6 /* SetViewController.swift */,
 			);
 			path = kakeiboApp;
 			sourceTree = "<group>";
@@ -138,8 +204,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C278DA7E251761020068B37B /* ViewController.swift in Sources */,
+				C2E4892F251C2A1B006B58A6 /* GirlDailyViewController.swift in Sources */,
+				C2E48925251C29B6006B58A6 /* BoyDailyViewController.swift in Sources */,
+				C2E4893F251C2ABB006B58A6 /* BothOthersViewController.swift in Sources */,
+				C2E48941251C2AD4006B58A6 /* BothTotalSumViewController.swift in Sources */,
+				C2E48933251C2A4A006B58A6 /* GirlHousingViewController.swift in Sources */,
+				C2E48929251C29DF006B58A6 /* BoyHousingViewController.swift in Sources */,
+				C2E48939251C2A82006B58A6 /* BothDailyViewController.swift in Sources */,
+				C2E4891F251C297A006B58A6 /* BoyRegisterViewController.swift in Sources */,
+				C2E48923251C29A4006B58A6 /* BoyFoodViewController.swift in Sources */,
+				C2E48947251C2B49006B58A6 /* GirlFinanceViewController.swift in Sources */,
+				C2E48945251C2B22006B58A6 /* BoyFinanceViewController.swift in Sources */,
+				C2E4894B251C2B77006B58A6 /* SetViewController.swift in Sources */,
+				C2E48927251C29C9006B58A6 /* BoyLeisureViewController.swift in Sources */,
+				C2E4892D251C2A05006B58A6 /* GirlFoodViewController.swift in Sources */,
+				C2E4893B251C2A94006B58A6 /* BothLeisureViewController.swift in Sources */,
+				C278DA7E251761020068B37B /* HomeViewController.swift in Sources */,
+				C2E4892B251C29F6006B58A6 /* BoyOthersViewController.swift in Sources */,
+				C2E4893D251C2AAA006B58A6 /* BothHousingViewController.swift in Sources */,
+				C2E48949251C2B63006B58A6 /* testFile.swift in Sources */,
+				C2E48931251C2A31006B58A6 /* GirlLeisureViewController.swift in Sources */,
+				C2E48937251C2A71006B58A6 /* BothFoodViewController.swift in Sources */,
+				C2E48935251C2A5F006B58A6 /* GirlOthersViewController.swift in Sources */,
 				C278DA7A251761020068B37B /* AppDelegate.swift in Sources */,
+				C2E48921251C2994006B58A6 /* GirlRegisterViewController.swift in Sources */,
 				C278DA7C251761020068B37B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
