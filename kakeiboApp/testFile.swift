@@ -27,11 +27,11 @@ struct testStruct {
     let girlHousingTotal = UserDefaults.standard.object(forKey: "GirlHousingTotal") as? Int
     
     //        それぞれのその他の合計を変数に入れた！
-    let boyOthersTotal = UserDefaults.standard.object(forKey: "BoyOthersTotal") as! Int
-    let girlOthersTotal = UserDefaults.standard.object(forKey: "GirlOthersTotal") as! Int
+    let boyOthersTotal = UserDefaults.standard.object(forKey: "BoyOthersTotal") as? Int
+    let girlOthersTotal = UserDefaults.standard.object(forKey: "GirlOthersTotal") as? Int
     
     
-    let boyTotalTotal = UserDefaults.standard.object(forKey: "botTotalSumSecond") as! Int
+    let boyTotalTotal = UserDefaults.standard.object(forKey: "boyTotalSumSecond") as? Int
     let girlTotalTotal = UserDefaults.standard.object(forKey: "girlTotalSecond") as? Int
     
     

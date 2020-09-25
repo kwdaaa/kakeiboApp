@@ -27,7 +27,7 @@ class BothTotalSumViewController: UIViewController {
         let bothTotal = testStruct()
         
         //        彼氏分の合計を計算
-        let boyTotalSum = bothTotal.boyFoodTotal! + bothTotal.boyDailyTotal! + bothTotal.boyLeisureTotal! + bothTotal.boyHousingTotal! + bothTotal.boyOthersTotal
+        let boyTotalSum = bothTotal.boyFoodTotal! + bothTotal.boyDailyTotal! + bothTotal.boyLeisureTotal! + bothTotal.boyHousingTotal! + bothTotal.boyOthersTotal!
         //       　彼氏の合計の型をIntからStringに変換
         let boyTotalSumSecond:String = String("\(boyTotalSum)")
         //        ラベルに表示
@@ -39,7 +39,7 @@ class BothTotalSumViewController: UIViewController {
         
         
         //        彼女の合計を計算
-        let girlTotalSum = bothTotal.girlFoodTotal! + bothTotal.girlDailyTotal! + bothTotal.girlLeisureTotal! + bothTotal.girlLeisureTotal! + bothTotal.girlOthersTotal
+        let girlTotalSum = bothTotal.girlFoodTotal! + bothTotal.girlDailyTotal! + bothTotal.girlLeisureTotal! + bothTotal.girlLeisureTotal! + bothTotal.girlOthersTotal!
         //        彼女の合計の型をIntからStringに変換
         let girlTotalSumSecond:String = String("\(girlTotalSum)")
         //        ラベルに表示

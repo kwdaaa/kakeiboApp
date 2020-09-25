@@ -43,14 +43,22 @@ class HomeViewController: UIViewController {
         //        固定費
         let bothHousingTotalSum = UserDefaults.standard.object(forKey: "bothHousingTotal")
         //        その他
-        let bothOthersTotalSum = UserDefaults.standard.object(forKey: "bothOthersTotal")
+         let bothOthersTotalSum = UserDefaults.standard.object(forKey: "bothOthersTotal")
         //        合計を持ってくる
-
+        
+        
+        //        let bothtest = testStruct()
+        
         let boyTotalSum = UserDefaults.standard.object(forKey: "boyTotalSumSecond") as? Int
-        let girlTotalSum = UserDefaults.standard.object(forKey: "girlTotalSumSecond") as? Int
+        let girlTotalSum = UserDefaults.standard.object(forKey: "girlTotalSecond") as? Int
+        
+        
+        //        let boyTotalSum = bothtest.boyTotalTotal
+        //        let girlTotalSum = bothtest.girlTotalTotal
         
         //        足し算
         let bothTotalSum = boyTotalSum! + girlTotalSum!
+
 //        型変換
         let bothTotalSumThird:String = String("\(bothTotalSum)")
         

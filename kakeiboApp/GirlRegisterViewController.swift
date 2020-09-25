@@ -146,7 +146,7 @@ class GirlRegisterViewController: UIViewController,UIPickerViewDataSource,UIPick
 //    }
     
     //    追加ボタン
-    @IBAction func boyAddButton(_sender:UITapGestureRecognizer!){
+    @IBAction func girlAddButton(_sender:UITapGestureRecognizer!){
         if girlRegisterLabel.text != nil{
             girlRegisterLabel.text = "金額を入力してください。"
         }else{
@@ -155,7 +155,7 @@ class GirlRegisterViewController: UIViewController,UIPickerViewDataSource,UIPick
                 //           pickerで取得した値で条件分岐
                 //            金額と日付を保存
             //            画面遷移
-            case "食費":
+            case "食 費":
                 
                 UserDefaults.standard.set(girlRegisterLabel.text, forKey: "girlFood")
                 //        画面遷移
@@ -163,7 +163,7 @@ class GirlRegisterViewController: UIViewController,UIPickerViewDataSource,UIPick
                 self.present(GirlFoodViewController, animated: true, completion: nil)
                 
                 
-            case "日用品":
+            case "日 用 品":
                 
                 UserDefaults.standard.set(girlRegisterLabel.text, forKey: "girlDaily")
                 //                画面遷移
@@ -171,14 +171,14 @@ class GirlRegisterViewController: UIViewController,UIPickerViewDataSource,UIPick
                 self.present(GirlDailyViewController,animated: true,completion: nil)
                 
                 
-            case "娯楽費":
+            case "娯 楽 費":
                 UserDefaults.standard.set(girlRegisterLabel.text, forKey: "girlLeisure")
                 //                画面遷移
                 let GirlLeisureViewController = self.storyboard?.instantiateViewController(identifier: "BoyLeisure") as! GirlLeisureViewController
                 self.present(GirlLeisureViewController,animated: true, completion: nil)
                 
                 
-            case "固定費":
+            case "固 定 費":
                 UserDefaults.standard.set(girlRegisterLabel.text, forKey: "girlHousing")
                 //                画面遷移
                 let GirlHousingViewController = self.storyboard?.instantiateViewController(withIdentifier: "GirlHousing")

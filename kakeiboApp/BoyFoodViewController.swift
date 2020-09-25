@@ -22,6 +22,7 @@ class BoyFoodViewController: UIViewController,UITableViewDataSource,UITableViewD
     
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
     }
     
@@ -40,15 +41,17 @@ class BoyFoodViewController: UIViewController,UITableViewDataSource,UITableViewD
             
         }
         
-        //        彼氏の食費の合計を保存
-        UserDefaults.standard.set(boyFoodTotal, forKey: "BoyFoodTotal")
         
+//       //        彼氏の食費の合計を保存
+              UserDefaults.standard.set(boyFoodTotal, forKey: "BoyFoodTotal")
+
         boyFoodTableView.dataSource = self
         boyFoodTableView.delegate = self
         
     }
     
     
+ 
     
     //    彼氏の食費の配列分のセルを作る
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

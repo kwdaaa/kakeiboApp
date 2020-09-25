@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C27199D9251E3DDC00179B01 /* ResetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27199D8251E3DDC00179B01 /* ResetViewController.swift */; };
+		C27199DB251E3DFF00179B01 /* BreakViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27199DA251E3DFF00179B01 /* BreakViewController.swift */; };
 		C278DA7A251761020068B37B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C278DA79251761020068B37B /* AppDelegate.swift */; };
 		C278DA7C251761020068B37B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C278DA7B251761020068B37B /* SceneDelegate.swift */; };
 		C278DA7E251761020068B37B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C278DA7D251761020068B37B /* HomeViewController.swift */; };
@@ -38,6 +40,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C27199D8251E3DDC00179B01 /* ResetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetViewController.swift; sourceTree = "<group>"; };
+		C27199DA251E3DFF00179B01 /* BreakViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakViewController.swift; sourceTree = "<group>"; };
 		C278DA76251761010068B37B /* kakeiboApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kakeiboApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C278DA79251761020068B37B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C278DA7B251761020068B37B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -129,6 +133,8 @@
 				C2E48946251C2B49006B58A6 /* GirlFinanceViewController.swift */,
 				C2E48948251C2B63006B58A6 /* testFile.swift */,
 				C2E4894A251C2B77006B58A6 /* SetViewController.swift */,
+				C27199D8251E3DDC00179B01 /* ResetViewController.swift */,
+				C27199DA251E3DFF00179B01 /* BreakViewController.swift */,
 			);
 			path = kakeiboApp;
 			sourceTree = "<group>";
@@ -204,6 +210,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C27199D9251E3DDC00179B01 /* ResetViewController.swift in Sources */,
 				C2E4892F251C2A1B006B58A6 /* GirlDailyViewController.swift in Sources */,
 				C2E48925251C29B6006B58A6 /* BoyDailyViewController.swift in Sources */,
 				C2E4893F251C2ABB006B58A6 /* BothOthersViewController.swift in Sources */,
@@ -226,6 +233,7 @@
 				C2E48931251C2A31006B58A6 /* GirlLeisureViewController.swift in Sources */,
 				C2E48937251C2A71006B58A6 /* BothFoodViewController.swift in Sources */,
 				C2E48935251C2A5F006B58A6 /* GirlOthersViewController.swift in Sources */,
+				C27199DB251E3DFF00179B01 /* BreakViewController.swift in Sources */,
 				C278DA7A251761020068B37B /* AppDelegate.swift in Sources */,
 				C2E48921251C2994006B58A6 /* GirlRegisterViewController.swift in Sources */,
 				C278DA7C251761020068B37B /* SceneDelegate.swift in Sources */,

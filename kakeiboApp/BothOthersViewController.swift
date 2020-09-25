@@ -30,7 +30,7 @@ class BothOthersViewController: UIViewController {
         
         
         //                BothTotalSumで使うために足し算！
-        let bothOthersTotal = bothOthers.boyOthersTotal + bothOthers.girlHousingTotal!
+        let bothOthersTotal = bothOthers.boyOthersTotal! + bothOthers.girlOthersTotal!
         UserDefaults.standard.set(bothOthersTotal, forKey: "bothOthersTotal")
         
         //        型変換
