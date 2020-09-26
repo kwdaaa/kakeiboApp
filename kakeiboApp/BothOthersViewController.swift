@@ -16,6 +16,19 @@ class BothOthersViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+               let bothOthers = testStruct()
+               
+               if bothOthers.boyOthersTotal == nil{
+                   
+                   bothOthers.boyOthersTotal == 0
+               }
+               
+               if bothOthers.girlOthersTotal == nil{
+                   
+                   bothOthers.girlOthersTotal == 0
+               }
     }
     
     

@@ -22,6 +22,12 @@ class BoyOthersViewController: UIViewController,UITableViewDelegate,UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    
+        if UserDefaults.standard.object(forKey: "BoyOthers") == nil{
+                   
+                  print("登録されていません。")
+                   
+               }
     }
     override func viewWillAppear(_ animated: Bool) {
         //        登録画面でのその他の値を持ってくる　ちゃんとStringからIntに変換されてる？

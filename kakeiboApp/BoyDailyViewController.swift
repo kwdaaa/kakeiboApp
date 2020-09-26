@@ -22,6 +22,14 @@ class BoyDailyViewController: UIViewController,UITableViewDataSource,UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        
+        if UserDefaults.standard.object(forKey: "BoyDaily") == nil{
+                   
+                  print("登録されていません。")
+                   
+               }
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {

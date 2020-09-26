@@ -16,6 +16,21 @@ class BothDailyViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        let bothDaily = testStruct()
+      
+        if bothDaily.boyDailyTotal == nil{
+            
+            bothDaily.boyDailyTotal == 0
+        }
+        
+        if bothDaily.girlDailyTotal == nil{
+            
+            bothDaily.girlDailyTotal == 0
+        }
+        
+       
     }
     
     override func viewWillAppear(_ animated: Bool) {

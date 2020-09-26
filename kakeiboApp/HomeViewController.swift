@@ -15,46 +15,17 @@ class HomeViewController: UIViewController{
         
         let boyTotalSum = UserDefaults.standard.object(forKey: "boyTotalSumSecond") as? Int
         let girlTotalSum = UserDefaults.standard.object(forKey: "girlTotalSecond") as? Int
-//        //     食費
-//        let bothFoodTotalSum =  UserDefaults.standard.object(forKey: "bothFoodTotal")
-//        //        日用品
-//        let bothDailyTotalSum = UserDefaults.standard.object(forKey: "bothDailyTotal")
-//        //        娯楽費
-//        let bothLeisureTotalSum = UserDefaults.standard.object(forKey: "bothLeisureTotal")
-//        //        固定費
-//        let bothHousingTotalSum = UserDefaults.standard.object(forKey: "bothHousingTotal")
-//        //        その他
-//        let bothOthersTotalSum = UserDefaults.standard.object(forKey: "bothOthersTotal")
-//
         
-       if UserDefaults.standard.object(forKey: "bothFoodTotal") == nil,UserDefaults.standard.object(forKey: "bothDailyTotal") == nil,UserDefaults.standard.object(forKey: "bothLeisureTotal") == nil,UserDefaults.standard.object(forKey: "bothHousing") == nil, UserDefaults.standard.object(forKey: "bothOthersTotal") == nil{
         
-        //    食費のラベル
-        bothFoodTotalLabel.text = "0"
-        //    日用品のラベル
-        bothDailyTotalLabel.text = "0"
-        //    娯楽費のラベル
-        bothLeisureTotalLabel.text = "0"
-        //    固定費のラベル
-        bothHousingTotalLabel.text = "0"
-        //    その他のラベル
-        bothOthersTotalLabel.text = "0"
-        //    合計のラベル
-        bothTotalSumLabel.text = "0"
-        
-//
-//            UserDefaults.standard.set(0,forKey: "bothFoodTotal")
-//            UserDefaults.standard.set(0,forKey: "bothDailyTotal")
-//            UserDefaults.standard.set(0,forKey: "bothLeisureTotal")
-//            UserDefaults.standard.set(0,forKey: "bothHousingTotal")
-//            UserDefaults.standard.set(0,forKey: "bothOthersTotal")
-        
-        }
         
         if UserDefaults.standard.object(forKey: "boyTotalSumSecond") == nil,UserDefaults.standard.object(forKey: "girlTotalSecond") == nil{
             
             UserDefaults.standard.set(0,forKey:"boyTotalSumSecond")
             UserDefaults.standard.set(0,forKey:"girlTotalSumSecond")
+            
+            
+            
+            
             
         }
         

@@ -11,15 +11,30 @@ import UIKit
 class BothHousingViewController: UIViewController {
     //    彼氏の固定費の合計を表示するラベル
       @IBOutlet var bothHousingBoy:UILabel!
-      //    彼女の固定費の合計を表示するラベル
-      @IBOutlet var bothHousingGirl:UILabel!
-      
-      override func viewDidLoad() {
-          super.viewDidLoad()
-      }
-      
+    //    彼女の固定費の合計を表示するラベル
+    @IBOutlet var bothHousingGirl:UILabel!
     
-      
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let bothHousing = testStruct()
+        
+        if bothHousing.boyHousingTotal == nil{
+            
+            bothHousing.boyHousingTotal == 0
+        }
+        
+        if bothHousing.girlHousingTotal == nil{
+            
+            bothHousing.girlHousingTotal == 0
+        }
+        
+    }
+    
+    
+    
      override func viewWillAppear(_ animated: Bool) {
          
 //         //        それぞれの固定費の合計を変数に入れた！

@@ -19,17 +19,32 @@ class BothFoodViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        let bothFood = testStruct()
+        
+        
+        if bothFood.boyFoodTotal == nil{
+            
+            bothFood.boyFoodTotal == 0
+        }
+        
+        if bothFood.girlFoodTotal == nil{
+            
+            bothFood.girlFoodTotal == 0
+        }
+        
     }
     
     
     override func viewWillAppear(_ animated: Bool) {
         
         //        それぞれの食費の合計を変数に入れた！
-//        let boyFoodTotal = UserDefaults.standard.object(forKey: "BoyFoodTotal") as? Int
-//        let girlFoodTotal = UserDefaults.standard.object(forKey: "GirlFoodTotal") as? Int
-//
+        //        let boyFoodTotal = UserDefaults.standard.object(forKey: "BoyFoodTotal") as? Int
+        //        let girlFoodTotal = UserDefaults.standard.object(forKey: "GirlFoodTotal") as? Int
+        //
         
-//構造体にアクセス
+        //構造体にアクセス
         let bothFood = testStruct()
         
         //        BothTotalSumで使うために足し算！

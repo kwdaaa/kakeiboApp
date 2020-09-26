@@ -23,6 +23,12 @@ class GirlDailyViewController: UIViewController,UITableViewDataSource,UITableVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if UserDefaults.standard.object(forKey: "GirlDaily") == nil{
+                         
+                        print("登録されていません。")
+                         
+                     }
     }
     override func viewWillAppear(_ animated: Bool) {
         //        登録画面での日用品の値を持ってくる　ちゃんとStringからIntに変換されてる？

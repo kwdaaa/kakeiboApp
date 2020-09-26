@@ -21,6 +21,12 @@ class GirlHousingViewController: UIViewController,UITableViewDataSource,UITableV
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if UserDefaults.standard.object(forKey: "GirlHousing") == nil{
+                         
+                        print("登録されていません。")
+                         
+                     }
     }
     override func viewWillAppear(_ animated: Bool) {
          //        登録画面での固定費の値を持ってくる　ちゃんとStringからIntに変換されてる？

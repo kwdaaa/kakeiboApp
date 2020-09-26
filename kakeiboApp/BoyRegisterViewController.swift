@@ -11,90 +11,99 @@ import UIKit
 class BoyRegisterViewController: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource {
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
+        pickerView = UIPickerView()
         pickerView.delegate = self
         pickerView.dataSource = self
         
-        super.viewDidLoad()
-               pickerView = UIPickerView()
-               pickerView.delegate = self
-               pickerView.dataSource = self
-               
+        boyRegisterLabel.text = "0"
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        //        初めは、金額のとこ0 が表示されている。
+        
         boyRegisterLabel.text = "0"
-        //        初めは、カテゴリーのラベルのところは、何も表示しない
-        textLabel.text = "カテゴリーを選択してください。"
+   
+       
         
     }
     
     
     //金額が表示されるラベル
     @IBOutlet var boyRegisterLabel:UILabel!
-      
+    
     
     //    数字のボタンが押されたら、boyRegisterLabelに表示する
     //    ここには、ボタンの0から９とACを紐付ける。追加ボタンは別 タップジェスチャー
     
     
-    
-    
-    
-    
-    
-    @IBAction func boyNumTap01(_ sender: Any) {
-        boyRegisterLabel.text = String(1)
-    }
-    
-    @IBAction func boyNumTap02(_ sender: Any) {
-        boyRegisterLabel.text = String(2)
-    }
-    
-    @IBAction func boyNumTap03(_ sender: Any) {
-         boyRegisterLabel.text = String(3)
-    }
-    
-    @IBAction func boyNumTap04(_ sender: Any) {
-         boyRegisterLabel.text = String(4)
-    }
-  
-    @IBAction func boyTap05(_ sender: Any) {
-         boyRegisterLabel.text = String(5)
-    }
-    
-    @IBAction func boyNumTap06(_ sender: Any) {
-         boyRegisterLabel.text = String(6)
-    }
-    
-    @IBAction func boyNumTap07(_ sender: Any) {
-         boyRegisterLabel.text = String(7)
-    }
-    
-    @IBAction func boyNumTap08(_ sender: Any) {
-         boyRegisterLabel.text = String(8)
-    }
-    
-    @IBAction func boyNumTap09(_ sender: Any) {
-         boyRegisterLabel.text = String(9)
-    }
-    
-    @IBAction func boyNumTap00(_ sender: Any) {
-         boyRegisterLabel.text = String(0)
-    }
-    
-    @IBAction func boyNumTapAC(_ sender: Any) {
-         boyRegisterLabel.text = ""
+//    引数の復讐する！！！！
+    func cal(count:String){
+        
+        if boyRegisterLabel.text == nil{
+            boyRegisterLabel.text = ""
+        }
+        
+        var resultNum:String
+        
+        resultNum = boyRegisterLabel.text! + count
+        
+        boyRegisterLabel.text = resultNum
     }
     
 
     
+    @IBAction func boyNumTap01(_ sender: Any) {
+        cal(count: "1")
+    }
+    
+    @IBAction func boyNumTap02(_ sender: Any) {
+       cal(count: "2")
+    }
+    
+    @IBAction func boyNumTap03(_ sender: Any) {
+      cal(count: "3")
+    }
+    
+    @IBAction func boyNumTap04(_ sender: Any) {
+       cal(count: "4")
+    }
+    
+    @IBAction func boyTap05(_ sender: Any) {
+        cal(count: "5")
+    }
+    
+    @IBAction func boyNumTap06(_ sender: Any) {
+        cal(count: "6")
+    }
+    
+    @IBAction func boyNumTap07(_ sender: Any) {
+       cal(count: "7")
+    }
+    
+    @IBAction func boyNumTap08(_ sender: Any) {
+        cal(count: "8")
+    }
+    
+    @IBAction func boyNumTap09(_ sender: Any) {
+       cal(count: "9")
+    }
+    
+    @IBAction func boyNumTap00(_ sender: Any) {
+        cal(count: "0")
+    }
+    
+    @IBAction func boyNumTapAC(_ sender: Any) {
+        boyRegisterLabel.text = ""
+    }
+    
+    
+    
     //    登録ボタン
     @IBAction func boyAddTap(_sender:UITapGestureRecognizer!){
-        if boyRegisterLabel.text != nil{
-            boyRegisterLabel.text = "金額を入力してください。"
+        if boyRegisterLabel.text != nil,selectedCategory != nil{
+            boyRegisterLabel.text = "入力してください。"
         }else{
             
             switch selectedCategory {
@@ -138,7 +147,7 @@ class BoyRegisterViewController: UIViewController,UIPickerViewDelegate, UIPicker
                 
                 let BoyOthersViewController = self.storyboard?.instantiateViewController(withIdentifier: "Boyothers") as! BoyOthersViewController
                 self.present(BoyOthersViewController,animated: true,completion: nil)
-            
+                
             default:
                 textLabel.text = "選択してください。"
             }
@@ -153,7 +162,7 @@ class BoyRegisterViewController: UIViewController,UIPickerViewDelegate, UIPicker
     
     var selectedCategory:String = "選択してください。"
     
-
+    
     
     let categoryArray = ["食  費","日 用 品","娯 楽 費","固 定 費","そ の 他"]
     
@@ -170,8 +179,8 @@ class BoyRegisterViewController: UIViewController,UIPickerViewDelegate, UIPicker
     
     
     
-
-
+    
+    
     //    選んだ値を取得
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
@@ -201,13 +210,13 @@ class BoyRegisterViewController: UIViewController,UIPickerViewDelegate, UIPicker
     
     @IBOutlet weak var pickerKeyboardButton: BoyPickerViewKeyboard!
     
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//        pickerView = UIPickerView()
-//        pickerView.delegate = self
-//        pickerView.dataSource = self
-//
-//    }
+    //    override func viewDidLoad() {
+    //        super.viewDidLoad()
+    //        pickerView = UIPickerView()
+    //        pickerView.delegate = self
+    //        pickerView.dataSource = self
+    //
+    //    }
     
     
     override var inputView: UIView? {
@@ -239,7 +248,7 @@ class BoyRegisterViewController: UIViewController,UIPickerViewDelegate, UIPicker
     
     @objc func cancelPicker() {
         pickerKeyboardButton.resignFirstResponder()
-
+        
     }
     
     @objc func donePicker() {

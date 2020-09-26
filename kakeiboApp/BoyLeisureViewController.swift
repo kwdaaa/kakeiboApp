@@ -21,6 +21,13 @@ class BoyLeisureViewController: UIViewController,UITableViewDataSource,UITableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        if UserDefaults.standard.object(forKey: "BoyLeisure") == nil{
+                   
+                  print("登録されていません。")
+                   
+               }
     }
     
     override func viewWillAppear(_ animated: Bool) {

@@ -15,11 +15,28 @@ class BothLeisureViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
+        
+        
+        
+        let bothLeisure = testStruct()
+        
+        if bothLeisure.boyLeisureTotal == nil{
+            
+            bothLeisure.boyLeisureTotal == 0
+        }
+        
+        if bothLeisure.girlLeisureTotal == nil{
+            
+            bothLeisure.girlLeisureTotal == 0
+        }
+        
+        
+            
+        }
     
     
-   override func viewWillAppear(_ animated: Bool) {
-       
+    override func viewWillAppear(_ animated: Bool) {
+        
 //       //        それぞれの娯楽費の合計を変数に入れた！
 //       let boyLeisureTotal = UserDefaults.standard.object(forKey: "BoyLeisureTotal") as? Int
 //       let girlLeisureTotal = UserDefaults.standard.object(forKey: "GirlLeisureTotal") as? Int

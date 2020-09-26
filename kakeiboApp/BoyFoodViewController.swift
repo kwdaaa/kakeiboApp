@@ -24,6 +24,13 @@ class BoyFoodViewController: UIViewController,UITableViewDataSource,UITableViewD
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        
+        
+        if UserDefaults.standard.object(forKey: "BoyFood") == nil{
+            
+           print("登録されていません。")
+            
+        }
     }
     
     

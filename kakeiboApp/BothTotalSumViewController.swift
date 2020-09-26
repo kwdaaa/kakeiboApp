@@ -19,7 +19,44 @@ class BothTotalSumViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let bothTotal = testStruct()
+        
+        if bothTotal.boyFoodTotal == nil{
+            
+            bothTotal.boyFoodTotal == 0
+        }
+        
+        if bothTotal.boyDailyTotal == nil{
+            
+            bothTotal.boyDailyTotal == 0
+            
+        }
+        
+        if bothTotal.boyLeisureTotal == nil{
+            
+            bothTotal.boyLeisureTotal == 0
+            
+        }
+        if bothTotal.boyHousingTotal == nil{
+            
+            bothTotal.boyHousingTotal == 0
+            
+        }
+        if bothTotal.boyOthersTotal == nil{
+            
+            bothTotal.boyOthersTotal == 0
+            
+        }
+        
+        if bothTotal.girlFoodTotal == nil{
+           
+           bothTotal.girlFoodTotal == 0
+           
+           }
+        
     }
+
     
     
     override func viewWillAppear(_ animated: Bool) {

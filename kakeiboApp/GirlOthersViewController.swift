@@ -21,6 +21,12 @@ class GirlOthersViewController: UIViewController,UITableViewDataSource,UITableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if UserDefaults.standard.object(forKey: "GirlOthers") == nil{
+                         
+                        print("登録されていません。")
+                         
+                     }
     }
     
     
