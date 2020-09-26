@@ -8,13 +8,15 @@
 
 import UIKit
 
-class BoyPickerViewKeyboard: UIViewController {
+class BoyPickerViewKeyboard: UIButton,UIKeyInput {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+    
+    override var canBecomeFirstResponder: Bool{
+        return true
     }
+    
+    
     var  hasText:Bool = true
     func insertText(_ text: String) {}
     func deleteBackward() {}

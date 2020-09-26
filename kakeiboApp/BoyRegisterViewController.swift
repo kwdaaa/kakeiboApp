@@ -40,6 +40,11 @@ class BoyRegisterViewController: UIViewController,UIPickerViewDelegate, UIPicker
     //    ここには、ボタンの0から９とACを紐付ける。追加ボタンは別 タップジェスチャー
     
     
+    
+    
+    
+    
+    
     @IBAction func boyNumTap01(_ sender: Any) {
         boyRegisterLabel.text = String(1)
     }

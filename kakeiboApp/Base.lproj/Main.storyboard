@@ -164,12 +164,15 @@
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gSv-SA-FdZ">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gSv-SA-FdZ" customClass="BoyPickerViewKeyboard" customModule="kakeiboApp" customModuleProvider="target">
                                                                 <rect key="frame" x="114.5" y="0.0" width="159.5" height="17"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="gSv-SA-FdZ" secondAttribute="height" multiplier="159:17" id="vud-ZX-nrP"/>
                                                                 </constraints>
                                                                 <state key="normal" title="Button"/>
+                                                                <connections>
+                                                                    <action selector="pushButton:" destination="oZg-Ts-aUb" eventType="touchUpInside" id="tCL-xD-THl"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -460,6 +463,8 @@
                     </view>
                     <connections>
                         <outlet property="boyRegisterLabel" destination="lsf-Qn-q4u" id="Xee-cR-tPk"/>
+                        <outlet property="pickerKeyboardButton" destination="gSv-SA-FdZ" id="uTi-rN-1CC"/>
+                        <outlet property="textLabel" destination="JyS-2V-WvI" id="LX4-db-hoI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9LB-9j-NOT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -470,57 +475,57 @@
                 <tapGestureRecognizer id="uPQ-Me-AkG" userLabel="tab02_girlAdd"/>
                 <tapGestureRecognizer id="3dg-wo-rAg" userLabel="cal_01">
                     <connections>
-                        <action selector="tap01:" destination="oZg-Ts-aUb" id="V0B-IH-PVE"/>
+                        <action selector="boyNumTap01:" destination="oZg-Ts-aUb" id="xtU-q6-WK5"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="4o1-St-thC" userLabel="cal_02">
                     <connections>
-                        <action selector="tap02:" destination="oZg-Ts-aUb" id="UFp-xo-BCw"/>
+                        <action selector="boyNumTap02:" destination="oZg-Ts-aUb" id="nYj-Tc-yWy"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="7FT-II-4Tb" userLabel="cal_03">
                     <connections>
-                        <action selector="tap03:" destination="oZg-Ts-aUb" id="fPK-Rt-OCO"/>
+                        <action selector="boyNumTap03:" destination="oZg-Ts-aUb" id="C4k-65-5zt"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="prj-ih-4I2" userLabel="cal_04">
                     <connections>
-                        <action selector="tap04:" destination="oZg-Ts-aUb" id="ZoY-qA-gWH"/>
+                        <action selector="boyNumTap04:" destination="oZg-Ts-aUb" id="M0m-BO-gFx"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="YQs-zm-iGP" userLabel="cal_05">
                     <connections>
-                        <action selector="tap05:" destination="oZg-Ts-aUb" id="Q7D-eH-3vl"/>
+                        <action selector="boyTap05:" destination="oZg-Ts-aUb" id="Oiu-1c-Wlx"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="lOq-Kg-2Cd" userLabel="cal_06">
                     <connections>
-                        <action selector="tap06:" destination="oZg-Ts-aUb" id="4xf-S9-W4o"/>
+                        <action selector="boyNumTap06:" destination="oZg-Ts-aUb" id="stE-7l-Aug"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="Lvy-57-pYx" userLabel="cal_07">
                     <connections>
-                        <action selector="tap07:" destination="oZg-Ts-aUb" id="g4e-IK-pGO"/>
+                        <action selector="boyNumTap07:" destination="oZg-Ts-aUb" id="Lo3-bO-0hA"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="9iB-Dn-E58" userLabel="cal_08">
                     <connections>
-                        <action selector="tap08:" destination="oZg-Ts-aUb" id="tuW-kd-uSF"/>
+                        <action selector="boyNumTap08:" destination="oZg-Ts-aUb" id="VrF-ne-AFn"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="zl6-jk-7rV" userLabel="cal_09">
                     <connections>
-                        <action selector="tap09:" destination="oZg-Ts-aUb" id="HJb-VK-fxR"/>
+                        <action selector="boyNumTap09:" destination="oZg-Ts-aUb" id="QSH-VT-BT8"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="26V-s1-qQl" userLabel="cal_00">
                     <connections>
-                        <action selector="tap00:" destination="oZg-Ts-aUb" id="dDO-Cn-GAj"/>
+                        <action selector="boyNumTap00:" destination="oZg-Ts-aUb" id="ZdK-hN-U3K"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="VgX-wn-8Ic" userLabel="cal_AC">
                     <connections>
-                        <action selector="tapAC:" destination="oZg-Ts-aUb" id="TXg-jC-N1E"/>
+                        <action selector="boyNumTapAC:" destination="oZg-Ts-aUb" id="kHj-jf-Dmj"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="TDU-MJ-Fhq" userLabel="cal_Add">
