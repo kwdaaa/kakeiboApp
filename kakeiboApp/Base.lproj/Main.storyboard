@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ORS-Qg-Ecr">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SV8-sf-oz3">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -89,11 +89,11 @@
                                                                 <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.90000000000000002" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="選択してください" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JyS-2V-WvI">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="選択してください" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JyS-2V-WvI">
                                                                 <rect key="frame" x="114.5" y="0.0" width="159.5" height="17"/>
                                                                 <gestureRecognizers/>
                                                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="15"/>
-                                                                <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.29999999999999999" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                                                <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.90000000000000002" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
@@ -110,11 +110,11 @@
                                                                 <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.90000000000000002" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="選択してください" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gHw-Ux-oSp">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="選択してください" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gHw-Ux-oSp">
                                                                 <rect key="frame" x="114.5" y="0.0" width="159.5" height="17"/>
                                                                 <gestureRecognizers/>
                                                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="15"/>
-                                                                <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.29999999999999999" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                                                <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.90000000000000002" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
@@ -169,7 +169,6 @@
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="gSv-SA-FdZ" secondAttribute="height" multiplier="159:17" id="vud-ZX-nrP"/>
                                                                 </constraints>
-                                                                <state key="normal" title="Button"/>
                                                                 <connections>
                                                                     <action selector="pushButton:" destination="oZg-Ts-aUb" eventType="touchUpInside" id="tCL-xD-THl"/>
                                                                 </connections>
@@ -193,7 +192,6 @@
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="2em-62-JeN" secondAttribute="height" multiplier="159:17" id="don-95-EzO"/>
                                                                 </constraints>
-                                                                <state key="normal" title="Button"/>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -1134,11 +1132,11 @@
                                                                 <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.90000000000000002" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="選択してください" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y6o-92-qXc">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="選択してください" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y6o-92-qXc">
                                                                 <rect key="frame" x="114.5" y="0.0" width="159.5" height="17"/>
                                                                 <gestureRecognizers/>
                                                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="15"/>
-                                                                <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.29999999999999999" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                                                <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.90000000000000002" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                                 <connections>
                                                                     <outletCollection property="gestureRecognizers" destination="ikx-8b-qkZ" appends="YES" id="Td0-8E-Fhx"/>
@@ -1158,11 +1156,11 @@
                                                                 <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.90000000000000002" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="選択してください" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r18-lS-nE9">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="選択してください" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r18-lS-nE9">
                                                                 <rect key="frame" x="114.5" y="0.0" width="159.5" height="17"/>
                                                                 <gestureRecognizers/>
                                                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="15"/>
-                                                                <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.29999999999999999" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                                                <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.90000000000000002" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                                 <connections>
                                                                     <outletCollection property="gestureRecognizers" destination="q8g-WC-5CS" appends="YES" id="VOe-5g-gQR"/>
@@ -1220,7 +1218,6 @@
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="yDD-6J-cn9" secondAttribute="height" multiplier="159:17" id="Gn1-IX-sgS"/>
                                                                 </constraints>
-                                                                <state key="normal" title="Button"/>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -1241,7 +1238,6 @@
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="iai-9Q-aGJ" secondAttribute="height" multiplier="159:17" id="am1-EN-95J"/>
                                                                 </constraints>
-                                                                <state key="normal" title="Button"/>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
