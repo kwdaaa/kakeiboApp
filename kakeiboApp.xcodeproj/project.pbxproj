@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C201C085251F11C500511E88 /* BoyPickerViewKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C201C084251F11C500511E88 /* BoyPickerViewKeyboard.swift */; };
+		C201C087251F11FC00511E88 /* BoyPickerViewKeyboardDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C201C086251F11FC00511E88 /* BoyPickerViewKeyboardDelegate.swift */; };
 		C27199D9251E3DDC00179B01 /* ResetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27199D8251E3DDC00179B01 /* ResetViewController.swift */; };
 		C27199DB251E3DFF00179B01 /* BreakViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27199DA251E3DFF00179B01 /* BreakViewController.swift */; };
 		C278DA7A251761020068B37B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C278DA79251761020068B37B /* AppDelegate.swift */; };
@@ -40,6 +42,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C201C084251F11C500511E88 /* BoyPickerViewKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoyPickerViewKeyboard.swift; sourceTree = "<group>"; };
+		C201C086251F11FC00511E88 /* BoyPickerViewKeyboardDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoyPickerViewKeyboardDelegate.swift; sourceTree = "<group>"; };
 		C27199D8251E3DDC00179B01 /* ResetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetViewController.swift; sourceTree = "<group>"; };
 		C27199DA251E3DFF00179B01 /* BreakViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakViewController.swift; sourceTree = "<group>"; };
 		C278DA76251761010068B37B /* kakeiboApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kakeiboApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -135,6 +139,8 @@
 				C2E4894A251C2B77006B58A6 /* SetViewController.swift */,
 				C27199D8251E3DDC00179B01 /* ResetViewController.swift */,
 				C27199DA251E3DFF00179B01 /* BreakViewController.swift */,
+				C201C084251F11C500511E88 /* BoyPickerViewKeyboard.swift */,
+				C201C086251F11FC00511E88 /* BoyPickerViewKeyboardDelegate.swift */,
 			);
 			path = kakeiboApp;
 			sourceTree = "<group>";
@@ -220,6 +226,7 @@
 				C2E48939251C2A82006B58A6 /* BothDailyViewController.swift in Sources */,
 				C2E4891F251C297A006B58A6 /* BoyRegisterViewController.swift in Sources */,
 				C2E48923251C29A4006B58A6 /* BoyFoodViewController.swift in Sources */,
+				C201C087251F11FC00511E88 /* BoyPickerViewKeyboardDelegate.swift in Sources */,
 				C2E48947251C2B49006B58A6 /* GirlFinanceViewController.swift in Sources */,
 				C2E48945251C2B22006B58A6 /* BoyFinanceViewController.swift in Sources */,
 				C2E4894B251C2B77006B58A6 /* SetViewController.swift in Sources */,
@@ -232,6 +239,7 @@
 				C2E48949251C2B63006B58A6 /* testFile.swift in Sources */,
 				C2E48931251C2A31006B58A6 /* GirlLeisureViewController.swift in Sources */,
 				C2E48937251C2A71006B58A6 /* BothFoodViewController.swift in Sources */,
+				C201C085251F11C500511E88 /* BoyPickerViewKeyboard.swift in Sources */,
 				C2E48935251C2A5F006B58A6 /* GirlOthersViewController.swift in Sources */,
 				C27199DB251E3DFF00179B01 /* BreakViewController.swift in Sources */,
 				C278DA7A251761020068B37B /* AppDelegate.swift in Sources */,

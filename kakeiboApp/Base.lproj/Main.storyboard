@@ -10,7 +10,7 @@
         <!--Boy Register View Controller-->
         <scene sceneID="EKR-E5-0bh">
             <objects>
-                <viewController id="oZg-Ts-aUb" customClass="BoyRegisterViewController" customModule="kakeiboApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BoyRegister" useStoryboardIdentifierAsRestorationIdentifier="YES" id="oZg-Ts-aUb" customClass="BoyRegisterViewController" customModule="kakeiboApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2o7-x1-1DH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -95,9 +95,6 @@
                                                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="15"/>
                                                                 <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.29999999999999999" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                                                 <nil key="highlightedColor"/>
-                                                                <connections>
-                                                                    <outletCollection property="gestureRecognizers" destination="MPV-55-Fu0" appends="YES" id="fHM-AI-Fd1"/>
-                                                                </connections>
                                                             </label>
                                                         </subviews>
                                                     </stackView>
@@ -119,10 +116,82 @@
                                                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="15"/>
                                                                 <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.29999999999999999" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                                                 <nil key="highlightedColor"/>
-                                                                <connections>
-                                                                    <outletCollection property="gestureRecognizers" destination="jCv-2i-KrY" appends="YES" id="0oJ-vx-ee8"/>
-                                                                </connections>
                                                             </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="qo3-1m-Khb" userLabel="info_button">
+                                        <rect key="frame" x="70" y="108.5" width="274" height="163"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="0FC-qh-34I" userLabel="infoButton02">
+                                                <rect key="frame" x="0.0" y="0.0" width="274" height="64"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DKU-dD-2Fn">
+                                                        <rect key="frame" x="0.0" y="0.0" width="27" height="64"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="DKU-dD-2Fn" secondAttribute="height" multiplier="27:64" id="93y-xc-2Ln"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dc3-if-FRS">
+                                                        <rect key="frame" x="47" y="0.0" width="227" height="64"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="Dc3-if-FRS" secondAttribute="height" multiplier="227:64" id="olV-cj-uBJ"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="t4a-nv-avn" userLabel="infoButton01">
+                                                <rect key="frame" x="0.0" y="104" width="274" height="59"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Ido-hz-0qM" userLabel="categoryButton">
+                                                        <rect key="frame" x="0.0" y="0.0" width="274" height="17"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iad-Zd-ldG">
+                                                                <rect key="frame" x="0.0" y="0.0" width="94.5" height="17"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" secondItem="iad-Zd-ldG" secondAttribute="height" multiplier="94:17" id="hZX-2M-S2L"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gSv-SA-FdZ">
+                                                                <rect key="frame" x="114.5" y="0.0" width="159.5" height="17"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" secondItem="gSv-SA-FdZ" secondAttribute="height" multiplier="159:17" id="vud-ZX-nrP"/>
+                                                                </constraints>
+                                                                <state key="normal" title="Button"/>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="z5G-99-3WB" userLabel="dateButton">
+                                                        <rect key="frame" x="0.0" y="42" width="274" height="17"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VkH-O1-ZBo">
+                                                                <rect key="frame" x="0.0" y="0.0" width="94.5" height="17"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" secondItem="VkH-O1-ZBo" secondAttribute="height" multiplier="94:17" id="MWu-3T-vrq"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2em-62-JeN">
+                                                                <rect key="frame" x="114.5" y="0.0" width="159.5" height="17"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" secondItem="2em-62-JeN" secondAttribute="height" multiplier="159:17" id="don-95-EzO"/>
+                                                                </constraints>
+                                                                <state key="normal" title="Button"/>
+                                                            </button>
                                                         </subviews>
                                                     </stackView>
                                                 </subviews>
@@ -132,9 +201,11 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstItem="j1E-Ax-d3H" firstAttribute="centerX" secondItem="RSQ-PB-Zh8" secondAttribute="centerX" id="7tm-gX-w7Y"/>
                                     <constraint firstItem="j1E-Ax-d3H" firstAttribute="centerY" secondItem="RSQ-PB-Zh8" secondAttribute="centerY" id="KJg-Uq-Dio"/>
+                                    <constraint firstAttribute="trailing" secondItem="qo3-1m-Khb" secondAttribute="trailing" constant="70" id="Ksb-so-Yqr"/>
                                     <constraint firstItem="j1E-Ax-d3H" firstAttribute="leading" secondItem="RSQ-PB-Zh8" secondAttribute="leading" constant="70" id="UN1-8I-tSB"/>
+                                    <constraint firstItem="qo3-1m-Khb" firstAttribute="leading" secondItem="RSQ-PB-Zh8" secondAttribute="leading" constant="70" id="ZnP-6N-x28"/>
+                                    <constraint firstItem="qo3-1m-Khb" firstAttribute="centerY" secondItem="RSQ-PB-Zh8" secondAttribute="centerY" id="wWC-q4-yVl"/>
                                     <constraint firstAttribute="trailing" secondItem="j1E-Ax-d3H" secondAttribute="trailing" constant="70" id="xoo-cH-tvb"/>
                                 </constraints>
                             </view>
@@ -457,18 +528,13 @@
                         <action selector="boyAddTapWith_sender:" destination="oZg-Ts-aUb" id="9d6-R5-YIK"/>
                     </connections>
                 </tapGestureRecognizer>
-                <tapGestureRecognizer id="MPV-55-Fu0" userLabel="category_select"/>
-                <tapGestureRecognizer id="jCv-2i-KrY">
-                    <string key="userLabel">
-date_select</string>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="4632" y="850"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="iau-th-kJ6">
             <objects>
-                <viewController id="SV8-sf-oz3" customClass="HomeViewController" customModule="kakeiboApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Home" useStoryboardIdentifierAsRestorationIdentifier="YES" id="SV8-sf-oz3" customClass="HomeViewController" customModule="kakeiboApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gQX-ad-8iK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -489,7 +555,7 @@ date_select</string>
                                             <constraint firstAttribute="width" secondItem="Nzb-MT-FPq" secondAttribute="height" multiplier="1:1" id="vEN-5V-BJF"/>
                                         </constraints>
                                         <connections>
-                                            <outletCollection property="gestureRecognizers" destination="Tui-sk-btB" appends="YES" id="gxu-cy-4Mq"/>
+                                            <outletCollection property="gestureRecognizers" destination="Y6q-np-0rR" appends="YES" id="U6L-Qz-dXd"/>
                                         </connections>
                                     </imageView>
                                 </subviews>
@@ -812,57 +878,58 @@ date_select</string>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="VC4-kh-9pi" userLabel="03_tab">
                                 <rect key="frame" x="20" y="791" width="374" height="59"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tab01_.home" translatesAutoresizingMaskIntoConstraints="NO" id="gK2-3D-jLH">
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tab01_.home" translatesAutoresizingMaskIntoConstraints="NO" id="gK2-3D-jLH">
                                         <rect key="frame" x="0.0" y="0.0" width="59" height="59"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="gK2-3D-jLH" secondAttribute="height" multiplier="1:1" id="peM-Vv-dhO"/>
                                         </constraints>
                                         <connections>
-                                            <outletCollection property="gestureRecognizers" destination="EeD-EQ-aoL" appends="YES" id="NwA-Ve-XQR"/>
+                                            <outletCollection property="gestureRecognizers" destination="rwa-Rg-X2L" appends="YES" id="NcP-4U-hmc"/>
                                         </connections>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tab02_boyKakei" translatesAutoresizingMaskIntoConstraints="NO" id="d6B-R8-fg4">
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tab02_boyKakei" translatesAutoresizingMaskIntoConstraints="NO" id="d6B-R8-fg4">
                                         <rect key="frame" x="79" y="0.0" width="58.5" height="59"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="d6B-R8-fg4" secondAttribute="height" multiplier="1:1" id="SY5-KJ-XBm"/>
                                         </constraints>
                                         <connections>
-                                            <outletCollection property="gestureRecognizers" destination="HD1-Qf-Ux2" appends="YES" id="Vss-gZ-uJp"/>
+                                            <outletCollection property="gestureRecognizers" destination="g68-M7-083" appends="YES" id="Zcd-yH-MRG"/>
                                         </connections>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tab02_boyAdd" translatesAutoresizingMaskIntoConstraints="NO" id="RJR-VM-zUk">
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tab02_boyAdd" translatesAutoresizingMaskIntoConstraints="NO" id="RJR-VM-zUk">
                                         <rect key="frame" x="157.5" y="0.0" width="59" height="59"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="RJR-VM-zUk" secondAttribute="height" multiplier="1:1" id="eDw-Tq-Htl"/>
                                         </constraints>
                                         <connections>
-                                            <outletCollection property="gestureRecognizers" destination="tW1-UQ-NwS" appends="YES" id="miW-f8-v18"/>
+                                            <outletCollection property="gestureRecognizers" destination="SEz-rI-kOW" appends="YES" id="QeP-Me-ald"/>
                                         </connections>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tab02_girlKakei" translatesAutoresizingMaskIntoConstraints="NO" id="aMn-Dp-GG5">
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tab02_girlKakei" translatesAutoresizingMaskIntoConstraints="NO" id="aMn-Dp-GG5">
                                         <rect key="frame" x="236.5" y="0.0" width="58.5" height="59"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="aMn-Dp-GG5" secondAttribute="height" multiplier="1:1" id="5wn-L3-bOn"/>
                                         </constraints>
                                         <connections>
-                                            <outletCollection property="gestureRecognizers" destination="3SR-uu-Esr" appends="YES" id="NYV-eq-uhr"/>
+                                            <outletCollection property="gestureRecognizers" destination="QBq-bI-w80" appends="YES" id="x6q-8v-trk"/>
                                         </connections>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tab02_girlAdd" translatesAutoresizingMaskIntoConstraints="NO" id="0IL-At-HFp">
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tab02_girlAdd" translatesAutoresizingMaskIntoConstraints="NO" id="0IL-At-HFp">
                                         <rect key="frame" x="315" y="0.0" width="59" height="59"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="0IL-At-HFp" secondAttribute="height" multiplier="1:1" id="iJP-BU-noJ"/>
                                         </constraints>
                                         <connections>
-                                            <outletCollection property="gestureRecognizers" destination="bZ6-mz-1ta" appends="YES" id="ldX-Aa-jYB"/>
+                                            <outletCollection property="gestureRecognizers" destination="kH6-b9-69u" appends="YES" id="epa-oi-68F"/>
                                         </connections>
                                     </imageView>
                                 </subviews>
+                                <gestureRecognizers/>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -893,37 +960,77 @@ date_select</string>
                         <outlet property="bothLeisureTotalLabel" destination="bJS-p4-yey" id="mZB-qY-Vdz"/>
                         <outlet property="bothOthersTotalLabel" destination="YLK-cJ-RBJ" id="gVm-US-wp2"/>
                         <outlet property="bothTotalSumLabel" destination="GOW-s3-HYE" id="gsL-FU-yOA"/>
-                        <outlet property="tapBoyFinance" destination="d6B-R8-fg4" id="5Lr-JT-7BA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2q3-cJ-T8M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="EeD-EQ-aoL" userLabel="tab01_home"/>
-                <tapGestureRecognizer id="HD1-Qf-Ux2" userLabel="tab02_boyKakei">
+                <tapGestureRecognizer id="Y6q-np-0rR" userLabel="set">
                     <connections>
-                        <action selector="tapBoyFinance:" destination="SV8-sf-oz3" id="eUS-0F-abt"/>
+                        <action selector="tapSet:" destination="SV8-sf-oz3" id="KSn-q3-yEI"/>
+                        <segue destination="IgE-tK-Xbd" kind="presentation" modalPresentationStyle="fullScreen" id="KJb-1o-qAX"/>
                     </connections>
                 </tapGestureRecognizer>
-                <tapGestureRecognizer id="tW1-UQ-NwS" userLabel="tab02_boyAdd"/>
-                <tapGestureRecognizer id="3SR-uu-Esr" userLabel="tab02_girlKakei"/>
-                <tapGestureRecognizer id="bZ6-mz-1ta" userLabel="tab02_girlAdd"/>
-                <tapGestureRecognizer id="Tui-sk-btB" userLabel="title_04">
+                <tapGestureRecognizer id="rwa-Rg-X2L" userLabel="tab01_home">
                     <connections>
-                        <action selector="setTapWith_sender:" destination="SV8-sf-oz3" id="egV-WH-PfL"/>
+                        <action selector="tapHome:" destination="SV8-sf-oz3" id="K3g-Gq-UCE"/>
                     </connections>
                 </tapGestureRecognizer>
-                <tapGestureRecognizer id="Vv3-Yj-Lz1" userLabel="syokuhi"/>
-                <tapGestureRecognizer id="XhL-Dv-p4m" userLabel="nichiyouhinhi"/>
-                <tapGestureRecognizer id="TjN-81-wjc" userLabel="gorakuhi"/>
-                <tapGestureRecognizer id="JCf-6o-mEo" userLabel="koteihi"/>
-                <tapGestureRecognizer id="CNB-qS-oJo" userLabel="sonota"/>
-                <tapGestureRecognizer id="zJB-OU-FDf" userLabel="goukei"/>
+                <tapGestureRecognizer id="g68-M7-083" userLabel="tab02_boyKakei">
+                    <connections>
+                        <action selector="tapBoyFinance:" destination="SV8-sf-oz3" id="KPT-hG-8ia"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="SEz-rI-kOW" userLabel="tab02_boyAdd">
+                    <connections>
+                        <action selector="tapBoyRegister:" destination="SV8-sf-oz3" id="k54-HF-ZPZ"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="QBq-bI-w80" userLabel="tab02_girlKakei">
+                    <connections>
+                        <action selector="tapGirlFinance:" destination="SV8-sf-oz3" id="yRS-tN-NPF"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="kH6-b9-69u" userLabel="tab02_girlAdd">
+                    <connections>
+                        <action selector="tapGirlRegister:" destination="SV8-sf-oz3" id="6vl-43-sNz"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Vv3-Yj-Lz1" userLabel="syokuhi">
+                    <connections>
+                        <action selector="tapBothFood:" destination="SV8-sf-oz3" id="4PX-2h-1yN"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="XhL-Dv-p4m" userLabel="nichiyouhinhi">
+                    <connections>
+                        <action selector="tapBothDaily:" destination="SV8-sf-oz3" id="DfT-TU-WYq"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="TjN-81-wjc" userLabel="gorakuhi">
+                    <connections>
+                        <action selector="tapBothLeisure:" destination="SV8-sf-oz3" id="5Ow-Lu-jre"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="JCf-6o-mEo" userLabel="koteihi">
+                    <connections>
+                        <action selector="tapBothHousing:" destination="SV8-sf-oz3" id="9x2-8B-Gc4"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="CNB-qS-oJo" userLabel="sonota">
+                    <connections>
+                        <action selector="tapBothOthers:" destination="SV8-sf-oz3" id="WCm-NT-f8m"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="zJB-OU-FDf" userLabel="goukei">
+                    <connections>
+                        <action selector="tapBTotalSum:" destination="SV8-sf-oz3" id="jSc-dT-hgZ"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="3826" y="-1912"/>
         </scene>
         <!--GirlRegisterViewController-->
         <scene sceneID="HIJ-ZK-5qn">
             <objects>
-                <viewController id="xby-cB-Fhw" userLabel="GirlRegisterViewController" customClass="GirlRegisterViewController" customModule="kakeiboApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GirlRegister" useStoryboardIdentifierAsRestorationIdentifier="YES" id="xby-cB-Fhw" userLabel="GirlRegisterViewController" customClass="GirlRegisterViewController" customModule="kakeiboApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Bre-eU-Pg2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1042,11 +1149,89 @@ date_select</string>
                                             </stackView>
                                         </subviews>
                                     </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="Y5p-mB-w7Z" userLabel="info_button">
+                                        <rect key="frame" x="70" y="108.5" width="274" height="163"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="X9q-nY-z9h" userLabel="infoButton02">
+                                                <rect key="frame" x="0.0" y="0.0" width="274" height="64"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wbK-oF-1cZ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="27" height="64"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="wbK-oF-1cZ" secondAttribute="height" multiplier="27:64" id="hSi-H4-Mb0"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sXY-Ec-EPD">
+                                                        <rect key="frame" x="47" y="0.0" width="227" height="64"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="sXY-Ec-EPD" secondAttribute="height" multiplier="227:64" id="VlD-sA-8AY"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="ig8-vc-zBo" userLabel="infoButton01">
+                                                <rect key="frame" x="0.0" y="104" width="274" height="59"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="gAV-Of-zvz" userLabel="categoryButton">
+                                                        <rect key="frame" x="0.0" y="0.0" width="274" height="17"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pne-di-CRU">
+                                                                <rect key="frame" x="0.0" y="0.0" width="94.5" height="17"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" secondItem="pne-di-CRU" secondAttribute="height" multiplier="94:17" id="ezq-NR-lK3"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yDD-6J-cn9">
+                                                                <rect key="frame" x="114.5" y="0.0" width="159.5" height="17"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" secondItem="yDD-6J-cn9" secondAttribute="height" multiplier="159:17" id="Gn1-IX-sgS"/>
+                                                                </constraints>
+                                                                <state key="normal" title="Button"/>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="uHD-Aq-o4F" userLabel="dateButton">
+                                                        <rect key="frame" x="0.0" y="42" width="274" height="17"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4W6-F5-RSI">
+                                                                <rect key="frame" x="0.0" y="0.0" width="94.5" height="17"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" secondItem="4W6-F5-RSI" secondAttribute="height" multiplier="94:17" id="hq8-Qq-qo3"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iai-9Q-aGJ">
+                                                                <rect key="frame" x="114.5" y="0.0" width="159.5" height="17"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" secondItem="iai-9Q-aGJ" secondAttribute="height" multiplier="159:17" id="am1-EN-95J"/>
+                                                                </constraints>
+                                                                <state key="normal" title="Button"/>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="4fM-YW-LTf" secondAttribute="trailing" constant="70" id="ENh-uh-qeC"/>
+                                    <constraint firstAttribute="trailing" secondItem="Y5p-mB-w7Z" secondAttribute="trailing" constant="70" id="HGn-2i-zET"/>
                                     <constraint firstItem="4fM-YW-LTf" firstAttribute="centerX" secondItem="qSh-is-Xiz" secondAttribute="centerX" id="nKf-PG-XAv"/>
+                                    <constraint firstItem="Y5p-mB-w7Z" firstAttribute="centerY" secondItem="qSh-is-Xiz" secondAttribute="centerY" id="ngx-5a-heZ"/>
+                                    <constraint firstItem="Y5p-mB-w7Z" firstAttribute="leading" secondItem="qSh-is-Xiz" secondAttribute="leading" constant="70" id="qC5-PM-DPj"/>
                                     <constraint firstItem="4fM-YW-LTf" firstAttribute="centerY" secondItem="qSh-is-Xiz" secondAttribute="centerY" id="zAc-9p-gg2"/>
                                     <constraint firstItem="4fM-YW-LTf" firstAttribute="leading" secondItem="qSh-is-Xiz" secondAttribute="leading" constant="70" id="zTS-p7-avR"/>
                                 </constraints>
@@ -1378,7 +1563,7 @@ date_select</string>
         <!--Set View Controller-->
         <scene sceneID="0Tt-gf-EfB">
             <objects>
-                <viewController storyboardIdentifier="SetView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="IgE-tK-Xbd" customClass="SetViewController" customModule="kakeiboApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Set" useStoryboardIdentifierAsRestorationIdentifier="YES" id="IgE-tK-Xbd" customClass="SetViewController" customModule="kakeiboApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xDD-lK-k1S">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1386,14 +1571,14 @@ date_select</string>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LsG-YS-WR2" userLabel="01_title">
                                 <rect key="frame" x="20" y="59" width="374" height="40"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="title_back" translatesAutoresizingMaskIntoConstraints="NO" id="wVX-fG-r7Y">
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="title_back" translatesAutoresizingMaskIntoConstraints="NO" id="wVX-fG-r7Y">
                                         <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="wVX-fG-r7Y" secondAttribute="height" multiplier="1:1" id="ry5-Yl-XQW"/>
                                         </constraints>
                                         <connections>
-                                            <outletCollection property="gestureRecognizers" destination="1WE-LE-nyW" appends="YES" id="GTS-Yh-Bqq"/>
+                                            <outletCollection property="gestureRecognizers" destination="dGg-gR-ccc" appends="YES" id="4yZ-ez-kkv"/>
                                         </connections>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="title.settei02_01" translatesAutoresizingMaskIntoConstraints="NO" id="KbV-b5-jLo">
@@ -1417,7 +1602,7 @@ date_select</string>
                                                     <constraint firstAttribute="width" secondItem="U43-JR-m6R" secondAttribute="height" multiplier="1:1" id="xhx-bo-61k"/>
                                                 </constraints>
                                                 <connections>
-                                                    <outletCollection property="gestureRecognizers" destination="zIx-Qi-ZYS" appends="YES" id="2LH-zy-iXB"/>
+                                                    <outletCollection property="gestureRecognizers" destination="3ZE-8x-5qt" appends="YES" id="VUm-Yu-DbB"/>
                                                 </connections>
                                             </imageView>
                                             <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_settei_02" translatesAutoresizingMaskIntoConstraints="NO" id="07G-4h-9am">
@@ -1427,7 +1612,7 @@ date_select</string>
                                                     <constraint firstAttribute="width" secondItem="07G-4h-9am" secondAttribute="height" multiplier="1:1" id="kNt-cR-KdI"/>
                                                 </constraints>
                                                 <connections>
-                                                    <outletCollection property="gestureRecognizers" destination="h1c-lh-jbh" appends="YES" id="2kg-5a-EpI"/>
+                                                    <outletCollection property="gestureRecognizers" destination="VCV-zO-7D0" appends="YES" id="JFA-xO-C6c"/>
                                                 </connections>
                                             </imageView>
                                             <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_settei_03" translatesAutoresizingMaskIntoConstraints="NO" id="Mv7-bo-mSy">
@@ -1437,7 +1622,7 @@ date_select</string>
                                                     <constraint firstAttribute="width" secondItem="Mv7-bo-mSy" secondAttribute="height" multiplier="1:1" id="UTc-dP-gkF"/>
                                                 </constraints>
                                                 <connections>
-                                                    <outletCollection property="gestureRecognizers" destination="y7t-nJ-ZMe" appends="YES" id="LtE-QJ-jM9"/>
+                                                    <outletCollection property="gestureRecognizers" destination="Sxn-bj-Rp1" appends="YES" id="guF-Hk-orm"/>
                                                 </connections>
                                             </imageView>
                                         </subviews>
@@ -1542,34 +1727,53 @@ date_select</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="349-hd-Hta"/>
                     </view>
-                    <connections>
-                        <outlet property="tapBreak" destination="Mv7-bo-mSy" id="cg0-2u-6Cn"/>
-                        <outlet property="tapReset" destination="07G-4h-9am" id="Auh-Td-ZDf"/>
-                        <outlet property="tapShare" destination="U43-JR-m6R" id="1Od-lz-rSO"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uHl-hh-wmI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="4e8-5M-jQ7" userLabel="tab02_home"/>
-                <tapGestureRecognizer id="bYI-KN-sra" userLabel="tab02_boyKakei"/>
-                <tapGestureRecognizer id="y7k-Ww-Oj5" userLabel="tab02_boyAdd"/>
-                <tapGestureRecognizer id="ffQ-ZK-V0C" userLabel="tab02_girlKakei"/>
-                <tapGestureRecognizer id="kdL-y0-0c5" userLabel="tab02_girlAdd"/>
-                <tapGestureRecognizer id="zIx-Qi-ZYS" userLabel="icon_settei_01">
+                <tapGestureRecognizer id="dGg-gR-ccc" userLabel="title_back">
                     <connections>
-                        <action selector="tapShare:" destination="IgE-tK-Xbd" id="Wr6-8G-hhq"/>
+                        <action selector="tapBack:" destination="IgE-tK-Xbd" id="n42-kq-IXz"/>
                     </connections>
                 </tapGestureRecognizer>
-                <tapGestureRecognizer id="h1c-lh-jbh" userLabel="icon_settei_02">
+                <tapGestureRecognizer id="4e8-5M-jQ7" userLabel="tab02_home">
                     <connections>
-                        <action selector="tapReset:" destination="IgE-tK-Xbd" id="Y1P-r9-V8d"/>
+                        <action selector="tapHome:" destination="IgE-tK-Xbd" id="vsI-In-C6y"/>
                     </connections>
                 </tapGestureRecognizer>
-                <tapGestureRecognizer id="y7t-nJ-ZMe" userLabel="icon_settei_03">
+                <tapGestureRecognizer id="bYI-KN-sra" userLabel="tab02_boyKakei">
                     <connections>
-                        <action selector="tapBreak:" destination="IgE-tK-Xbd" id="cVw-De-9OL"/>
+                        <action selector="tapBoyFinance:" destination="IgE-tK-Xbd" id="0oG-81-Axu"/>
                     </connections>
                 </tapGestureRecognizer>
-                <tapGestureRecognizer id="1WE-LE-nyW" userLabel="title_back"/>
+                <tapGestureRecognizer id="y7k-Ww-Oj5" userLabel="tab02_boyAdd">
+                    <connections>
+                        <action selector="tapBoyRegister:" destination="IgE-tK-Xbd" id="xqG-bI-FDq"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="ffQ-ZK-V0C" userLabel="tab02_girlKakei">
+                    <connections>
+                        <action selector="tapGirlFinance:" destination="IgE-tK-Xbd" id="WYT-Ln-LY0"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="kdL-y0-0c5" userLabel="tab02_girlAdd">
+                    <connections>
+                        <action selector="tapGirlRegister:" destination="IgE-tK-Xbd" id="C30-hj-9oR"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="3ZE-8x-5qt" userLabel="share">
+                    <connections>
+                        <action selector="tapShare:" destination="IgE-tK-Xbd" id="Q0W-eI-ULm"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="VCV-zO-7D0" userLabel="reset">
+                    <connections>
+                        <action selector="tapReset:" destination="IgE-tK-Xbd" id="Mu8-3l-9bj"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Sxn-bj-Rp1" userLabel="break">
+                    <connections>
+                        <action selector="tapBreak:" destination="IgE-tK-Xbd" id="ncV-Sh-CxS"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="4631.884057971015" y="-1913.1696428571427"/>
         </scene>
@@ -1581,25 +1785,132 @@ date_select</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="message_reset_01" translatesAutoresizingMaskIntoConstraints="NO" id="zX2-vo-3px">
-                                <rect key="frame" x="45" y="383" width="324" height="130"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mpU-Wf-uQI">
+                                <rect key="frame" x="0.0" y="44" width="414" height="734"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="message_reset_01" translatesAutoresizingMaskIntoConstraints="NO" id="zX2-vo-3px">
+                                        <rect key="frame" x="45" y="302" width="324" height="130"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="zX2-vo-3px" secondAttribute="height" multiplier="162:65" id="VDy-Qj-6sS"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="zX2-vo-3px" secondAttribute="height" multiplier="5:2" id="284-Hc-Vei"/>
+                                    <constraint firstItem="zX2-vo-3px" firstAttribute="centerY" secondItem="mpU-Wf-uQI" secondAttribute="centerY" id="A0t-BH-cth"/>
+                                    <constraint firstItem="zX2-vo-3px" firstAttribute="leading" secondItem="mpU-Wf-uQI" secondAttribute="leading" constant="45" id="CbC-mj-Wds"/>
+                                    <constraint firstAttribute="trailing" secondItem="zX2-vo-3px" secondAttribute="trailing" constant="45" id="YQe-hK-biO"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line_04" translatesAutoresizingMaskIntoConstraints="NO" id="bDG-DC-u3f">
+                                <rect key="frame" x="0.0" y="778" width="414" height="6"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="bDG-DC-u3f" secondAttribute="height" multiplier="69:1" id="Be5-Lf-3Cs"/>
                                 </constraints>
                             </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="uh0-cn-ohT" userLabel="03_tab">
+                                <rect key="frame" x="20" y="791" width="374" height="59"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tab02_home" translatesAutoresizingMaskIntoConstraints="NO" id="bdb-CB-K1h">
+                                        <rect key="frame" x="0.0" y="0.0" width="59" height="59"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="bdb-CB-K1h" secondAttribute="height" multiplier="1:1" id="iRd-EL-BcP"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="9WS-nw-nnK" appends="YES" id="AAC-fi-x1I"/>
+                                        </connections>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tab02_boyKakei" translatesAutoresizingMaskIntoConstraints="NO" id="sCy-hC-Rk4">
+                                        <rect key="frame" x="79" y="0.0" width="58.5" height="59"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="sCy-hC-Rk4" secondAttribute="height" multiplier="1:1" id="xgb-Y6-uUt"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="Hej-Sp-lKA" appends="YES" id="GN7-MI-kfi"/>
+                                        </connections>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tab02_boyAdd" translatesAutoresizingMaskIntoConstraints="NO" id="paS-Ph-rtN">
+                                        <rect key="frame" x="157.5" y="0.0" width="59" height="59"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="paS-Ph-rtN" secondAttribute="height" multiplier="1:1" id="H1Z-JX-8dA"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="lv7-FJ-8lG" appends="YES" id="2uV-Ym-Cyt"/>
+                                        </connections>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tab02_girlKakei" translatesAutoresizingMaskIntoConstraints="NO" id="8Uq-Uy-JRo">
+                                        <rect key="frame" x="236.5" y="0.0" width="58.5" height="59"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="8Uq-Uy-JRo" secondAttribute="height" multiplier="1:1" id="O6k-ru-gfy"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="Asp-Ht-D8g" appends="YES" id="g2V-fL-n71"/>
+                                        </connections>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tab02_girlAdd" translatesAutoresizingMaskIntoConstraints="NO" id="ALC-ON-qJv">
+                                        <rect key="frame" x="315" y="0.0" width="59" height="59"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="ALC-ON-qJv" secondAttribute="height" multiplier="1:1" id="sBx-EV-1Ju"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="ShL-gB-pFd" appends="YES" id="mZE-9G-Z4s"/>
+                                        </connections>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="zX2-vo-3px" firstAttribute="leading" secondItem="T0Y-Ja-lfh" secondAttribute="leading" constant="45" id="7a7-e3-73j"/>
-                            <constraint firstItem="zX2-vo-3px" firstAttribute="centerY" secondItem="Ubv-Us-8Ki" secondAttribute="centerY" id="Wkh-rX-3Dc"/>
-                            <constraint firstItem="T0Y-Ja-lfh" firstAttribute="trailing" secondItem="zX2-vo-3px" secondAttribute="trailing" constant="45" id="rWm-Uq-eRX"/>
+                            <constraint firstItem="uh0-cn-ohT" firstAttribute="top" secondItem="bDG-DC-u3f" secondAttribute="bottom" constant="7" id="75G-zk-XwD"/>
+                            <constraint firstItem="T0Y-Ja-lfh" firstAttribute="bottom" secondItem="uh0-cn-ohT" secondAttribute="bottom" constant="12" id="9Da-LJ-tFq"/>
+                            <constraint firstItem="mpU-Wf-uQI" firstAttribute="top" secondItem="T0Y-Ja-lfh" secondAttribute="top" id="Ahu-cj-egQ"/>
+                            <constraint firstItem="uh0-cn-ohT" firstAttribute="leading" secondItem="T0Y-Ja-lfh" secondAttribute="leading" constant="20" id="IZr-Qp-67v"/>
+                            <constraint firstAttribute="trailing" secondItem="uh0-cn-ohT" secondAttribute="trailing" constant="20" id="ODB-Wn-p8X"/>
+                            <constraint firstItem="T0Y-Ja-lfh" firstAttribute="trailing" secondItem="mpU-Wf-uQI" secondAttribute="trailing" id="PO3-5e-VKo"/>
+                            <constraint firstItem="bDG-DC-u3f" firstAttribute="leading" secondItem="T0Y-Ja-lfh" secondAttribute="leading" id="V7U-3D-84Z"/>
+                            <constraint firstItem="mpU-Wf-uQI" firstAttribute="leading" secondItem="T0Y-Ja-lfh" secondAttribute="leading" id="WRR-PW-kvV"/>
+                            <constraint firstAttribute="trailing" secondItem="bDG-DC-u3f" secondAttribute="trailing" id="c7C-at-L6s"/>
+                            <constraint firstItem="bDG-DC-u3f" firstAttribute="top" secondItem="mpU-Wf-uQI" secondAttribute="bottom" id="uyT-dc-lkv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="T0Y-Ja-lfh"/>
                     </view>
+                    <connections>
+                        <outlet property="imageview" destination="zX2-vo-3px" id="eEn-zP-nJV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="76T-4o-96M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="9WS-nw-nnK" userLabel="tab02_home">
+                    <connections>
+                        <action selector="tapHome:" destination="o6I-xt-QPj" id="9LE-kj-UJC"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Hej-Sp-lKA" userLabel="tab02_boyKakei">
+                    <connections>
+                        <action selector="tapBoyFinance:" destination="o6I-xt-QPj" id="aWI-xu-sdd"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="lv7-FJ-8lG" userLabel="tab02_boyAdd">
+                    <connections>
+                        <action selector="tapBoyRegister:" destination="o6I-xt-QPj" id="BqT-aa-k6Z"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Asp-Ht-D8g" userLabel="tab02_girlKakei">
+                    <connections>
+                        <action selector="tapGirlFinance:" destination="o6I-xt-QPj" id="Ghm-ro-aS7"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="ShL-gB-pFd" userLabel="tab02_girlAdd">
+                    <connections>
+                        <action selector="tapGirlRegister:" destination="o6I-xt-QPj" id="eNa-NJ-TYa"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="5432" y="-1913"/>
+            <point key="canvasLocation" x="5431.884057971015" y="-1913.1696428571427"/>
         </scene>
         <!--Boy Food View Controller-->
         <scene sceneID="WBj-Sq-mpQ">
@@ -4088,7 +4399,7 @@ date_select</string>
         <!--Both Food View Controller-->
         <scene sceneID="EHS-gX-xPL">
             <objects>
-                <viewController id="DB6-Tm-EJi" customClass="BothFoodViewController" customModule="kakeiboApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BothFood" useStoryboardIdentifierAsRestorationIdentifier="YES" id="DB6-Tm-EJi" customClass="BothFoodViewController" customModule="kakeiboApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jZa-nP-lWX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -4294,19 +4605,43 @@ date_select</string>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bvc-3D-IcW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="mRK-Qi-f8R" userLabel="tab02_home"/>
-                <tapGestureRecognizer id="k0h-dL-dQX" userLabel="tab02_boyKakei"/>
-                <tapGestureRecognizer id="Fgo-DQ-gMQ" userLabel="tab02_boyAdd"/>
-                <tapGestureRecognizer id="9cF-LC-8Pk" userLabel="tab02_girlKakei"/>
-                <tapGestureRecognizer id="Qh0-en-QU9" userLabel="tab02_girlAdd"/>
-                <tapGestureRecognizer id="HCg-L9-R7Z" userLabel="title_back"/>
+                <tapGestureRecognizer id="HCg-L9-R7Z" userLabel="title_back">
+                    <connections>
+                        <action selector="tapBack:" destination="DB6-Tm-EJi" id="OnF-Yf-dAW"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="mRK-Qi-f8R" userLabel="tab02_home">
+                    <connections>
+                        <action selector="tapHome:" destination="DB6-Tm-EJi" id="fjr-Ve-rMw"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="k0h-dL-dQX" userLabel="tab02_boyKakei">
+                    <connections>
+                        <action selector="tapBoyFinance:" destination="DB6-Tm-EJi" id="BxF-XV-eVZ"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Fgo-DQ-gMQ" userLabel="tab02_boyAdd">
+                    <connections>
+                        <action selector="tapBoyRegister:" destination="DB6-Tm-EJi" id="HLW-4u-Uz7"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="9cF-LC-8Pk" userLabel="tab02_girlKakei">
+                    <connections>
+                        <action selector="tapGirlFinance:" destination="DB6-Tm-EJi" id="6eq-CW-i6o"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Qh0-en-QU9" userLabel="tab02_girlAdd">
+                    <connections>
+                        <action selector="tapGirlRegister:" destination="DB6-Tm-EJi" id="fwc-cX-g9Y"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="4631.884057971015" y="-479.46428571428567"/>
         </scene>
         <!--Both Daily View Controller-->
         <scene sceneID="cn2-5G-rUi">
             <objects>
-                <viewController id="KE4-xO-A4Y" customClass="BothDailyViewController" customModule="kakeiboApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BothDaily" useStoryboardIdentifierAsRestorationIdentifier="YES" id="KE4-xO-A4Y" customClass="BothDailyViewController" customModule="kakeiboApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8Z1-KX-zrR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -4513,19 +4848,43 @@ date_select</string>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hOR-3o-NUI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="8dz-gB-Stt" userLabel="tab02_home"/>
-                <tapGestureRecognizer id="hTs-p6-KmU" userLabel="tab02_boyKakei"/>
-                <tapGestureRecognizer id="K0Y-b1-17r" userLabel="tab02_boyAdd"/>
-                <tapGestureRecognizer id="tUZ-Tj-09w" userLabel="tab02_girlKakei"/>
-                <tapGestureRecognizer id="Q4T-lF-8NM" userLabel="tab02_girlAdd"/>
-                <tapGestureRecognizer id="wSh-h3-flG" userLabel="title_back"/>
+                <tapGestureRecognizer id="wSh-h3-flG" userLabel="title_back">
+                    <connections>
+                        <action selector="tapBack:" destination="KE4-xO-A4Y" id="BZK-J8-98i"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="8dz-gB-Stt" userLabel="tab02_home">
+                    <connections>
+                        <action selector="tapHome:" destination="KE4-xO-A4Y" id="Dfd-OL-5Ve"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="hTs-p6-KmU" userLabel="tab02_boyKakei">
+                    <connections>
+                        <action selector="tapBoyFinance:" destination="KE4-xO-A4Y" id="RBg-Iy-VPd"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="K0Y-b1-17r" userLabel="tab02_boyAdd">
+                    <connections>
+                        <action selector="tapBoyRegister:" destination="KE4-xO-A4Y" id="69A-53-ykD"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="tUZ-Tj-09w" userLabel="tab02_girlKakei">
+                    <connections>
+                        <action selector="tapGirlFinance:" destination="KE4-xO-A4Y" id="yXh-9g-DcO"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Q4T-lF-8NM" userLabel="tab02_girlAdd">
+                    <connections>
+                        <action selector="tapGirlRegister:" destination="KE4-xO-A4Y" id="8OZ-b9-iqA"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="5432" y="-479"/>
         </scene>
         <!--Both Leisure View Controller-->
         <scene sceneID="M9b-1D-2QD">
             <objects>
-                <viewController id="tNg-yJ-zaf" customClass="BothLeisureViewController" customModule="kakeiboApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BothLeisure" useStoryboardIdentifierAsRestorationIdentifier="YES" id="tNg-yJ-zaf" customClass="BothLeisureViewController" customModule="kakeiboApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8do-SN-amd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -4539,9 +4898,6 @@ date_select</string>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="dz4-AS-c4c" secondAttribute="height" multiplier="1:1" id="3EK-Ho-wGx"/>
                                         </constraints>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="kxw-Oh-Ak9" appends="YES" id="vr1-0u-jNe"/>
-                                        </connections>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="title_uchiwake2_03" translatesAutoresizingMaskIntoConstraints="NO" id="odg-BY-FIm">
                                         <rect key="frame" x="40" y="0.0" width="334" height="40"/>
@@ -4657,9 +5013,6 @@ date_select</string>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="a3q-yG-2IP" secondAttribute="height" multiplier="1:1" id="P2v-z5-Krj"/>
                                         </constraints>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="6Ka-62-my7" appends="YES" id="bqO-uE-DHT"/>
-                                        </connections>
                                     </imageView>
                                     <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tab02_boyKakei" translatesAutoresizingMaskIntoConstraints="NO" id="ZAY-R6-qfn">
                                         <rect key="frame" x="79" y="0.0" width="58.5" height="59"/>
@@ -4667,9 +5020,6 @@ date_select</string>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="ZAY-R6-qfn" secondAttribute="height" multiplier="1:1" id="g9b-q0-OmG"/>
                                         </constraints>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="WVT-nO-cmc" appends="YES" id="l3F-uH-3xH"/>
-                                        </connections>
                                     </imageView>
                                     <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tab02_boyAdd" translatesAutoresizingMaskIntoConstraints="NO" id="ovo-fs-TFG">
                                         <rect key="frame" x="157.5" y="0.0" width="59" height="59"/>
@@ -4677,9 +5027,6 @@ date_select</string>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="ovo-fs-TFG" secondAttribute="height" multiplier="1:1" id="6g7-q5-out"/>
                                         </constraints>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="gHy-nt-urL" appends="YES" id="BrA-Mp-z0Q"/>
-                                        </connections>
                                     </imageView>
                                     <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tab02_girlKakei" translatesAutoresizingMaskIntoConstraints="NO" id="lkO-5D-FCJ">
                                         <rect key="frame" x="236.5" y="0.0" width="58.5" height="59"/>
@@ -4697,9 +5044,6 @@ date_select</string>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="edf-BA-ifQ" secondAttribute="height" multiplier="1:1" id="XO1-ei-GdZ"/>
                                         </constraints>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="Jdb-vt-eys" appends="YES" id="ojw-6l-ZBL"/>
-                                        </connections>
                                     </imageView>
                                 </subviews>
                             </stackView>
@@ -4733,19 +5077,43 @@ date_select</string>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Anb-SD-dpu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="6Ka-62-my7" userLabel="tab02_home"/>
-                <tapGestureRecognizer id="WVT-nO-cmc" userLabel="tab02_boyKakei"/>
-                <tapGestureRecognizer id="gHy-nt-urL" userLabel="tab02_boyAdd"/>
-                <tapGestureRecognizer id="JTy-Q5-rA9" userLabel="tab02_girlKakei"/>
-                <tapGestureRecognizer id="Jdb-vt-eys" userLabel="tab02_girlAdd"/>
-                <tapGestureRecognizer id="kxw-Oh-Ak9" userLabel="title_back"/>
+                <tapGestureRecognizer id="kxw-Oh-Ak9" userLabel="title_back">
+                    <connections>
+                        <action selector="tapBack:" destination="tNg-yJ-zaf" id="gLw-n5-Lda"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="6Ka-62-my7" userLabel="tab02_home">
+                    <connections>
+                        <action selector="tapHome:" destination="tNg-yJ-zaf" id="rgA-js-FNC"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="WVT-nO-cmc" userLabel="tab02_boyKakei">
+                    <connections>
+                        <action selector="tapBoyFinance:" destination="tNg-yJ-zaf" id="Mn2-ak-z1Y"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="gHy-nt-urL" userLabel="tab02_boyAdd">
+                    <connections>
+                        <action selector="tapBoyRegister:" destination="tNg-yJ-zaf" id="h2f-vg-o1q"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="JTy-Q5-rA9" userLabel="tab02_girlKakei">
+                    <connections>
+                        <action selector="tapGirlFinance:" destination="tNg-yJ-zaf" id="aE8-Pr-Q94"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Jdb-vt-eys" userLabel="tab02_girlAdd">
+                    <connections>
+                        <action selector="tapGirlRegister:" destination="tNg-yJ-zaf" id="isC-rK-5Xa"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="6227.536231884058" y="-479.46428571428567"/>
         </scene>
         <!--Both Housing View Controller-->
         <scene sceneID="dnQ-OL-mXo">
             <objects>
-                <viewController id="aiY-oC-US9" customClass="BothHousingViewController" customModule="kakeiboApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="aiY-oC-US9" customClass="BothHousingViewController" customModule="kakeiboApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4fv-Ew-AOV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -4952,19 +5320,43 @@ date_select</string>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RpO-Bj-Upd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="29J-Mb-hm0" userLabel="tab02_home"/>
-                <tapGestureRecognizer id="Kl6-pD-kum" userLabel="tab02_boyKakei"/>
-                <tapGestureRecognizer id="Toe-3w-2tQ" userLabel="tab02_boyAdd"/>
-                <tapGestureRecognizer id="bGi-iq-Nrc" userLabel="tab02_girlKakei"/>
-                <tapGestureRecognizer id="zLb-KI-6cb" userLabel="tab02_girlAdd"/>
-                <tapGestureRecognizer id="KHt-mn-MpN" userLabel="title_back"/>
+                <tapGestureRecognizer id="KHt-mn-MpN" userLabel="title_back">
+                    <connections>
+                        <action selector="tapBack:" destination="aiY-oC-US9" id="4GW-GG-YoB"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="29J-Mb-hm0" userLabel="tab02_home">
+                    <connections>
+                        <action selector="tapHome:" destination="aiY-oC-US9" id="Eu2-cz-YiN"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Kl6-pD-kum" userLabel="tab02_boyKakei">
+                    <connections>
+                        <action selector="tapBoyFinance:" destination="aiY-oC-US9" id="swg-th-Pci"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Toe-3w-2tQ" userLabel="tab02_boyAdd">
+                    <connections>
+                        <action selector="tapBoyRegister:" destination="aiY-oC-US9" id="Itq-7h-Xwg"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="bGi-iq-Nrc" userLabel="tab02_girlKakei">
+                    <connections>
+                        <action selector="tapGirlFinance:" destination="aiY-oC-US9" id="8dp-uk-tTi"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="zLb-KI-6cb" userLabel="tab02_girlAdd">
+                    <connections>
+                        <action selector="tapGirlRegister:" destination="aiY-oC-US9" id="YRa-P2-6ZO"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="7022" y="-479"/>
         </scene>
         <!--Both OthersView Controller-->
         <scene sceneID="1nj-kI-1hs">
             <objects>
-                <viewController id="Tc7-aK-lv5" userLabel="Both OthersView Controller" customClass="BothOthersViewController" customModule="kakeiboApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BothHousing" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Tc7-aK-lv5" userLabel="Both OthersView Controller" customClass="BothOthersViewController" customModule="kakeiboApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZxM-MD-gmG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -5171,19 +5563,43 @@ date_select</string>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="305-eE-dBw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="BGh-SL-kbk" userLabel="tab02_home"/>
-                <tapGestureRecognizer id="yzo-dY-YbE" userLabel="tab02_boyKakei"/>
-                <tapGestureRecognizer id="yON-y2-OHE" userLabel="tab02_boyAdd"/>
-                <tapGestureRecognizer id="Q87-KV-bHh" userLabel="tab02_girlKakei"/>
-                <tapGestureRecognizer id="Hxa-Kz-BTO" userLabel="tab02_girlAdd"/>
-                <tapGestureRecognizer id="e42-ug-dA2" userLabel="title_back"/>
+                <tapGestureRecognizer id="e42-ug-dA2" userLabel="title_back">
+                    <connections>
+                        <action selector="tapBack:" destination="Tc7-aK-lv5" id="tN7-Ni-zkE"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="BGh-SL-kbk" userLabel="tab02_home">
+                    <connections>
+                        <action selector="tapHome:" destination="Tc7-aK-lv5" id="qDg-xg-4yy"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="yzo-dY-YbE" userLabel="tab02_boyKakei">
+                    <connections>
+                        <action selector="tapBoyFinance:" destination="Tc7-aK-lv5" id="bIJ-W0-Rsx"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="yON-y2-OHE" userLabel="tab02_boyAdd">
+                    <connections>
+                        <action selector="tapBoyRegister:" destination="Tc7-aK-lv5" id="i2X-ff-IZk"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Q87-KV-bHh" userLabel="tab02_girlKakei">
+                    <connections>
+                        <action selector="tapGirlFinance:" destination="Tc7-aK-lv5" id="jLc-Fg-xpb"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Hxa-Kz-BTO" userLabel="tab02_girlAdd">
+                    <connections>
+                        <action selector="tapGirlRegister:" destination="Tc7-aK-lv5" id="7G5-sl-CIz"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="7777" y="-479"/>
         </scene>
         <!--Both Total Sum View Controller-->
         <scene sceneID="Hd8-io-rxB">
             <objects>
-                <viewController id="ZTA-n0-Fyi" customClass="BothTotalSumViewController" customModule="kakeiboApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BothTotalSum" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ZTA-n0-Fyi" customClass="BothTotalSumViewController" customModule="kakeiboApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Sqx-ln-4Qx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -5390,12 +5806,36 @@ date_select</string>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A8N-8a-krX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="266-Pi-L0M" userLabel="tab02_home"/>
-                <tapGestureRecognizer id="Wli-0r-DO5" userLabel="tab02_boyKakei"/>
-                <tapGestureRecognizer id="11y-Nu-Coz" userLabel="tab02_boyAdd"/>
-                <tapGestureRecognizer id="yxG-gS-C0c" userLabel="tab02_girkKakei"/>
-                <tapGestureRecognizer id="bMH-LG-4gs" userLabel="tab02_girlAdd"/>
-                <tapGestureRecognizer id="PGv-wO-Ue5" userLabel="title_back"/>
+                <tapGestureRecognizer id="PGv-wO-Ue5" userLabel="title_back">
+                    <connections>
+                        <action selector="tapBack:" destination="ZTA-n0-Fyi" id="5Db-Vk-G5g"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="266-Pi-L0M" userLabel="tab02_home">
+                    <connections>
+                        <action selector="tapHome:" destination="ZTA-n0-Fyi" id="d7q-IN-9mS"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Wli-0r-DO5" userLabel="tab02_boyKakei">
+                    <connections>
+                        <action selector="tapBoyFinance:" destination="ZTA-n0-Fyi" id="YFb-ah-8UM"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="11y-Nu-Coz" userLabel="tab02_boyAdd">
+                    <connections>
+                        <action selector="tapBoyRegister:" destination="ZTA-n0-Fyi" id="rjl-A5-JqO"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="yxG-gS-C0c" userLabel="tab02_girkKakei">
+                    <connections>
+                        <action selector="tapGirlFinance:" destination="ZTA-n0-Fyi" id="5kA-ea-g4w"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="bMH-LG-4gs" userLabel="tab02_girlAdd">
+                    <connections>
+                        <action selector="tapGirlRegister:" destination="ZTA-n0-Fyi" id="Nqj-TD-VS3"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="8541" y="-479"/>
         </scene>
@@ -5407,23 +5847,110 @@ date_select</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="message_hakyoku_01" translatesAutoresizingMaskIntoConstraints="NO" id="Y3U-w9-kim">
-                                <rect key="frame" x="45" y="383" width="324" height="130"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xmz-m1-6ii">
+                                <rect key="frame" x="0.0" y="44" width="414" height="736"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="message_hakyoku_01" translatesAutoresizingMaskIntoConstraints="NO" id="b7g-Gd-TwL">
+                                        <rect key="frame" x="45" y="303" width="324" height="130"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="130" id="lSg-F4-137"/>
+                                            <constraint firstAttribute="width" secondItem="b7g-Gd-TwL" secondAttribute="height" multiplier="162:65" id="zU4-TN-Dfb"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="b7g-Gd-TwL" firstAttribute="leading" secondItem="Xmz-m1-6ii" secondAttribute="leading" constant="45" id="cfd-jT-Ti8"/>
+                                    <constraint firstItem="b7g-Gd-TwL" firstAttribute="centerY" secondItem="Xmz-m1-6ii" secondAttribute="centerY" id="nJz-q0-qDK"/>
+                                    <constraint firstAttribute="trailing" secondItem="b7g-Gd-TwL" secondAttribute="trailing" constant="45" id="pfB-y2-Rt1"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line_04" translatesAutoresizingMaskIntoConstraints="NO" id="bjb-S4-l1o">
+                                <rect key="frame" x="0.0" y="780" width="414" height="6"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="bjb-S4-l1o" secondAttribute="height" multiplier="69:1" id="UZ0-lN-3To"/>
+                                </constraints>
                             </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="cZt-A3-tWT" userLabel="03_tab">
+                                <rect key="frame" x="20" y="793" width="364" height="57"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tab02_home" translatesAutoresizingMaskIntoConstraints="NO" id="Phf-IW-Sga">
+                                        <rect key="frame" x="0.0" y="0.0" width="57" height="57"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Phf-IW-Sga" secondAttribute="height" multiplier="1:1" id="Sm0-gu-eKh"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="qfy-bK-bXh" appends="YES" id="boq-w4-8XV"/>
+                                        </connections>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tab02_boyKakei" translatesAutoresizingMaskIntoConstraints="NO" id="v3U-eT-0sn">
+                                        <rect key="frame" x="77" y="0.0" width="56.5" height="57"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="v3U-eT-0sn" secondAttribute="height" multiplier="1:1" id="FQW-oE-IU1"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="2Ix-K5-cW7" appends="YES" id="PDE-9s-zus"/>
+                                        </connections>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tab02_boyAdd" translatesAutoresizingMaskIntoConstraints="NO" id="dxJ-Ca-ram">
+                                        <rect key="frame" x="153.5" y="0.0" width="57" height="57"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="dxJ-Ca-ram" secondAttribute="height" multiplier="1:1" id="dzb-eK-E2P"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="l56-4i-nih" appends="YES" id="jpD-it-BZQ"/>
+                                        </connections>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tab02_girlKakei" translatesAutoresizingMaskIntoConstraints="NO" id="6ok-Za-PwP">
+                                        <rect key="frame" x="230.5" y="0.0" width="56.5" height="57"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="6ok-Za-PwP" secondAttribute="height" multiplier="1:1" id="q9y-M8-kkb"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="x99-M3-KrY" appends="YES" id="r8N-Ub-TMp"/>
+                                        </connections>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tab02_girlAdd" translatesAutoresizingMaskIntoConstraints="NO" id="6gt-gS-lM9">
+                                        <rect key="frame" x="307" y="0.0" width="57" height="57"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="6gt-gS-lM9" secondAttribute="height" multiplier="1:1" id="Iee-av-KAe"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="dXT-xs-tAh" appends="YES" id="6et-dp-yfA"/>
+                                        </connections>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="Y3U-w9-kim" firstAttribute="leading" secondItem="2xv-Jx-rg1" secondAttribute="leading" constant="45" id="CtA-6v-zee"/>
-                            <constraint firstItem="Y3U-w9-kim" firstAttribute="centerY" secondItem="X9n-Wa-uY6" secondAttribute="centerY" id="G3O-Iy-YhP"/>
-                            <constraint firstItem="2xv-Jx-rg1" firstAttribute="trailing" secondItem="Y3U-w9-kim" secondAttribute="trailing" constant="45" id="GVJ-hM-o2O"/>
-                            <constraint firstItem="Y3U-w9-kim" firstAttribute="width" secondItem="Y3U-w9-kim" secondAttribute="height" multiplier="5:2" id="kBA-nX-kqB"/>
+                            <constraint firstItem="bjb-S4-l1o" firstAttribute="trailing" secondItem="2xv-Jx-rg1" secondAttribute="trailing" id="5f4-iP-awz"/>
+                            <constraint firstItem="cZt-A3-tWT" firstAttribute="top" secondItem="bjb-S4-l1o" secondAttribute="bottom" constant="7" id="6jh-yK-aJr"/>
+                            <constraint firstItem="bjb-S4-l1o" firstAttribute="leading" secondItem="2xv-Jx-rg1" secondAttribute="leading" id="EYD-k0-laG"/>
+                            <constraint firstItem="Xmz-m1-6ii" firstAttribute="leading" secondItem="2xv-Jx-rg1" secondAttribute="leading" id="FpP-Js-CAJ"/>
+                            <constraint firstItem="2xv-Jx-rg1" firstAttribute="bottom" secondItem="cZt-A3-tWT" secondAttribute="bottom" constant="12" id="JwQ-DX-jWk"/>
+                            <constraint firstAttribute="trailing" secondItem="cZt-A3-tWT" secondAttribute="trailing" constant="30" id="NL4-N1-vFx"/>
+                            <constraint firstItem="Xmz-m1-6ii" firstAttribute="top" secondItem="2xv-Jx-rg1" secondAttribute="top" id="WIP-RZ-QSO"/>
+                            <constraint firstItem="Xmz-m1-6ii" firstAttribute="trailing" secondItem="2xv-Jx-rg1" secondAttribute="trailing" id="rC5-C8-bcd"/>
+                            <constraint firstItem="bjb-S4-l1o" firstAttribute="top" secondItem="Xmz-m1-6ii" secondAttribute="bottom" id="vaV-ke-NhK"/>
+                            <constraint firstItem="cZt-A3-tWT" firstAttribute="leading" secondItem="2xv-Jx-rg1" secondAttribute="leading" constant="20" id="vyZ-Wi-JbB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2xv-Jx-rg1"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eGl-W3-8jr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="qfy-bK-bXh" userLabel="tab02_home"/>
+                <tapGestureRecognizer id="2Ix-K5-cW7" userLabel="tab02_boyKakei"/>
+                <tapGestureRecognizer id="l56-4i-nih" userLabel="tab02_boyAdd"/>
+                <tapGestureRecognizer id="x99-M3-KrY" userLabel="tab02_girlKakei"/>
+                <tapGestureRecognizer id="dXT-xs-tAh" userLabel="tab02_girlAdd"/>
             </objects>
-            <point key="canvasLocation" x="5432" y="-1250"/>
+            <point key="canvasLocation" x="5431.884057971015" y="-1250.2232142857142"/>
         </scene>
     </scenes>
     <resources>

@@ -53,6 +53,7 @@ class BoyFinanceViewController: UIViewController {
     //    ここからは、タップジェスチャーからの画面遷移
     //        食費に画面遷移
     @IBAction func boyFinanceTap(_sender:UITapGestureRecognizer){
+        
         let BoyFoodViewController = self.storyboard?.instantiateViewController(withIdentifier: "BoyFood") as! BoyFoodViewController
         self.present(BoyFoodViewController, animated: true, completion: nil)
     }

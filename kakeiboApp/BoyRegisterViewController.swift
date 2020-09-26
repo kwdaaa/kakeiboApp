@@ -8,12 +8,18 @@
 
 import UIKit
 
-class BoyRegisterViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
+class BoyRegisterViewController: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        boyCategoryPicker.delegate = self
-        boyCategoryPicker.dataSource = self
+        pickerView.delegate = self
+        pickerView.dataSource = self
+        
+        super.viewDidLoad()
+               pickerView = UIPickerView()
+               pickerView.delegate = self
+               pickerView.dataSource = self
+               
         
     }
     
@@ -21,57 +27,14 @@ class BoyRegisterViewController: UIViewController,UIPickerViewDelegate,UIPickerV
         //        初めは、金額のとこ0 が表示されている。
         boyRegisterLabel.text = "0"
         //        初めは、カテゴリーのラベルのところは、何も表示しない
-        boyCategoryLabel.text = "カテゴリーを選択してください。"
+        textLabel.text = "カテゴリーを選択してください。"
         
     }
     
     
     //金額が表示されるラベル
     @IBOutlet var boyRegisterLabel:UILabel!
-    //    カテゴリーを選択するピッカー
-    @IBOutlet var boyCategoryPicker:UIPickerView!
-    //    ピッカーの値を反映させるラベル
-    @IBOutlet var boyCategoryLabel:UILabel!
-    //カテゴリー選択時に使うボタン
-    @IBAction func boyCategoryTap(_sender:UIButton!){
-        //        ここを押したらピッカーが出てくる
-    }
-    
-    
-    //ピッカーの配列を持ってくる　testFileから
-    let boyArray = categoryStruct()
-    
-    //    let categoryArray = ["食費","日用品","娯楽費","固定費","その他"]
-    
-    //    ピッカーの列数
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    //    ピッカーの中身の数
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return boyArray.categoryArray.count
-    }
-    //    ピッカーのタイトルを取得
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        
-        return boyArray.categoryArray[row]
-        
-    }
-    //    選択されたピッカーの値を取得
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        
-        var boySelected = boyArray.categoryArray[row]
-        
-        //        ラベルにピッカーの値を表示する　　doneを押してから！！！！これ違う
-        boyCategoryLabel.text = boySelected
-        
-        //       メソッド外の変数に渡す
-        boySelected = boySelectedCategory
-        
-    }
-    
-    //  選択されたピッカーの値を取得する変数
-    var boySelectedCategory: String = ""
+      
     
     //    数字のボタンが押されたら、boyRegisterLabelに表示する
     //    ここには、ボタンの0から９とACを紐付ける。追加ボタンは別 タップジェスチャー
@@ -121,35 +84,7 @@ class BoyRegisterViewController: UIViewController,UIPickerViewDelegate,UIPickerV
          boyRegisterLabel.text = ""
     }
     
-    
-    
-    //         @IBAction func boyNumTap(_ sender:
-//        UITapGestureRecognizer) {
-//        switch sender.titleLabel?.text  {
-//        case "0":
-//            boyRegisterLabel.text = String(0)
-//        case "1":
-//            boyRegisterLabel.text = String(1)
-//        case "2":
-//            boyRegisterLabel.text = String(2)
-//        case "3":
-//            boyRegisterLabel.text = String(3)
-//        case "4":
-//            boyRegisterLabel.text = String(4)
-//        case "5":
-//            boyRegisterLabel.text = String(5)
-//        case "6":
-//            boyRegisterLabel.text = String(6)
-//        case "7":
-//            boyRegisterLabel.text = String(7)
-//        case "8":
-//            boyRegisterLabel.text = String(8)
-//        case "9":
-//            boyRegisterLabel.text = String(9)
-//        default:
-//            boyRegisterLabel.text  = String("")
-//        }
-//    }
+
     
     //    登録ボタン
     @IBAction func boyAddTap(_sender:UITapGestureRecognizer!){
@@ -157,7 +92,7 @@ class BoyRegisterViewController: UIViewController,UIPickerViewDelegate,UIPickerV
             boyRegisterLabel.text = "金額を入力してください。"
         }else{
             
-            switch boySelectedCategory {
+            switch selectedCategory {
                 //           pickerで取得した値で条件分岐
                 //            金額と日付を保存
             //            画面遷移
@@ -192,14 +127,129 @@ class BoyRegisterViewController: UIViewController,UIPickerViewDelegate,UIPickerV
                 self.present(BoyHousingViewController,animated: true,completion: nil)
                 
                 
-            default:
+            case "そ の 他":
                 UserDefaults.standard.set(boyRegisterLabel.text, forKey: "boyothers")
                 //                画面遷移
                 
                 let BoyOthersViewController = self.storyboard?.instantiateViewController(withIdentifier: "Boyothers") as! BoyOthersViewController
                 self.present(BoyOthersViewController,animated: true,completion: nil)
-                
+            
+            default:
+                textLabel.text = "選択してください。"
             }
         }
     }
+    
+    @IBOutlet var textLabel:UILabel!
+    
+    var pickerView: UIPickerView!
+    
+    var selectedRow = 0
+    
+    var selectedCategory:String = "選択してください。"
+    
+
+    
+    let categoryArray = ["食  費","日 用 品","娯 楽 費","固 定 費","そ の 他"]
+    
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return categoryArray.count
+    }
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return categoryArray[row]
+    }
+    
+    
+    
+
+
+    //    選んだ値を取得
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        
+        selectedRow = row
+        
+    }
+    
+    
+    
+    
+    
+    func didCancel(sender: BoyPickerViewKeyboard) {
+        
+        print("cancel")
+    }
+    
+    func didDone(sender: BoyPickerViewKeyboard, selectedData: String) {
+        textLabel.text = selectedData
+        
+        selectedCategory = selectedData
+        
+        
+        print(selectedData)
+    }
+    
+    
+    
+    @IBOutlet weak var pickerKeyboardButton: BoyPickerViewKeyboard!
+    
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//        pickerView = UIPickerView()
+//        pickerView.delegate = self
+//        pickerView.dataSource = self
+//
+//    }
+    
+    
+    override var inputView: UIView? {
+        
+        pickerView = UIPickerView()
+        pickerView.delegate = self
+        pickerView.selectRow(selectedRow, inComponent: 0, animated: true)
+        
+        return pickerView
+    }
+    
+    
+    override var inputAccessoryView: UIView? {
+        let toolbar = UIToolbar()
+        toolbar.frame = CGRect(x: 0, y: 0, width: pickerView.frame.width, height: 44)
+        
+        let space = UIBarButtonItem(barButtonSystemItem: .fixedSpace, target: self, action: nil)
+        space.width = 12
+        let cancelItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(self.cancelPicker))
+        let flexSpaceItem = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil)
+        let doneButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(self.donePicker))
+        
+        let toolbarItems = [space, cancelItem, flexSpaceItem, doneButtonItem, space]
+        
+        toolbar.setItems(toolbarItems, animated: true)
+        
+        return toolbar
+    }
+    
+    @objc func cancelPicker() {
+        pickerKeyboardButton.resignFirstResponder()
+
+    }
+    
+    @objc func donePicker() {
+        pickerKeyboardButton.resignFirstResponder()
+        textLabel.text = categoryArray[selectedRow]
+    }
+    
+    
+    @IBAction func pushButton(_ sender: BoyPickerViewKeyboard) {
+        
+        sender.becomeFirstResponder()
+        
+    }
+    
+    
 }
+
+
