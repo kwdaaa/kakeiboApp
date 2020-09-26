@@ -12,6 +12,18 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let boyTotalSum = UserDefaults.standard.object(forKey: "boyTotalSumSecond") as? Int
+        let girlTotalSum = UserDefaults.standard.object(forKey: "girlTotalSecond") as? Int
+
+        
+        if UserDefaults.standard.object(forKey: "boyTotalSumSecond") == nil,UserDefaults.standard.object(forKey: "girlTotalSecond") == nil{
+            
+            UserDefaults.standard.set(0,forKey:"boyTotalSumSecond")
+            UserDefaults.standard.set(0,forKey:"girlTotalSumSecond")
+            
+        }
+
     }
     
     //    食費のラベル
@@ -26,11 +38,6 @@ class HomeViewController: UIViewController {
     @IBOutlet var bothOthersTotalLabel:UILabel!
     //    合計のラベル
     @IBOutlet var bothTotalSumLabel:UILabel!
-    
-    
-    
-    
-    
     
     
     override func viewWillAppear(_ animated: Bool) {
@@ -49,15 +56,11 @@ class HomeViewController: UIViewController {
         
         //        let bothtest = testStruct()
         
-        let boyTotalSum = UserDefaults.standard.object(forKey: "boyTotalSumSecond") as? Int
-        let girlTotalSum = UserDefaults.standard.object(forKey: "girlTotalSecond") as? Int
-        
-        
-        //        let boyTotalSum = bothtest.boyTotalTotal
-        //        let girlTotalSum = bothtest.girlTotalTotal
+        let boyTotalSum = UserDefaults.standard.object(forKey: "boyTotalSumSecond") as! Int
+        let girlTotalSum = UserDefaults.standard.object(forKey: "girlTotalSumSecond") as! Int
         
         //        足し算
-        let bothTotalSum = boyTotalSum! + girlTotalSum!
+        let bothTotalSum = boyTotalSum + girlTotalSum
 
 //        型変換
         let bothTotalSumThird:String = String("\(bothTotalSum)")
