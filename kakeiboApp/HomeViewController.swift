@@ -80,6 +80,20 @@ class HomeViewController: UIViewController {
         self.present(SetViewController,animated: true,completion: nil)
         
     }
+    
+    // 画面遷移
+    
+    // タブバーの画面遷移
+    // 彼氏の家計（BoyFinanceViewController）
+    @IBOutlet var tapBoyFinance: UIImageView!
+    @IBAction func tapBoyFinance(_ sender: Any) {
+    
+    let BoyFinanceViewController = self.storyboard?.instantiateViewController(withIdentifier: "BoyFinance") as! BoyFinanceViewController
+    self.present(BoyFinanceViewController, animated: true, completion: nil)
+}
+    
+    
+    
 }
 
 
