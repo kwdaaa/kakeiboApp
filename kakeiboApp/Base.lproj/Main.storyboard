@@ -893,11 +893,16 @@ date_select</string>
                         <outlet property="bothLeisureTotalLabel" destination="bJS-p4-yey" id="mZB-qY-Vdz"/>
                         <outlet property="bothOthersTotalLabel" destination="YLK-cJ-RBJ" id="gVm-US-wp2"/>
                         <outlet property="bothTotalSumLabel" destination="GOW-s3-HYE" id="gsL-FU-yOA"/>
+                        <outlet property="tapBoyFinance" destination="d6B-R8-fg4" id="5Lr-JT-7BA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2q3-cJ-T8M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="EeD-EQ-aoL" userLabel="tab01_home"/>
-                <tapGestureRecognizer id="HD1-Qf-Ux2" userLabel="tab02_boyKakei"/>
+                <tapGestureRecognizer id="HD1-Qf-Ux2" userLabel="tab02_boyKakei">
+                    <connections>
+                        <action selector="tapBoyFinance:" destination="SV8-sf-oz3" id="eUS-0F-abt"/>
+                    </connections>
+                </tapGestureRecognizer>
                 <tapGestureRecognizer id="tW1-UQ-NwS" userLabel="tab02_boyAdd"/>
                 <tapGestureRecognizer id="3SR-uu-Esr" userLabel="tab02_girlKakei"/>
                 <tapGestureRecognizer id="bZ6-mz-1ta" userLabel="tab02_girlAdd"/>
@@ -3189,7 +3194,7 @@ date_select</string>
         <!--Boy Finance View Controller-->
         <scene sceneID="qmD-Dp-Bid">
             <objects>
-                <viewController id="ORS-Qg-Ecr" customClass="BoyFinanceViewController" customModule="kakeiboApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BoyFinance" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ORS-Qg-Ecr" customClass="BoyFinanceViewController" customModule="kakeiboApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mLw-WR-no0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3636,7 +3641,7 @@ date_select</string>
         <!--Girl Finance View Controller-->
         <scene sceneID="YcT-es-lzz">
             <objects>
-                <viewController id="U9h-e6-t8i" customClass="GirlFinanceViewController" customModule="kakeiboApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GirlFinance" useStoryboardIdentifierAsRestorationIdentifier="YES" id="U9h-e6-t8i" customClass="GirlFinanceViewController" customModule="kakeiboApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BKN-Sp-LV0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
