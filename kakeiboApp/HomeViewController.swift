@@ -135,30 +135,48 @@ class HomeViewController: UIViewController{
     // 02:各カテゴリーの画面遷移
     // 02-1:食費（BothFoodViewController）
     @IBAction func tapBothFood(_ sender: Any) {
+        let BothFoodVC = self.storyboard?.instantiateViewController(withIdentifier: "BothFood") as! BothFoodViewController
+               BothFoodVC.modalPresentationStyle = .fullScreen
+               self.present(BothFoodVC, animated: true, completion: nil)
     }
     
     
     // 02-2:日用品費（BothDailyViewController）
     @IBAction func tapBothDaily(_ sender: Any) {
+        let BothDailyVC = self.storyboard?.instantiateViewController(withIdentifier: "BothDaily") as! BothDailyViewController
+               BothDailyVC.modalPresentationStyle = .fullScreen
+               self.present(BothDailyVC, animated: true, completion: nil)
     }
     
     
     // 02-3:娯楽費（BothLeisureViewController）
     @IBAction func tapBothLeisure(_ sender: Any) {
+        let BothLeisureVC = self.storyboard?.instantiateViewController(withIdentifier: "BothLeisure") as! BothLeisureViewController
+                      BothLeisureVC.modalPresentationStyle = .fullScreen
+                      self.present(BothLeisureVC, animated: true, completion: nil)
     }
     
     
     // 02-4:固定費（BothHousingViewController）
     @IBAction func tapBothHousing(_ sender: Any) {
+        let BothHousingVC = self.storyboard?.instantiateViewController(withIdentifier: "BothHousing") as! BothHousingViewController
+        BothHousingVC.modalPresentationStyle = .fullScreen
+        self.present(BothHousingVC, animated: true, completion: nil)
     }
     
     
     // 02-5:その他（BothOthersViewController）
     @IBAction func tapBothOthers(_ sender: Any) {
+        let BothOthersVC = self.storyboard?.instantiateViewController(withIdentifier: "BothOthers") as! BothOthersViewController
+        BothOthersVC.modalPresentationStyle = .fullScreen
+        self.present(BothOthersVC, animated: true, completion: nil)
     }
     
     // 02-6:合計（BothTotalSumViewController）
-    @IBAction func tapBTotalSum(_ sender: Any) {
+    @IBAction func tapBothTotalSum(_ sender: Any) {
+        let BothTotalSumVC = self.storyboard?.instantiateViewController(withIdentifier: "BothTotalSum") as! BothTotalSumViewController
+        BothTotalSumVC.modalPresentationStyle = .fullScreen
+        self.present(BothTotalSumVC, animated: true, completion: nil)
     }
     
     

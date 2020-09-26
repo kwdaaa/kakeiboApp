@@ -16,15 +16,42 @@ class BreakViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // // // // // // // // // // // // // // // // // // // //
+    // 画面遷移
+    // 01:タブバーの画面遷移
+    // 01-1:ホーム（HomeViewController）
+    @IBAction func tapHome(_ sender: Any) {
+        let HomeVC = self.storyboard?.instantiateViewController(withIdentifier: "Home") as! HomeViewController
+        HomeVC.modalPresentationStyle = .fullScreen
+        self.present(HomeVC, animated: false, completion: nil)
     }
-    */
+    
+    // 01-2:彼氏の家計（BoyFinanceViewController）
+    @IBAction func tapBoyFinance(_ sender: Any) {
+        let BoyFinanceVC = self.storyboard?.instantiateViewController(withIdentifier: "BoyFinance") as! BoyFinanceViewController
+        BoyFinanceVC.modalPresentationStyle = .fullScreen
+        self.present(BoyFinanceVC, animated: false, completion: nil)
+    }
+    
+    // 01-3:彼氏の登録（BoyRegisterViewController）
+    @IBAction func tapBoyRegister(_ sender: Any) {
+        let BoyRegisterVC = self.storyboard?.instantiateViewController(withIdentifier: "BoyRegister") as! BoyRegisterViewController
+        BoyRegisterVC.modalPresentationStyle = .fullScreen
+        self.present(BoyRegisterVC, animated: false, completion: nil)
+    }
+    
+    // 01-4:彼女の家計（GirlFinanceViewController）
+    @IBAction func tapGirlFinance(_ sender: Any) {
+        let GirlFinanceVC = self.storyboard?.instantiateViewController(withIdentifier: "GirlFinance") as! GirlFinanceViewController
+        GirlFinanceVC.modalPresentationStyle = .fullScreen
+        self.present(GirlFinanceVC, animated: false, completion: nil)
+    }
+    
+    // 01-5:彼女の登録（GirlRegisterViewController）
+    @IBAction func tapGirlRegister(_ sender: Any) {
+        let GirlRegisterVC = self.storyboard?.instantiateViewController(withIdentifier: "GirlRegister") as! GirlRegisterViewController
+        GirlRegisterVC.modalPresentationStyle = .fullScreen
+        self.present(GirlRegisterVC, animated: false, completion: nil)
+    }
 
 }

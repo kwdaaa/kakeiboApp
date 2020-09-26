@@ -92,7 +92,7 @@ class SetViewController: UIViewController{
     // シェアのタップジェスチャー
     @IBAction func tapShare(_ sender: Any) {
         // 共有する項目
-        let shareText = "ふたりの家計"
+        let shareText = "●ふたりの家計\n食費：¥(食費合計の変数)\n日用品費：¥(日用品費合計の変数)\n娯楽費：¥(娯楽費合計の変数)\n固定費：¥(固定費合計の変数)\nその他：¥(その他合計の変数)\n合計：¥(合計の変数)\n\n●彼氏の家計\n合計：¥(合計の変数)\n\n●彼女の家計\n合計：¥(合計の変数)"
         
         let activityItems = [shareText] as [Any]
 

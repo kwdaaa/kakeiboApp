@@ -54,39 +54,86 @@ class GirlFinanceViewController: UIViewController {
     //    ここからは、タップジェスチャー？ボタンからの画面遷移 今は、タップジェスチャーにしてあるよ
     
     
-    //        食費に画面遷移
-    @IBAction func girlFinanceTap(_sender:UITapGestureRecognizer){
-        let GirlFoodViewController = self.storyboard?.instantiateViewController(withIdentifier: "GirlFood") as! GirlFoodViewController
-        self.present(GirlFoodViewController, animated: true, completion: nil)
+    
+    
+    // // // // // // // // // // // // // // // // // // // //
+    // 画面遷移
+    // 01:タブバーの画面遷移
+    // 01-1:ホーム（HomeViewController）
+    @IBAction func tapHome(_ sender: Any) {
+        let HomeVC = self.storyboard?.instantiateViewController(withIdentifier: "Home") as! HomeViewController
+        HomeVC.modalPresentationStyle = .fullScreen
+        self.present(HomeVC, animated: false, completion: nil)
+    }
+    
+    // 01-2:彼氏の家計（BoyFinanceViewController）
+    @IBAction func tapBoyFinance(_ sender: Any) {
+        let BoyFinanceVC = self.storyboard?.instantiateViewController(withIdentifier: "BoyFinance") as! BoyFinanceViewController
+        BoyFinanceVC.modalPresentationStyle = .fullScreen
+        self.present(BoyFinanceVC, animated: false, completion: nil)
+    }
+    
+    // 01-3:彼氏の登録（BoyRegisterViewController）
+    @IBAction func tapBoyRegister(_ sender: Any) {
+        let BoyRegisterVC = self.storyboard?.instantiateViewController(withIdentifier: "BoyRegister") as! BoyRegisterViewController
+        BoyRegisterVC.modalPresentationStyle = .fullScreen
+        self.present(BoyRegisterVC, animated: false, completion: nil)
+    }
+    
+    // 01-4:彼女の家計（GirlFinanceViewController）
+    @IBAction func tapGirlFinance(_ sender: Any) {
+//        let GirlFinanceVC = self.storyboard?.instantiateViewController(withIdentifier: "GirlFinance") as! GirlFinanceViewController
+//        GirlFinanceVC.modalPresentationStyle = .fullScreen
+//        self.present(GirlFinanceVC, animated: false, completion: nil)
+    }
+    
+    // 01-5:彼女の登録（GirlRegisterViewController）
+    @IBAction func tapGirlRegister(_ sender: Any) {
+        let GirlRegisterVC = self.storyboard?.instantiateViewController(withIdentifier: "GirlRegister") as! GirlRegisterViewController
+        GirlRegisterVC.modalPresentationStyle = .fullScreen
+        self.present(GirlRegisterVC, animated: false, completion: nil)
     }
     
     
-    //    日用品に画面遷移
-    @IBAction func girlDailyTap(_sender:UITapGestureRecognizer){
+    
+    
+    
+    // 02:各カテゴリーの画面遷移
+    // 02-1:食費（GirlFoodViewController）
+    @IBAction func girlFinanceTap(_sender: Any){
+        let GirlFoodVC = self.storyboard?.instantiateViewController(withIdentifier: "GirlFood") as! GirlFoodViewController
+        GirlFoodVC.modalPresentationStyle = .fullScreen
+        self.present(GirlFoodVC, animated: true, completion: nil)
+    }
+        
+    // 02-2:日用品費（GirlDailyViewController）
+    @IBAction func girlDailyTap(_sender: Any){
         //        日用品に画面遷移
-        let GirlDailyViewController = self.storyboard?.instantiateViewController(identifier: "GirlDaily") as! GirlDailyViewController
-        self.present(GirlDailyViewController,animated: true,completion: nil)
+        let GirlDailyVC = self.storyboard?.instantiateViewController(identifier: "GirlDaily") as! GirlDailyViewController
+        GirlDailyVC.modalPresentationStyle = .fullScreen
+        self.present(GirlDailyVC,animated: true,completion: nil)
     }
     
-    
-    
-    //        娯楽費に画面遷移
-    @IBAction func girlLeisureTap(_sender:UITapGestureRecognizer ){
-        let GirlLeisureViewController = self.storyboard?.instantiateViewController(identifier: "GirlLeisure") as! GirlLeisureViewController
-        self.present(GirlLeisureViewController,animated: true, completion: nil)
+    // 02-3:娯楽費（GirlLeisureViewController）
+    @IBAction func girlLeisureTap(_sender: Any){
+        let GirlLeisureVC = self.storyboard?.instantiateViewController(identifier: "GirlLeisure") as! GirlLeisureViewController
+        GirlLeisureVC.modalPresentationStyle = .fullScreen
+        self.present(GirlLeisureVC,animated: true, completion: nil)
     }
     
-    //    固定費に画面遷移
-    @IBAction func girlHousingTap(_sender:UITapGestureRecognizer){
-        let GirlHousingViewController = self.storyboard?.instantiateViewController(withIdentifier: "GirlHousing")
+    // 02-4:固定費（GirlHousingViewController）
+    @IBAction func girlHousingTap(_sender: Any){
+        let GirlHousingVC = self.storyboard?.instantiateViewController(withIdentifier: "GirlHousing")
             as! GirlHousingViewController
-        self.present(GirlHousingViewController,animated: true,completion: nil)
+        GirlHousingVC.modalPresentationStyle = .fullScreen
+        self.present(GirlHousingVC,animated: true,completion: nil)
     }
     
-    //    その他に画面遷移
-    @IBAction func girlOthersTap(_sender:UITapGestureRecognizer){
-        let GirlOthersViewController = self.storyboard?.instantiateViewController(withIdentifier: "Girlothers") as! GirlOthersViewController
-        self.present(GirlOthersViewController,animated: true,completion: nil)
+    // 02-5:その他（GirlOthersViewController）
+    @IBAction func girlOthersTap(_sender: Any){
+        let GirlOthersVC = self.storyboard?.instantiateViewController(withIdentifier: "Girlothers") as! GirlOthersViewController
+        GirlOthersVC.modalPresentationStyle = .fullScreen
+        self.present(GirlOthersVC,animated: true,completion: nil)
     }
     
 }

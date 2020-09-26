@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SV8-sf-oz3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ORS-Qg-Ecr">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -468,11 +468,31 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9LB-9j-NOT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="z5X-0j-oZ2" userLabel="tab02_home"/>
-                <tapGestureRecognizer id="ONf-Qt-1Sz" userLabel="tab02_boyKakei"/>
-                <tapGestureRecognizer id="LT1-rr-JyR" userLabel="tab01_boyAdd"/>
-                <tapGestureRecognizer id="evc-9I-try" userLabel="tab02_girlKakei"/>
-                <tapGestureRecognizer id="uPQ-Me-AkG" userLabel="tab02_girlAdd"/>
+                <tapGestureRecognizer id="z5X-0j-oZ2" userLabel="tab02_home">
+                    <connections>
+                        <action selector="tapHome:" destination="oZg-Ts-aUb" id="Cbb-iY-aKJ"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="ONf-Qt-1Sz" userLabel="tab02_boyKakei">
+                    <connections>
+                        <action selector="tapBoyFinance:" destination="oZg-Ts-aUb" id="CNu-q4-oTD"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="LT1-rr-JyR" userLabel="tab01_boyAdd">
+                    <connections>
+                        <action selector="tapBoyRegister:" destination="oZg-Ts-aUb" id="HfO-OF-W7V"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="evc-9I-try" userLabel="tab02_girlKakei">
+                    <connections>
+                        <action selector="tapGirlFinance:" destination="oZg-Ts-aUb" id="xEE-RD-0Ms"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="uPQ-Me-AkG" userLabel="tab02_girlAdd">
+                    <connections>
+                        <action selector="tapGirlRegister:" destination="oZg-Ts-aUb" id="K3Y-BI-T08"/>
+                    </connections>
+                </tapGestureRecognizer>
                 <tapGestureRecognizer id="3dg-wo-rAg" userLabel="cal_01">
                     <connections>
                         <action selector="boyNumTap01:" destination="oZg-Ts-aUb" id="xtU-q6-WK5"/>
@@ -1402,7 +1422,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="rhL-dd-tSa" userLabel="03_tab">
                                 <rect key="frame" x="20" y="791" width="374" height="59"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tab02_home" translatesAutoresizingMaskIntoConstraints="NO" id="f8o-8B-f5E">
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tab02_home" translatesAutoresizingMaskIntoConstraints="NO" id="f8o-8B-f5E">
                                         <rect key="frame" x="0.0" y="0.0" width="59" height="59"/>
                                         <gestureRecognizers/>
                                         <constraints>
@@ -1412,7 +1432,7 @@
                                             <outletCollection property="gestureRecognizers" destination="vjv-r2-YnM" appends="YES" id="kct-gH-0kR"/>
                                         </connections>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tab02_boyKakei" translatesAutoresizingMaskIntoConstraints="NO" id="axN-RL-Phe">
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tab02_boyKakei" translatesAutoresizingMaskIntoConstraints="NO" id="axN-RL-Phe">
                                         <rect key="frame" x="79" y="0.0" width="58.5" height="59"/>
                                         <gestureRecognizers/>
                                         <constraints>
@@ -1422,7 +1442,7 @@
                                             <outletCollection property="gestureRecognizers" destination="D5g-D2-NBP" appends="YES" id="TZs-qk-LPR"/>
                                         </connections>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tab02_boyAdd" translatesAutoresizingMaskIntoConstraints="NO" id="rv4-ju-kje">
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tab02_boyAdd" translatesAutoresizingMaskIntoConstraints="NO" id="rv4-ju-kje">
                                         <rect key="frame" x="157.5" y="0.0" width="59" height="59"/>
                                         <gestureRecognizers/>
                                         <constraints>
@@ -1432,7 +1452,7 @@
                                             <outletCollection property="gestureRecognizers" destination="3br-KH-zTX" appends="YES" id="WFz-hT-I6u"/>
                                         </connections>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tab02_girlKakei" translatesAutoresizingMaskIntoConstraints="NO" id="7hT-2e-Yt0">
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tab02_girlKakei" translatesAutoresizingMaskIntoConstraints="NO" id="7hT-2e-Yt0">
                                         <rect key="frame" x="236.5" y="0.0" width="58.5" height="59"/>
                                         <gestureRecognizers/>
                                         <constraints>
@@ -1442,7 +1462,7 @@
                                             <outletCollection property="gestureRecognizers" destination="bhO-an-lHD" appends="YES" id="nTQ-CN-wZt"/>
                                         </connections>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tab01_.girlAdd" translatesAutoresizingMaskIntoConstraints="NO" id="dfK-h6-nl8">
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tab01_.girlAdd" translatesAutoresizingMaskIntoConstraints="NO" id="dfK-h6-nl8">
                                         <rect key="frame" x="315" y="0.0" width="59" height="59"/>
                                         <gestureRecognizers/>
                                         <constraints>
@@ -1495,11 +1515,31 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gLc-ag-Xsn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="vjv-r2-YnM" userLabel="tab02_home"/>
-                <tapGestureRecognizer id="D5g-D2-NBP" userLabel="tab02_boyKakei"/>
-                <tapGestureRecognizer id="3br-KH-zTX" userLabel="tab02_boyAdd"/>
-                <tapGestureRecognizer id="bhO-an-lHD" userLabel="tab02_girlKakei"/>
-                <tapGestureRecognizer id="6e5-YH-wPF" userLabel="tab02_girlAdd"/>
+                <tapGestureRecognizer id="vjv-r2-YnM" userLabel="tab02_home">
+                    <connections>
+                        <action selector="tapHome:" destination="xby-cB-Fhw" id="U0K-Nd-We6"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="D5g-D2-NBP" userLabel="tab02_boyKakei">
+                    <connections>
+                        <action selector="tapBoyFinance:" destination="xby-cB-Fhw" id="kmD-Z7-Ftd"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="3br-KH-zTX" userLabel="tab02_boyAdd">
+                    <connections>
+                        <action selector="tapBoyRegister:" destination="xby-cB-Fhw" id="Hc9-k9-zGp"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="bhO-an-lHD" userLabel="tab02_girlKakei">
+                    <connections>
+                        <action selector="tapGirlFinance:" destination="xby-cB-Fhw" id="yyD-aJ-0TG"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="6e5-YH-wPF" userLabel="tab02_girlAdd">
+                    <connections>
+                        <action selector="tapGirlRegister:" destination="xby-cB-Fhw" id="S3u-WM-czX"/>
+                    </connections>
+                </tapGestureRecognizer>
                 <tapGestureRecognizer id="FMd-cW-bih" userLabel="cal_01">
                     <connections>
                         <action selector="girlNumTap01:" destination="xby-cB-Fhw" id="i1m-ie-6Q6"/>
@@ -2068,11 +2108,31 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T54-DG-dYV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="bKN-Ax-nKg" userLabel="tab02_home"/>
-                <tapGestureRecognizer id="WJc-HX-PGX" userLabel="tab01_boyKakei"/>
-                <tapGestureRecognizer id="5ML-Sa-8WB" userLabel="tab02_boyAdd"/>
-                <tapGestureRecognizer id="lxc-Ga-Z9a" userLabel="tab02_girlKakei"/>
-                <tapGestureRecognizer id="HXV-OU-Inu" userLabel="tab02_girlAdd"/>
+                <tapGestureRecognizer id="bKN-Ax-nKg" userLabel="tab02_home">
+                    <connections>
+                        <action selector="tapHome:" destination="XHd-mG-ZKb" id="TAB-8A-eYD"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="WJc-HX-PGX" userLabel="tab01_boyKakei">
+                    <connections>
+                        <action selector="tapBoyFinance:" destination="XHd-mG-ZKb" id="eT0-Gx-tb8"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="5ML-Sa-8WB" userLabel="tab02_boyAdd">
+                    <connections>
+                        <action selector="tapBoyRegister:" destination="XHd-mG-ZKb" id="h0u-4q-Z24"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="lxc-Ga-Z9a" userLabel="tab02_girlKakei">
+                    <connections>
+                        <action selector="tapGirlFinance:" destination="XHd-mG-ZKb" id="qKg-ot-4dY"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="HXV-OU-Inu" userLabel="tab02_girlAdd">
+                    <connections>
+                        <action selector="tapGirlRegister:" destination="XHd-mG-ZKb" id="pro-gE-Shx"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="5432" y="850"/>
         </scene>
@@ -2227,11 +2287,31 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XvS-W9-8Aq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="huo-te-Epn" userLabel="tab02_home"/>
-                <tapGestureRecognizer id="Ulb-mf-Wjb" userLabel="tab01_boyKakei"/>
-                <tapGestureRecognizer id="WdH-pP-SWa" userLabel="tab02_boyAdd"/>
-                <tapGestureRecognizer id="Ttq-cA-3JD" userLabel="tab02_girlKakei"/>
-                <tapGestureRecognizer id="xPx-BW-HEV" userLabel="tab02_girlAdd"/>
+                <tapGestureRecognizer id="huo-te-Epn" userLabel="tab02_home">
+                    <connections>
+                        <action selector="tapHome:" destination="Beb-SJ-Z0S" id="8ov-mD-u7q"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Ulb-mf-Wjb" userLabel="tab01_boyKakei">
+                    <connections>
+                        <action selector="tapBoyFinance:" destination="Beb-SJ-Z0S" id="N7w-Hf-u4v"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="WdH-pP-SWa" userLabel="tab02_boyAdd">
+                    <connections>
+                        <action selector="tapBoyRegister:" destination="Beb-SJ-Z0S" id="abO-db-N2v"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Ttq-cA-3JD" userLabel="tab02_girlKakei">
+                    <connections>
+                        <action selector="tapGirlFinance:" destination="Beb-SJ-Z0S" id="Cxa-17-RyQ"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="xPx-BW-HEV" userLabel="tab02_girlAdd">
+                    <connections>
+                        <action selector="tapGirlRegister:" destination="Beb-SJ-Z0S" id="hqh-2r-ds5"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="6228" y="850"/>
         </scene>
@@ -2386,11 +2466,31 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n3W-K4-ijG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="VML-KQ-eUH" userLabel="tab02_home"/>
-                <tapGestureRecognizer id="XAV-Mn-l3K" userLabel="tab01_boyKakei"/>
-                <tapGestureRecognizer id="zvn-AI-SFm" userLabel="tab02_boyAdd"/>
-                <tapGestureRecognizer id="x19-6o-sOa" userLabel="tab02_girlKakei"/>
-                <tapGestureRecognizer id="GwZ-rC-ihD" userLabel="tab02_girlAdd"/>
+                <tapGestureRecognizer id="VML-KQ-eUH" userLabel="tab02_home">
+                    <connections>
+                        <action selector="tapHome:" destination="Ctb-oD-4Dz" id="F9A-XB-d1Q"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="XAV-Mn-l3K" userLabel="tab01_boyKakei">
+                    <connections>
+                        <action selector="tapBoyFinance:" destination="Ctb-oD-4Dz" id="2oY-Wy-PdB"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="zvn-AI-SFm" userLabel="tab02_boyAdd">
+                    <connections>
+                        <action selector="tapBoyRegister:" destination="Ctb-oD-4Dz" id="we8-Je-KuH"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="x19-6o-sOa" userLabel="tab02_girlKakei">
+                    <connections>
+                        <action selector="tapGirlFinance:" destination="Ctb-oD-4Dz" id="8Gh-Hn-4Cj"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="GwZ-rC-ihD" userLabel="tab02_girlAdd">
+                    <connections>
+                        <action selector="tapGirlRegister:" destination="Ctb-oD-4Dz" id="W1n-90-WzT"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="7023" y="850"/>
         </scene>
@@ -2545,11 +2645,31 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a5c-r3-zsH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="TlU-tQ-dOc" userLabel="tab02_home"/>
-                <tapGestureRecognizer id="dyJ-0k-BZJ" userLabel="tab01_boyKakei"/>
-                <tapGestureRecognizer id="rHn-23-eRy" userLabel="tab02_boyAdd"/>
-                <tapGestureRecognizer id="yfl-en-G2A" userLabel="tab02_girlKakei"/>
-                <tapGestureRecognizer id="UXA-Nl-b6i" userLabel="tab02_girlAdd"/>
+                <tapGestureRecognizer id="TlU-tQ-dOc" userLabel="tab02_home">
+                    <connections>
+                        <action selector="tapHome:" destination="BMY-Nq-F3P" id="8Dh-SS-dyX"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="dyJ-0k-BZJ" userLabel="tab01_boyKakei">
+                    <connections>
+                        <action selector="tapBoyFinance:" destination="BMY-Nq-F3P" id="9jx-Vu-uQn"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="rHn-23-eRy" userLabel="tab02_boyAdd">
+                    <connections>
+                        <action selector="tapBoyRegister:" destination="BMY-Nq-F3P" id="U12-23-akX"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="yfl-en-G2A" userLabel="tab02_girlKakei">
+                    <connections>
+                        <action selector="tapGirlFinance:" destination="BMY-Nq-F3P" id="ayV-zx-llU"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="UXA-Nl-b6i" userLabel="tab02_girlAdd">
+                    <connections>
+                        <action selector="tapGirlRegister:" destination="BMY-Nq-F3P" id="zBf-DV-Kpd"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="7777" y="850"/>
         </scene>
@@ -2704,11 +2824,31 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E9b-Ze-pK1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="DMv-z2-lVb" userLabel="tab02_home"/>
-                <tapGestureRecognizer id="Wvx-2D-HZD" userLabel="tab01_boyKakei"/>
-                <tapGestureRecognizer id="hVi-vA-Km8" userLabel="tab02_boyAdd"/>
-                <tapGestureRecognizer id="2eF-Dy-yhc" userLabel="tab02_girlKakei"/>
-                <tapGestureRecognizer id="gfz-hZ-QUP" userLabel="tab02_girlAdd"/>
+                <tapGestureRecognizer id="DMv-z2-lVb" userLabel="tab02_home">
+                    <connections>
+                        <action selector="tapHome:" destination="EyP-RV-zUq" id="VsY-8G-FeO"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Wvx-2D-HZD" userLabel="tab01_boyKakei">
+                    <connections>
+                        <action selector="tapBoyFinance:" destination="EyP-RV-zUq" id="zYC-6D-MlL"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="hVi-vA-Km8" userLabel="tab02_boyAdd">
+                    <connections>
+                        <action selector="tapBoyRegister:" destination="EyP-RV-zUq" id="Eiw-RI-cDc"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="2eF-Dy-yhc" userLabel="tab02_girlKakei">
+                    <connections>
+                        <action selector="tapGirlFinance:" destination="EyP-RV-zUq" id="aOc-uE-jRp"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="gfz-hZ-QUP" userLabel="tab02_girlAdd">
+                    <connections>
+                        <action selector="tapGirlRegister:" destination="EyP-RV-zUq" id="ZGA-P8-e9P"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="8542" y="850"/>
         </scene>
@@ -2863,11 +3003,31 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FCy-gG-2rD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="ugS-uh-xAb" userLabel="tab02_home"/>
-                <tapGestureRecognizer id="RAe-NP-bnD" userLabel="tab02_boyKakei"/>
-                <tapGestureRecognizer id="gVV-yC-f1Z" userLabel="tab02_boyAdd"/>
-                <tapGestureRecognizer id="YyY-MO-NSm" userLabel="tab01_girlKakei"/>
-                <tapGestureRecognizer id="MQ7-cJ-aec" userLabel="tab02_girlAdd"/>
+                <tapGestureRecognizer id="ugS-uh-xAb" userLabel="tab02_home">
+                    <connections>
+                        <action selector="tapHome:" destination="FTQ-u1-en4" id="QUO-5i-Kam"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="RAe-NP-bnD" userLabel="tab02_boyKakei">
+                    <connections>
+                        <action selector="tapBoyFinance:" destination="FTQ-u1-en4" id="qki-bB-xZ2"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="gVV-yC-f1Z" userLabel="tab02_boyAdd">
+                    <connections>
+                        <action selector="tapBoyRegister:" destination="FTQ-u1-en4" id="6YA-Ih-5xf"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="YyY-MO-NSm" userLabel="tab01_girlKakei">
+                    <connections>
+                        <action selector="tapGirlFinance:" destination="FTQ-u1-en4" id="OYX-Pu-JRI"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="MQ7-cJ-aec" userLabel="tab02_girlAdd">
+                    <connections>
+                        <action selector="tapGirlRegister:" destination="FTQ-u1-en4" id="Wt7-vD-eJJ"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="5432" y="2222"/>
         </scene>
@@ -3022,11 +3182,31 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kC5-ag-Ptw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="gwt-5p-csb" userLabel="tab02_home"/>
-                <tapGestureRecognizer id="JqF-S0-fgO" userLabel="tab02_boyKakei"/>
-                <tapGestureRecognizer id="BAG-IS-Lpu" userLabel="tab02_boyAdd"/>
-                <tapGestureRecognizer id="lVr-CZ-50Z" userLabel="tab01_girlKakei"/>
-                <tapGestureRecognizer id="qZS-PX-4O1" userLabel="tab02_girlAdd"/>
+                <tapGestureRecognizer id="gwt-5p-csb" userLabel="tab02_home">
+                    <connections>
+                        <action selector="tapHome:" destination="93m-vI-JPM" id="6PA-rJ-9Uy"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="JqF-S0-fgO" userLabel="tab02_boyKakei">
+                    <connections>
+                        <action selector="tapBoyFinance:" destination="93m-vI-JPM" id="Rkf-uH-IY4"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="BAG-IS-Lpu" userLabel="tab02_boyAdd">
+                    <connections>
+                        <action selector="tapBoyRegister:" destination="93m-vI-JPM" id="hlT-Kg-sMZ"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="lVr-CZ-50Z" userLabel="tab01_girlKakei">
+                    <connections>
+                        <action selector="tapGirlFinance:" destination="93m-vI-JPM" id="mO6-ft-hfT"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="qZS-PX-4O1" userLabel="tab02_girlAdd">
+                    <connections>
+                        <action selector="tapGirlRegister:" destination="93m-vI-JPM" id="94J-zo-7aA"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="6228" y="2222"/>
         </scene>
@@ -3181,11 +3361,31 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gba-Yf-hN2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="gnF-3a-FcP" userLabel="tab02_home"/>
-                <tapGestureRecognizer id="ltY-Zk-oSA" userLabel="tab02_boyKakei"/>
-                <tapGestureRecognizer id="jlp-dN-hoq" userLabel="tab02_boyAdd"/>
-                <tapGestureRecognizer id="LhO-zV-8xr" userLabel="tab01_girlKakei"/>
-                <tapGestureRecognizer id="uxl-0b-OuF" userLabel="tab02_girlAdd"/>
+                <tapGestureRecognizer id="gnF-3a-FcP" userLabel="tab02_home">
+                    <connections>
+                        <action selector="tapHome:" destination="fXt-ev-Pkv" id="pPg-1D-3k8"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="ltY-Zk-oSA" userLabel="tab02_boyKakei">
+                    <connections>
+                        <action selector="tapBoyFinance:" destination="fXt-ev-Pkv" id="5dI-Tg-hrQ"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="jlp-dN-hoq" userLabel="tab02_boyAdd">
+                    <connections>
+                        <action selector="tapBoyRegister:" destination="fXt-ev-Pkv" id="3Ud-cg-IwS"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="LhO-zV-8xr" userLabel="tab01_girlKakei">
+                    <connections>
+                        <action selector="tapGirlFinance:" destination="fXt-ev-Pkv" id="11y-bi-OXy"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="uxl-0b-OuF" userLabel="tab02_girlAdd">
+                    <connections>
+                        <action selector="tapGirlRegister:" destination="fXt-ev-Pkv" id="Jek-Ko-c5J"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="7022" y="2222"/>
         </scene>
@@ -3340,11 +3540,31 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QJK-38-qTh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="FoN-em-ONd" userLabel="tab02_home"/>
-                <tapGestureRecognizer id="zQn-VW-eji" userLabel="tab02_boyKakei"/>
-                <tapGestureRecognizer id="3bq-bW-ehm" userLabel="tab02_boyAdd"/>
-                <tapGestureRecognizer id="R0z-3c-rNm" userLabel="tab01_girlKakei"/>
-                <tapGestureRecognizer id="JnL-NN-PQi" userLabel="tab02_girlAdd"/>
+                <tapGestureRecognizer id="FoN-em-ONd" userLabel="tab02_home">
+                    <connections>
+                        <action selector="tapHome:" destination="vqI-Nd-4NZ" id="ogv-ut-KUr"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="zQn-VW-eji" userLabel="tab02_boyKakei">
+                    <connections>
+                        <action selector="tapBoyFinance:" destination="vqI-Nd-4NZ" id="our-Ab-LWp"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="3bq-bW-ehm" userLabel="tab02_boyAdd">
+                    <connections>
+                        <action selector="tapBoyRegister:" destination="vqI-Nd-4NZ" id="qfo-2O-uqy"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="R0z-3c-rNm" userLabel="tab01_girlKakei">
+                    <connections>
+                        <action selector="tapGirlFinance:" destination="vqI-Nd-4NZ" id="cIo-Fk-8RD"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="JnL-NN-PQi" userLabel="tab02_girlAdd">
+                    <connections>
+                        <action selector="tapGirlRegister:" destination="vqI-Nd-4NZ" id="3Tb-Ix-P83"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="7777" y="2222"/>
         </scene>
@@ -3499,11 +3719,31 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l15-F7-nNr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="doy-Mu-fBU" userLabel="tab02_home"/>
-                <tapGestureRecognizer id="3wf-x5-uaq" userLabel="tab02_boyKakei"/>
-                <tapGestureRecognizer id="0Z0-2S-BGO" userLabel="tab02_boyAdd"/>
-                <tapGestureRecognizer id="I7j-4g-cQ8" userLabel="tab01_girlKakei"/>
-                <tapGestureRecognizer id="GDx-hE-RSk" userLabel="tab02_girlAdd"/>
+                <tapGestureRecognizer id="doy-Mu-fBU" userLabel="tab02_home">
+                    <connections>
+                        <action selector="tapHome:" destination="Dsr-tN-jqS" id="roO-aq-kxV"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="3wf-x5-uaq" userLabel="tab02_boyKakei">
+                    <connections>
+                        <action selector="tapBoyFinance:" destination="Dsr-tN-jqS" id="tdx-Tu-rwF"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="0Z0-2S-BGO" userLabel="tab02_boyAdd">
+                    <connections>
+                        <action selector="tapBoyRegister:" destination="Dsr-tN-jqS" id="hVk-eF-Yt7"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="I7j-4g-cQ8" userLabel="tab01_girlKakei">
+                    <connections>
+                        <action selector="tapGirlFinance:" destination="Dsr-tN-jqS" id="yVM-Lg-FxE"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="GDx-hE-RSk" userLabel="tab02_girlAdd">
+                    <connections>
+                        <action selector="tapGirlRegister:" destination="Dsr-tN-jqS" id="oZb-Em-XL8"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="8541" y="2222"/>
         </scene>
@@ -3837,7 +4077,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="yX8-Ob-8C8" userLabel="03_tab">
                                 <rect key="frame" x="20" y="791" width="374" height="59"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tab02_home" translatesAutoresizingMaskIntoConstraints="NO" id="Hv5-Aa-Qx2">
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tab02_home" translatesAutoresizingMaskIntoConstraints="NO" id="Hv5-Aa-Qx2">
                                         <rect key="frame" x="0.0" y="0.0" width="59" height="59"/>
                                         <gestureRecognizers/>
                                         <constraints>
@@ -3847,7 +4087,7 @@
                                             <outletCollection property="gestureRecognizers" destination="711-Ba-1ce" appends="YES" id="jPo-bc-uoR"/>
                                         </connections>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tab01_.boyKakei" translatesAutoresizingMaskIntoConstraints="NO" id="Z9M-e7-aHr">
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tab01_.boyKakei" translatesAutoresizingMaskIntoConstraints="NO" id="Z9M-e7-aHr">
                                         <rect key="frame" x="79" y="0.0" width="58.5" height="59"/>
                                         <gestureRecognizers/>
                                         <constraints>
@@ -3857,7 +4097,7 @@
                                             <outletCollection property="gestureRecognizers" destination="7T2-NK-Rty" appends="YES" id="zRG-CB-LQo"/>
                                         </connections>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tab02_boyAdd" translatesAutoresizingMaskIntoConstraints="NO" id="DJ1-YK-Ask">
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tab02_boyAdd" translatesAutoresizingMaskIntoConstraints="NO" id="DJ1-YK-Ask">
                                         <rect key="frame" x="157.5" y="0.0" width="59" height="59"/>
                                         <gestureRecognizers/>
                                         <constraints>
@@ -3867,7 +4107,7 @@
                                             <outletCollection property="gestureRecognizers" destination="T3j-dT-7Cu" appends="YES" id="YPl-ik-Xxs"/>
                                         </connections>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tab02_girlKakei" translatesAutoresizingMaskIntoConstraints="NO" id="IcV-ra-mxK">
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tab02_girlKakei" translatesAutoresizingMaskIntoConstraints="NO" id="IcV-ra-mxK">
                                         <rect key="frame" x="236.5" y="0.0" width="58.5" height="59"/>
                                         <gestureRecognizers/>
                                         <constraints>
@@ -3877,7 +4117,7 @@
                                             <outletCollection property="gestureRecognizers" destination="dRa-jG-HFb" appends="YES" id="WB6-x9-5I1"/>
                                         </connections>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tab02_girlAdd" translatesAutoresizingMaskIntoConstraints="NO" id="7y7-Of-mlR">
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tab02_girlAdd" translatesAutoresizingMaskIntoConstraints="NO" id="7y7-Of-mlR">
                                         <rect key="frame" x="315" y="0.0" width="59" height="59"/>
                                         <gestureRecognizers/>
                                         <constraints>
@@ -3921,11 +4161,31 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AuR-mX-Mam" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="711-Ba-1ce" userLabel="tab02_home"/>
-                <tapGestureRecognizer id="7T2-NK-Rty" userLabel="tab01_boyKakei"/>
-                <tapGestureRecognizer id="T3j-dT-7Cu" userLabel="tab02_boyAdd"/>
-                <tapGestureRecognizer id="dRa-jG-HFb" userLabel="tab02_girlKakei"/>
-                <tapGestureRecognizer id="Kge-Fs-j7F" userLabel="tab02_girlAdd"/>
+                <tapGestureRecognizer id="711-Ba-1ce" userLabel="tab02_home">
+                    <connections>
+                        <action selector="tapHome:" destination="ORS-Qg-Ecr" id="gQd-fb-2Yj"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="7T2-NK-Rty" userLabel="tab01_boyKakei">
+                    <connections>
+                        <action selector="tapBoyFinance:" destination="ORS-Qg-Ecr" id="w2t-8t-PHF"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="T3j-dT-7Cu" userLabel="tab02_boyAdd">
+                    <connections>
+                        <action selector="tapBoyRegister:" destination="ORS-Qg-Ecr" id="c0c-66-kFH"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="dRa-jG-HFb" userLabel="tab02_girlKakei">
+                    <connections>
+                        <action selector="tapGirlFinance:" destination="ORS-Qg-Ecr" id="Xd6-at-D2I"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Kge-Fs-j7F" userLabel="tab02_girlAdd">
+                    <connections>
+                        <action selector="tapGirlRegister:" destination="ORS-Qg-Ecr" id="SSJ-F4-Oyv"/>
+                    </connections>
+                </tapGestureRecognizer>
                 <tapGestureRecognizer id="ycz-m9-hvo" userLabel="boy_syokuhi">
                     <connections>
                         <action selector="boyFinanceTapWith_sender:" destination="ORS-Qg-Ecr" id="SCD-sA-blL"/>
@@ -4273,7 +4533,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="GZc-ce-Jug" userLabel="03_tab">
                                 <rect key="frame" x="20" y="791" width="374" height="59"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tab02_home" translatesAutoresizingMaskIntoConstraints="NO" id="bGJ-XB-84a">
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tab02_home" translatesAutoresizingMaskIntoConstraints="NO" id="bGJ-XB-84a">
                                         <rect key="frame" x="0.0" y="0.0" width="59" height="59"/>
                                         <gestureRecognizers/>
                                         <constraints>
@@ -4283,7 +4543,7 @@
                                             <outletCollection property="gestureRecognizers" destination="XrZ-Zf-iBT" appends="YES" id="qZE-7v-oWq"/>
                                         </connections>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tab02_boyKakei" translatesAutoresizingMaskIntoConstraints="NO" id="UZS-nO-ey8">
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tab02_boyKakei" translatesAutoresizingMaskIntoConstraints="NO" id="UZS-nO-ey8">
                                         <rect key="frame" x="79" y="0.0" width="58.5" height="59"/>
                                         <gestureRecognizers/>
                                         <constraints>
@@ -4293,7 +4553,7 @@
                                             <outletCollection property="gestureRecognizers" destination="JOP-eU-qma" appends="YES" id="ZpX-YT-WM7"/>
                                         </connections>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tab02_boyAdd" translatesAutoresizingMaskIntoConstraints="NO" id="zy2-zs-eZ0">
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tab02_boyAdd" translatesAutoresizingMaskIntoConstraints="NO" id="zy2-zs-eZ0">
                                         <rect key="frame" x="157.5" y="0.0" width="59" height="59"/>
                                         <gestureRecognizers/>
                                         <constraints>
@@ -4303,7 +4563,7 @@
                                             <outletCollection property="gestureRecognizers" destination="a4M-hb-A9G" appends="YES" id="qux-UK-8l3"/>
                                         </connections>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tab01_.girlKakei" translatesAutoresizingMaskIntoConstraints="NO" id="fUW-qp-faB">
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tab01_.girlKakei" translatesAutoresizingMaskIntoConstraints="NO" id="fUW-qp-faB">
                                         <rect key="frame" x="236.5" y="0.0" width="58.5" height="59"/>
                                         <gestureRecognizers/>
                                         <constraints>
@@ -4313,7 +4573,7 @@
                                             <outletCollection property="gestureRecognizers" destination="TiJ-2b-Ten" appends="YES" id="s6y-XI-UtS"/>
                                         </connections>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tab02_girlAdd" translatesAutoresizingMaskIntoConstraints="NO" id="YZO-XR-VLB">
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tab02_girlAdd" translatesAutoresizingMaskIntoConstraints="NO" id="YZO-XR-VLB">
                                         <rect key="frame" x="315" y="0.0" width="59" height="59"/>
                                         <gestureRecognizers/>
                                         <constraints>
@@ -4368,11 +4628,31 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6pR-A5-eh1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="XrZ-Zf-iBT" userLabel="tab02_home"/>
-                <tapGestureRecognizer id="JOP-eU-qma" userLabel="tab02_boyKakei"/>
-                <tapGestureRecognizer id="a4M-hb-A9G" userLabel="tab02_boyAdd"/>
-                <tapGestureRecognizer id="TiJ-2b-Ten" userLabel="tab01_girlKakei"/>
-                <tapGestureRecognizer id="tBW-xE-KAq" userLabel="tab02_girlAdd"/>
+                <tapGestureRecognizer id="XrZ-Zf-iBT" userLabel="tab02_home">
+                    <connections>
+                        <action selector="tapHome:" destination="U9h-e6-t8i" id="En5-7L-qw3"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="JOP-eU-qma" userLabel="tab02_boyKakei">
+                    <connections>
+                        <action selector="tapBoyFinance:" destination="U9h-e6-t8i" id="i5R-8h-k9d"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="a4M-hb-A9G" userLabel="tab02_boyAdd">
+                    <connections>
+                        <action selector="tapBoyRegister:" destination="U9h-e6-t8i" id="zi0-CK-Wk3"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="TiJ-2b-Ten" userLabel="tab01_girlKakei">
+                    <connections>
+                        <action selector="tapGirlFinance:" destination="U9h-e6-t8i" id="QzW-Al-alF"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="tBW-xE-KAq" userLabel="tab02_girlAdd">
+                    <connections>
+                        <action selector="tapGirlRegister:" destination="U9h-e6-t8i" id="4fX-rW-Wca"/>
+                    </connections>
+                </tapGestureRecognizer>
                 <tapGestureRecognizer id="sTF-Cp-Oge" userLabel="girl_syokuhi">
                     <connections>
                         <action selector="girlFinanceTapWith_sender:" destination="U9h-e6-t8i" id="DET-vk-iYE"/>
@@ -5949,11 +6229,31 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eGl-W3-8jr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="qfy-bK-bXh" userLabel="tab02_home"/>
-                <tapGestureRecognizer id="2Ix-K5-cW7" userLabel="tab02_boyKakei"/>
-                <tapGestureRecognizer id="l56-4i-nih" userLabel="tab02_boyAdd"/>
-                <tapGestureRecognizer id="x99-M3-KrY" userLabel="tab02_girlKakei"/>
-                <tapGestureRecognizer id="dXT-xs-tAh" userLabel="tab02_girlAdd"/>
+                <tapGestureRecognizer id="qfy-bK-bXh" userLabel="tab02_home">
+                    <connections>
+                        <action selector="tapHome:" destination="5sV-bF-Mt9" id="vhb-q2-HWa"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="2Ix-K5-cW7" userLabel="tab02_boyKakei">
+                    <connections>
+                        <action selector="tapBoyFinance:" destination="5sV-bF-Mt9" id="vZo-iE-rzZ"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="l56-4i-nih" userLabel="tab02_boyAdd">
+                    <connections>
+                        <action selector="tapBoyRegister:" destination="5sV-bF-Mt9" id="eSm-Mp-Zwl"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="x99-M3-KrY" userLabel="tab02_girlKakei">
+                    <connections>
+                        <action selector="tapGirlFinance:" destination="5sV-bF-Mt9" id="jJl-3u-idc"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="dXT-xs-tAh" userLabel="tab02_girlAdd">
+                    <connections>
+                        <action selector="tapGirlRegister:" destination="5sV-bF-Mt9" id="Uku-rM-Y4e"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="5431.884057971015" y="-1250.2232142857142"/>
         </scene>

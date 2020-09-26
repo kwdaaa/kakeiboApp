@@ -39,7 +39,6 @@ class ResetViewController: UIViewController {
     
     
     // // // // // // // // // // // // // // // // // // // //
-    
     // 画面遷移
     // 01:タブバーの画面遷移
     // 01-1:ホーム（HomeViewController）
