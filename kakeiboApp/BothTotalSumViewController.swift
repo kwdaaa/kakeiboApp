@@ -93,11 +93,11 @@ class BothTotalSumViewController: UIViewController {
         viewDidLoad()
         
         
-        let boyFoodTotal = UserDefaults.standard.object(forKey: "BoyFoodTotal") as! Int
-        let boyDailyTotal = UserDefaults.standard.object(forKey: "BoyDailyTotal") as! Int
-        let boyLeisureTotal = UserDefaults.standard.object(forKey: "BoyLeisureTotal") as! Int
-        let boyHousingTotal = UserDefaults.standard.object(forKey: "BoyHousingTotal")as! Int
-        let boyOthersTotal = UserDefaults.standard.object(forKey: "BoyOthersTotal")as! Int
+        let boyFoodTotal = UserDefaults.standard.object(forKey: "BoyFoodTotal") as! Int ?? 0
+        let boyDailyTotal = UserDefaults.standard.object(forKey: "BoyDailyTotal") as! Int ?? 0
+        let boyLeisureTotal = UserDefaults.standard.object(forKey: "BoyLeisureTotal") as! Int ?? 0
+        let boyHousingTotal = UserDefaults.standard.object(forKey: "BoyHousingTotal")as! Int ?? 0
+        let boyOthersTotal = UserDefaults.standard.object(forKey: "BoyOthersTotal")as! Int ?? 0
         
         
         

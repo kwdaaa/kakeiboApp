@@ -17,6 +17,7 @@ class SetViewController: UIViewController{
         super.viewDidLoad()
 
     }
+   
     
     
     // リセットのアラート
@@ -24,7 +25,7 @@ class SetViewController: UIViewController{
         // アラートダイアログを生成
         let alertController = UIAlertController(title: "本当にリセットしますか",
                                                 message: "\n全ての家計記録を削除します。",
-                                                preferredStyle: UIAlertController.Style.alert)
+                                                preferredStyle: UIAlertController.Style.actionSheet)
         // いいえボタンがタップされた時の処理
         let nonresetAction = UIAlertAction(title: "いいえ",
                                            style: UIAlertAction.Style.cancel, handler: { action in})
@@ -93,7 +94,7 @@ class SetViewController: UIViewController{
         // アラートダイアログを生成
         let alertController = UIAlertController(title: "本当にお別れしますか",
                                                 message: "\n全ての家計記録を削除し、\nお付き合い前の関係性に戻ります。",
-                                                preferredStyle: UIAlertController.Style.alert)
+                                                preferredStyle: UIAlertController.Style.actionSheet)
         
         // 別れたくないボタンがタップされた時の処理
         let nonbreakAction = UIAlertAction(title: "別れたくない",
@@ -158,28 +159,28 @@ class SetViewController: UIViewController{
     
     
     
-    // ふたりの家計（食費）
-    let bothFoodTotalSum = UserDefaults.standard.object(forKey: "BothFoodTotal")as! String
-    // ふたりの家計（日用品）
-    let bothDailyTotalSum = UserDefaults.standard.object(forKey: "BothDailyTotal")as! String
-    // ふたりの家計（娯楽費）
-    let bothLeisureTotalSum = UserDefaults.standard.object(forKey: "BothLeisureTotal")as! String
-    // ふたりの家計（固定費）
-    let bothHousingTotalSum = UserDefaults.standard.object(forKey: "BothHousingTotal")as! String
-    // ふたりの家計（その他）
-    let bothOthersTotalSum = UserDefaults.standard.object(forKey: "BothOthersTotal")as! String
-    
-    // ふたりの家計（合計）
-    
-    let TotalSum = UserDefaults.standard.object(forKey: "BothTotalSum") as! String
-    
-    // 彼氏の家計（合計）bothTotalSumをいじってる。全部０に
-    
-    let boyTotalSum = UserDefaults.standard.object(forKey: "BoyTotalSumSecond") as! String
-    
-    // 彼女の家計（合計）
-    
-    let girlTotalSum = UserDefaults.standard.object(forKey: "GirlTotalSumSecond")as! String
+//    // ふたりの家計（食費）
+//    let bothFoodTotalSum = UserDefaults.standard.object(forKey: "BothFoodTotal")as! String
+//    // ふたりの家計（日用品）
+//    let bothDailyTotalSum = UserDefaults.standard.object(forKey: "BothDailyTotal")as! String
+//    // ふたりの家計（娯楽費）
+//    let bothLeisureTotalSum = UserDefaults.standard.object(forKey: "BothLeisureTotal")as! String
+//    // ふたりの家計（固定費）
+//    let bothHousingTotalSum = UserDefaults.standard.object(forKey: "BothHousingTotal")as! String
+//    // ふたりの家計（その他）
+//    let bothOthersTotalSum = UserDefaults.standard.object(forKey: "BothOthersTotal")as! String
+//
+//    // ふたりの家計（合計）
+//
+//    let TotalSum = UserDefaults.standard.object(forKey: "BothTotalSum") as! String
+//
+//    // 彼氏の家計（合計）bothTotalSumをいじってる。全部０に
+//
+//    let boyTotalSum = UserDefaults.standard.object(forKey: "BoyTotalSumSecond") as! String
+//
+//    // 彼女の家計（合計）
+//
+//    let girlTotalSum = UserDefaults.standard.object(forKey: "GirlTotalSumSecond")as! String
     
     
     
@@ -187,7 +188,7 @@ class SetViewController: UIViewController{
     // シェアのタップジェスチャー
     @IBAction func tapShare(_ sender: Any) {
         // 共有する項目
-        let shareText = "▼ふたりの家計\n食費：¥\(bothFoodTotalSum)\n日用品費：¥|\(bothDailyTotalSum)\n娯楽費：¥\(bothLeisureTotalSum)\n固定費：¥\(bothHousingTotalSum)\nその他：¥\(bothOthersTotalSum)\n合計：¥\(TotalSum)\n▼彼氏の家計\n合計：¥\(boyTotalSum)\n▼彼女の家計\n合計：¥\(girlTotalSum)"
+        let shareText = "▼ふたりの家計\n食費：¥12,345\n日用品費：¥12,345\n娯楽費：¥12,345\n固定費：¥12,345\nその他：¥12,345\n合計：¥12,345\n▼彼氏の家計\n合計：¥12,345\n▼彼女の家計\n合計：¥12,345"
         
         let activityItems = [shareText] as [Any]
         
@@ -213,6 +214,7 @@ class SetViewController: UIViewController{
     @IBAction func tapReset(_ sender: Any) {
         // アラートを出す
         resetShowAlert()
+//        testAlert.resetShowAlert()
     }
     
     // 破局のタップジェスチャー

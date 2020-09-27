@@ -40,8 +40,8 @@ class BothFoodViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         
         //        それぞれの食費の合計を変数に入れた！
-                let boyFoodTotal = UserDefaults.standard.object(forKey: "BoyFoodTotal") as? Int
-                let girlFoodTotal = UserDefaults.standard.object(forKey: "GirlFoodTotal") as? Int
+                let boyFoodTotal = UserDefaults.standard.object(forKey: "BoyFoodTotal") as? Int ?? 0
+                let girlFoodTotal = UserDefaults.standard.object(forKey: "GirlFoodTotal") as? Int ?? 0
         
 //
 //        //構造体にアクセス
@@ -50,7 +50,7 @@ class BothFoodViewController: UIViewController {
         viewDidLoad()
         
         //        BothTotalSumで使うために足し算！
-        let bothfoodTotal = boyFoodTotal! + girlFoodTotal!
+        let bothfoodTotal = boyFoodTotal + girlFoodTotal
         
         UserDefaults.standard.set(bothfoodTotal, forKey: "BothFoodTotal")
         

@@ -18,25 +18,14 @@ class BothOthersViewController: UIViewController {
         super.viewDidLoad()
         
         
-               let bothOthers = testStruct()
-               
-               if bothOthers.boyOthersTotal == nil{
-                   
-                   bothOthers.boyOthersTotal == 0
-               }
-               
-               if bothOthers.girlOthersTotal == nil{
-                   
-                   bothOthers.girlOthersTotal == 0
-               }
     }
     
     
     override func viewWillAppear(_ animated: Bool) {
         
         //           //        それぞれのその他の合計を変数に入れた！
-                   let boyOthersTotal = UserDefaults.standard.object(forKey: "BoyOthersTotal") as! Int
-                   let girlOthersTotal = UserDefaults.standard.object(forKey: "GirlOthersTotal") as! Int
+                   let boyOthersTotal = UserDefaults.standard.object(forKey: "BoyOthersTotal") as! Int ?? 0
+                   let girlOthersTotal = UserDefaults.standard.object(forKey: "GirlOthersTotal") as! Int ?? 0
         
 //        //構造体にアクセス
 //        let bothOthers = testStruct()

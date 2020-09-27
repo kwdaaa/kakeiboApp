@@ -38,8 +38,8 @@ class BothHousingViewController: UIViewController {
      override func viewWillAppear(_ animated: Bool) {
          
 //         //        それぞれの固定費の合計を変数に入れた！
-         let boyHousingTotal = UserDefaults.standard.object(forKey: "BoyHousingTotal") as? Int
-         let girlHousingTotal = UserDefaults.standard.object(forKey: "GirlHousingTotal") as? Int
+         let boyHousingTotal = UserDefaults.standard.object(forKey: "BoyHousingTotal") as? Int ?? 0
+         let girlHousingTotal = UserDefaults.standard.object(forKey: "GirlHousingTotal") as? Int ?? 0
 
 ////        構造体にアクセス
 //        let bothHousing = testStruct()
@@ -47,7 +47,7 @@ class BothHousingViewController: UIViewController {
     
         
          //        BothTotalSumで使うために足し算！
-        let bothHousingTotal = boyHousingTotal! + girlHousingTotal!
+        let bothHousingTotal = boyHousingTotal + girlHousingTotal
         UserDefaults.standard.set(bothHousingTotal, forKey: "BothHousingTotal")
 //
          //        型変換

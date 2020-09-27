@@ -56,8 +56,11 @@ class GirlDailyViewController: UIViewController,UITableViewDataSource,UITableVie
         UserDefaults.standard.set(girlDailyArray,forKey: "GirlDailyArray")
        
         //        彼女の日用品の合計を保存
-        UserDefaults.standard.set(girlDailyTotal, forKey: "GirlDailyTotal")
+        if girlDailyTotal != nil{
         
+        UserDefaults.standard.set(girlDailyTotal, forKey: "GirlDailyTotal")
+        }
+            
         girlDailyTableView.dataSource = self
         girlDailyTableView.delegate = self
     }

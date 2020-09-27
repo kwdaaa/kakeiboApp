@@ -2000,14 +2000,14 @@
                                 <rect key="frame" x="0.0" y="112" width="414" height="666"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lWB-je-3Ja">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="666"/>
+                                        <rect key="frame" x="20" y="0.0" width="374" height="666"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BoyFoodCell" id="5cn-8M-2DH">
-                                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                                <rect key="frame" x="0.0" y="28" width="374" height="43.5"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5cn-8M-2DH" id="pt1-T0-u3y">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </tableViewCellContentView>
                                             </tableViewCell>
@@ -2017,9 +2017,9 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstItem="lWB-je-3Ja" firstAttribute="top" secondItem="wYV-FI-BD5" secondAttribute="top" id="1ud-f8-npP"/>
-                                    <constraint firstItem="lWB-je-3Ja" firstAttribute="leading" secondItem="wYV-FI-BD5" secondAttribute="leading" id="hhp-y6-Sj8"/>
+                                    <constraint firstItem="lWB-je-3Ja" firstAttribute="leading" secondItem="wYV-FI-BD5" secondAttribute="leading" constant="20" id="hhp-y6-Sj8"/>
                                     <constraint firstAttribute="bottom" secondItem="lWB-je-3Ja" secondAttribute="bottom" id="iLF-of-jsC"/>
-                                    <constraint firstAttribute="trailing" secondItem="lWB-je-3Ja" secondAttribute="trailing" id="r29-Xo-8ZI"/>
+                                    <constraint firstAttribute="trailing" secondItem="lWB-je-3Ja" secondAttribute="trailing" constant="20" id="r29-Xo-8ZI"/>
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line_04" translatesAutoresizingMaskIntoConstraints="NO" id="rkp-yK-vwE">
@@ -2179,14 +2179,14 @@
                                 <rect key="frame" x="0.0" y="112" width="414" height="666"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eEq-fL-Y6c">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="666"/>
+                                        <rect key="frame" x="20" y="0.0" width="374" height="666"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BoyDailyCell" id="5Vq-Wy-eGE">
-                                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                                <rect key="frame" x="0.0" y="28" width="374" height="43.5"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5Vq-Wy-eGE" id="1bx-TX-hu0">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </tableViewCellContentView>
                                             </tableViewCell>
@@ -2197,8 +2197,8 @@
                                 <constraints>
                                     <constraint firstItem="eEq-fL-Y6c" firstAttribute="top" secondItem="XDb-KK-YV3" secondAttribute="top" id="Msp-jS-VxI"/>
                                     <constraint firstAttribute="bottom" secondItem="eEq-fL-Y6c" secondAttribute="bottom" id="rMY-OZ-LBr"/>
-                                    <constraint firstItem="eEq-fL-Y6c" firstAttribute="leading" secondItem="XDb-KK-YV3" secondAttribute="leading" id="w92-Dc-OJh"/>
-                                    <constraint firstAttribute="trailing" secondItem="eEq-fL-Y6c" secondAttribute="trailing" id="wsd-Jh-XtW"/>
+                                    <constraint firstItem="eEq-fL-Y6c" firstAttribute="leading" secondItem="XDb-KK-YV3" secondAttribute="leading" constant="20" id="w92-Dc-OJh"/>
+                                    <constraint firstAttribute="trailing" secondItem="eEq-fL-Y6c" secondAttribute="trailing" constant="20" id="wsd-Jh-XtW"/>
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line_04" translatesAutoresizingMaskIntoConstraints="NO" id="gTD-a9-STN">
@@ -2358,14 +2358,14 @@
                                 <rect key="frame" x="0.0" y="112" width="414" height="666"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3Kf-r0-YJK">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="666"/>
+                                        <rect key="frame" x="20" y="0.0" width="374" height="666"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BoyLeisureCell" id="ehG-BR-q82">
-                                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                                <rect key="frame" x="0.0" y="28" width="374" height="43.5"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ehG-BR-q82" id="aKU-Uz-348">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </tableViewCellContentView>
                                             </tableViewCell>
@@ -2375,8 +2375,8 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstItem="3Kf-r0-YJK" firstAttribute="top" secondItem="fVj-lg-nVH" secondAttribute="top" id="35A-hZ-71m"/>
-                                    <constraint firstItem="3Kf-r0-YJK" firstAttribute="leading" secondItem="fVj-lg-nVH" secondAttribute="leading" id="V7q-r8-sXL"/>
-                                    <constraint firstAttribute="trailing" secondItem="3Kf-r0-YJK" secondAttribute="trailing" id="r80-Kl-1HE"/>
+                                    <constraint firstItem="3Kf-r0-YJK" firstAttribute="leading" secondItem="fVj-lg-nVH" secondAttribute="leading" constant="20" id="V7q-r8-sXL"/>
+                                    <constraint firstAttribute="trailing" secondItem="3Kf-r0-YJK" secondAttribute="trailing" constant="20" id="r80-Kl-1HE"/>
                                     <constraint firstAttribute="bottom" secondItem="3Kf-r0-YJK" secondAttribute="bottom" id="v5G-m3-tYw"/>
                                 </constraints>
                             </view>
@@ -2537,14 +2537,14 @@
                                 <rect key="frame" x="0.0" y="112" width="414" height="666"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Evj-4I-9c3">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="666"/>
+                                        <rect key="frame" x="20" y="0.0" width="374" height="666"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BoyHousingCell" id="mQL-hm-lCe">
-                                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                                <rect key="frame" x="0.0" y="28" width="374" height="43.5"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mQL-hm-lCe" id="Ib0-zo-ERO">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </tableViewCellContentView>
                                             </tableViewCell>
@@ -2553,9 +2553,9 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstItem="Evj-4I-9c3" firstAttribute="leading" secondItem="zMl-2X-XPr" secondAttribute="leading" id="FJ0-P1-dTJ"/>
+                                    <constraint firstItem="Evj-4I-9c3" firstAttribute="leading" secondItem="zMl-2X-XPr" secondAttribute="leading" constant="20" id="FJ0-P1-dTJ"/>
                                     <constraint firstAttribute="bottom" secondItem="Evj-4I-9c3" secondAttribute="bottom" id="Hyt-Xu-dH2"/>
-                                    <constraint firstAttribute="trailing" secondItem="Evj-4I-9c3" secondAttribute="trailing" id="cD9-eV-Yni"/>
+                                    <constraint firstAttribute="trailing" secondItem="Evj-4I-9c3" secondAttribute="trailing" constant="20" id="cD9-eV-Yni"/>
                                     <constraint firstItem="Evj-4I-9c3" firstAttribute="top" secondItem="zMl-2X-XPr" secondAttribute="top" id="rmY-T5-u3t"/>
                                 </constraints>
                             </view>
@@ -2716,14 +2716,14 @@
                                 <rect key="frame" x="0.0" y="112" width="414" height="666"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Bpn-Qg-DqY">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="666"/>
+                                        <rect key="frame" x="20" y="0.0" width="374" height="666"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BoyOthersCell" id="3yz-cV-dQ3">
-                                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                                <rect key="frame" x="0.0" y="28" width="374" height="43.5"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3yz-cV-dQ3" id="1ot-6d-SHs">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </tableViewCellContentView>
                                             </tableViewCell>
@@ -2732,9 +2732,9 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="Bpn-Qg-DqY" secondAttribute="trailing" id="WLW-iG-1Qk"/>
+                                    <constraint firstAttribute="trailing" secondItem="Bpn-Qg-DqY" secondAttribute="trailing" constant="20" id="WLW-iG-1Qk"/>
                                     <constraint firstItem="Bpn-Qg-DqY" firstAttribute="top" secondItem="CHd-Wb-ALZ" secondAttribute="top" id="bHL-ND-Zon"/>
-                                    <constraint firstItem="Bpn-Qg-DqY" firstAttribute="leading" secondItem="CHd-Wb-ALZ" secondAttribute="leading" id="nJj-gy-d67"/>
+                                    <constraint firstItem="Bpn-Qg-DqY" firstAttribute="leading" secondItem="CHd-Wb-ALZ" secondAttribute="leading" constant="20" id="nJj-gy-d67"/>
                                     <constraint firstAttribute="bottom" secondItem="Bpn-Qg-DqY" secondAttribute="bottom" id="ubu-ko-hS7"/>
                                 </constraints>
                             </view>
@@ -2895,14 +2895,14 @@
                                 <rect key="frame" x="0.0" y="112" width="414" height="666"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="STX-NQ-xtl">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="666"/>
+                                        <rect key="frame" x="20" y="0.0" width="374" height="666"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GirlFoodCell" id="zbc-Au-SXv">
-                                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                                <rect key="frame" x="0.0" y="28" width="374" height="43.5"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zbc-Au-SXv" id="Df9-ma-0V9">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </tableViewCellContentView>
                                             </tableViewCell>
@@ -2911,10 +2911,10 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="STX-NQ-xtl" secondAttribute="trailing" id="cRV-ic-VS5"/>
+                                    <constraint firstAttribute="trailing" secondItem="STX-NQ-xtl" secondAttribute="trailing" constant="20" id="cRV-ic-VS5"/>
                                     <constraint firstAttribute="bottom" secondItem="STX-NQ-xtl" secondAttribute="bottom" id="evu-Rc-HOj"/>
                                     <constraint firstItem="STX-NQ-xtl" firstAttribute="top" secondItem="52W-KG-ACi" secondAttribute="top" id="hfI-TQ-S3c"/>
-                                    <constraint firstItem="STX-NQ-xtl" firstAttribute="leading" secondItem="52W-KG-ACi" secondAttribute="leading" id="s18-7f-2fv"/>
+                                    <constraint firstItem="STX-NQ-xtl" firstAttribute="leading" secondItem="52W-KG-ACi" secondAttribute="leading" constant="20" id="s18-7f-2fv"/>
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line_04" translatesAutoresizingMaskIntoConstraints="NO" id="z7A-lZ-yzh">
@@ -3074,14 +3074,14 @@
                                 <rect key="frame" x="0.0" y="112" width="414" height="666"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QW9-Q1-sn3">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="666"/>
+                                        <rect key="frame" x="20" y="0.0" width="374" height="666"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GirlDailyCell" id="JHN-hB-vT2">
-                                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                                <rect key="frame" x="0.0" y="28" width="374" height="43.5"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JHN-hB-vT2" id="F6F-ff-rM8">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </tableViewCellContentView>
                                             </tableViewCell>
@@ -3091,9 +3091,9 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstItem="QW9-Q1-sn3" firstAttribute="top" secondItem="JjU-hF-lsI" secondAttribute="top" id="4Sn-2G-7ZC"/>
-                                    <constraint firstAttribute="trailing" secondItem="QW9-Q1-sn3" secondAttribute="trailing" id="78T-Eb-Fmb"/>
+                                    <constraint firstAttribute="trailing" secondItem="QW9-Q1-sn3" secondAttribute="trailing" constant="20" id="78T-Eb-Fmb"/>
                                     <constraint firstAttribute="bottom" secondItem="QW9-Q1-sn3" secondAttribute="bottom" id="m7T-fL-QAI"/>
-                                    <constraint firstItem="QW9-Q1-sn3" firstAttribute="leading" secondItem="JjU-hF-lsI" secondAttribute="leading" id="zl1-3D-eLL"/>
+                                    <constraint firstItem="QW9-Q1-sn3" firstAttribute="leading" secondItem="JjU-hF-lsI" secondAttribute="leading" constant="20" id="zl1-3D-eLL"/>
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line_04" translatesAutoresizingMaskIntoConstraints="NO" id="G1h-q3-l0N">
@@ -3253,14 +3253,14 @@
                                 <rect key="frame" x="0.0" y="112" width="414" height="666"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TnD-fm-j9L">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="666"/>
+                                        <rect key="frame" x="20" y="0.0" width="374" height="666"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GirlLeisureCell" id="U2H-vL-d9S">
-                                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                                <rect key="frame" x="0.0" y="28" width="374" height="43.5"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="U2H-vL-d9S" id="v1C-Ny-wGW">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </tableViewCellContentView>
                                             </tableViewCell>
@@ -3271,8 +3271,8 @@
                                 <constraints>
                                     <constraint firstItem="TnD-fm-j9L" firstAttribute="top" secondItem="hSq-YK-DUg" secondAttribute="top" id="RCN-HF-LR6"/>
                                     <constraint firstAttribute="bottom" secondItem="TnD-fm-j9L" secondAttribute="bottom" id="bAa-3l-I88"/>
-                                    <constraint firstAttribute="trailing" secondItem="TnD-fm-j9L" secondAttribute="trailing" id="dNb-Zw-U5W"/>
-                                    <constraint firstItem="TnD-fm-j9L" firstAttribute="leading" secondItem="hSq-YK-DUg" secondAttribute="leading" id="j0b-dV-NIt"/>
+                                    <constraint firstAttribute="trailing" secondItem="TnD-fm-j9L" secondAttribute="trailing" constant="20" id="dNb-Zw-U5W"/>
+                                    <constraint firstItem="TnD-fm-j9L" firstAttribute="leading" secondItem="hSq-YK-DUg" secondAttribute="leading" constant="20" id="j0b-dV-NIt"/>
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line_04" translatesAutoresizingMaskIntoConstraints="NO" id="Qy2-MS-Kcd">
@@ -3432,14 +3432,14 @@
                                 <rect key="frame" x="0.0" y="112" width="414" height="666"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qxe-ra-rbM">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="666"/>
+                                        <rect key="frame" x="20" y="0.0" width="374" height="666"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" showsReorderControl="YES" indentationWidth="10" reuseIdentifier="GirlHousingCell" id="xsa-NS-3as">
-                                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                                <rect key="frame" x="0.0" y="28" width="374" height="43.5"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xsa-NS-3as" id="2Kp-b9-WHH">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </tableViewCellContentView>
                                             </tableViewCell>
@@ -3448,8 +3448,8 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstItem="qxe-ra-rbM" firstAttribute="leading" secondItem="bfU-Pf-1J7" secondAttribute="leading" id="0iX-Qs-W9A"/>
-                                    <constraint firstAttribute="trailing" secondItem="qxe-ra-rbM" secondAttribute="trailing" id="RGM-9s-xRx"/>
+                                    <constraint firstItem="qxe-ra-rbM" firstAttribute="leading" secondItem="bfU-Pf-1J7" secondAttribute="leading" constant="20" id="0iX-Qs-W9A"/>
+                                    <constraint firstAttribute="trailing" secondItem="qxe-ra-rbM" secondAttribute="trailing" constant="20" id="RGM-9s-xRx"/>
                                     <constraint firstItem="qxe-ra-rbM" firstAttribute="top" secondItem="bfU-Pf-1J7" secondAttribute="top" id="jtP-BR-SQo"/>
                                     <constraint firstAttribute="bottom" secondItem="qxe-ra-rbM" secondAttribute="bottom" id="kdi-3h-Gu4"/>
                                 </constraints>
@@ -3611,14 +3611,14 @@
                                 <rect key="frame" x="0.0" y="112" width="414" height="666"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="C4l-8w-jMY">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="666"/>
+                                        <rect key="frame" x="20" y="0.0" width="374" height="666"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GirlOthersCell" id="cYE-5I-Fqu">
-                                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                                <rect key="frame" x="0.0" y="28" width="374" height="43.5"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cYE-5I-Fqu" id="ySj-pe-dnP">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </tableViewCellContentView>
                                             </tableViewCell>
@@ -3629,8 +3629,8 @@
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="C4l-8w-jMY" secondAttribute="bottom" id="RbY-IV-DA7"/>
                                     <constraint firstItem="C4l-8w-jMY" firstAttribute="top" secondItem="mL6-7I-Od0" secondAttribute="top" id="X9m-Oq-tgm"/>
-                                    <constraint firstAttribute="trailing" secondItem="C4l-8w-jMY" secondAttribute="trailing" id="lWc-GJ-SJS"/>
-                                    <constraint firstItem="C4l-8w-jMY" firstAttribute="leading" secondItem="mL6-7I-Od0" secondAttribute="leading" id="sCM-j4-sRB"/>
+                                    <constraint firstAttribute="trailing" secondItem="C4l-8w-jMY" secondAttribute="trailing" constant="20" id="lWc-GJ-SJS"/>
+                                    <constraint firstItem="C4l-8w-jMY" firstAttribute="leading" secondItem="mL6-7I-Od0" secondAttribute="leading" constant="20" id="sCM-j4-sRB"/>
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line_04" translatesAutoresizingMaskIntoConstraints="NO" id="qF3-v6-nLN">
@@ -4190,27 +4190,27 @@
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="ycz-m9-hvo" userLabel="boy_syokuhi">
                     <connections>
-                        <action selector="boyFinanceTapWith_sender:" destination="ORS-Qg-Ecr" id="SCD-sA-blL"/>
+                        <action selector="tapBoyFoodWith_sender:" destination="ORS-Qg-Ecr" id="sqK-JB-XrD"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="GpQ-cz-x4P" userLabel="boy_nishiyouhinhi">
                     <connections>
-                        <action selector="boyDailyTapWith_sender:" destination="ORS-Qg-Ecr" id="zpt-DJ-rJf"/>
+                        <action selector="tapBoyDailyWith_sender:" destination="ORS-Qg-Ecr" id="Ua3-cp-FvG"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="bLI-mg-Kfn" userLabel="boy_gorakuhi">
                     <connections>
-                        <action selector="boyLeisureTapWith_sender:" destination="ORS-Qg-Ecr" id="AHh-86-TeZ"/>
+                        <action selector="tapBoyLeisureWith_sender:" destination="ORS-Qg-Ecr" id="h29-UO-hGP"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="bqd-gf-aBL" userLabel="boy_koteihi">
                     <connections>
-                        <action selector="boyHousingTapWith_sender:" destination="ORS-Qg-Ecr" id="Hva-4X-j4J"/>
+                        <action selector="tapBoyHousingWith_sender:" destination="ORS-Qg-Ecr" id="VKg-Wd-Q2l"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="mSG-02-bSC" userLabel="boy_sonota">
                     <connections>
-                        <action selector="boyOthersTapWith_sender:" destination="ORS-Qg-Ecr" id="V9x-7t-0fz"/>
+                        <action selector="tapBoyOthersWith_sender:" destination="ORS-Qg-Ecr" id="vV8-O9-aFz"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>

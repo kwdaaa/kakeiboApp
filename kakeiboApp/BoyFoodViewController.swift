@@ -24,7 +24,8 @@ class BoyFoodViewController: UIViewController,UITableViewDataSource,UITableViewD
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        
+        boyFoodTableView.dataSource = self
+        boyFoodTableView.delegate = self
     }
     
     

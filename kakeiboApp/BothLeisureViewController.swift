@@ -38,15 +38,15 @@ class BothLeisureViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         
 //       //        それぞれの娯楽費の合計を変数に入れた！
-       let boyLeisureTotal = UserDefaults.standard.object(forKey: "BoyLeisureTotal") as? Int
-       let girlLeisureTotal = UserDefaults.standard.object(forKey: "GirlLeisureTotal") as? Int
+       let boyLeisureTotal = UserDefaults.standard.object(forKey: "BoyLeisureTotal") as? Int ?? 0
+       let girlLeisureTotal = UserDefaults.standard.object(forKey: "GirlLeisureTotal") as? Int ?? 0
     
 ////    構造体にアクセス
 //    let bothLeisure = testStruct()
     
        viewDidLoad()
        //        BothTotalSumで使うために足し算！
-    let bothLeisureTotal = boyLeisureTotal! + girlLeisureTotal!
+    let bothLeisureTotal = boyLeisureTotal + girlLeisureTotal
        UserDefaults.standard.set(bothLeisureTotal, forKey: "BothLeisureTotal")
 //
        //        型変換
