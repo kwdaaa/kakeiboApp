@@ -33,6 +33,43 @@ class SetViewController: UIViewController{
         
         // はいボタンがタップされた時の処理
         let resetAction = UIAlertAction(title: "はい", style: UIAlertAction.Style.default, handler:{(action: UIAlertAction!) in
+            
+            UserDefaults.standard.removeObject(forKey: "BothTotalSum")
+            
+            UserDefaults.standard.removeObject(forKey: "BoyTotalSumSecond")
+            UserDefaults.standard.removeObject(forKey: "GirlTotalSumSecond")
+            
+            UserDefaults.standard.removeObject(forKey: "BoyFoodTotal")
+            UserDefaults.standard.removeObject(forKey: "BoyDailyTotal")
+            UserDefaults.standard.removeObject(forKey: "BoyLeisureTotal")
+            UserDefaults.standard.removeObject(forKey: "BoyHousingTotal")
+            UserDefaults.standard.removeObject(forKey: "BoyOthersTotal")
+            
+            UserDefaults.standard.removeObject(forKey: "GirlFoodTotal")
+            UserDefaults.standard.removeObject(forKey: "GirlDailyTotal")
+            UserDefaults.standard.removeObject(forKey: "GirlLeisureTotal")
+            UserDefaults.standard.removeObject(forKey: "GirlHousingTotal")
+            UserDefaults.standard.removeObject(forKey: "GirlOthersTotal")
+            
+            UserDefaults.standard.removeObject(forKey: "BoyFood")
+            UserDefaults.standard.removeObject(forKey: "BoyDaily")
+            UserDefaults.standard.removeObject(forKey: "BoyLeisure")
+            UserDefaults.standard.removeObject(forKey: "BoyHousing")
+            UserDefaults.standard.removeObject(forKey: "Boyothers")
+            
+            UserDefaults.standard.removeObject(forKey: "GirlFood")
+            UserDefaults.standard.removeObject(forKey: "GirlDaily")
+            UserDefaults.standard.removeObject(forKey: "GirlLeisure")
+            UserDefaults.standard.removeObject(forKey: "GirlHousing")
+            UserDefaults.standard.removeObject(forKey: "Girlothers")
+            
+            UserDefaults.standard.removeObject(forKey: "BothFoodTotal")
+            UserDefaults.standard.removeObject(forKey: "BothDailyTotal")
+            UserDefaults.standard.removeObject(forKey: "BothLeisureTotal")
+            UserDefaults.standard.removeObject(forKey: "BothHousingTotal")
+            UserDefaults.standard.removeObject(forKey: "BothOthersTotal")
+            
+            
             let storyboard: UIStoryboard = self.storyboard!
             let resetView = storyboard.instantiateViewController(withIdentifier: "reset")as! ResetViewController
             resetView.modalPresentationStyle = .fullScreen
@@ -49,8 +86,7 @@ class SetViewController: UIViewController{
         
     }
     
-    
-    
+   
     // 破局のアラート
     func breakShowAlert(){
         
@@ -68,10 +104,46 @@ class SetViewController: UIViewController{
         
         // 別れるボタンがタップされた時の処理
         let breakAction = UIAlertAction(title: "別れる", style: UIAlertAction.Style.default, handler:{(action: UIAlertAction!) in
+            
+            UserDefaults.standard.removeObject(forKey: "BoyTotalSumSecond")
+            UserDefaults.standard.removeObject(forKey: "GirlTotalSumSecond")
+            
+            UserDefaults.standard.removeObject(forKey: "BoyFoodTotal")
+            UserDefaults.standard.removeObject(forKey: "BoyDailyTotal")
+            UserDefaults.standard.removeObject(forKey: "BoyLeisureTotal")
+            UserDefaults.standard.removeObject(forKey: "BoyHousingTotal")
+            UserDefaults.standard.removeObject(forKey: "BoyOthersTotal")
+            
+            UserDefaults.standard.removeObject(forKey: "GirlFoodTotal")
+            UserDefaults.standard.removeObject(forKey: "GirlDailyTotal")
+            UserDefaults.standard.removeObject(forKey: "GirlLeisureTotal")
+            UserDefaults.standard.removeObject(forKey: "GirlHousingTotal")
+            UserDefaults.standard.removeObject(forKey: "GirlOthersTotal")
+            
+            UserDefaults.standard.removeObject(forKey: "BoyFood")
+            UserDefaults.standard.removeObject(forKey: "BoyDaily")
+            UserDefaults.standard.removeObject(forKey: "BoyLeisure")
+            UserDefaults.standard.removeObject(forKey: "BoyHousing")
+            UserDefaults.standard.removeObject(forKey: "Boyothers")
+            
+            UserDefaults.standard.removeObject(forKey: "GirlFood")
+            UserDefaults.standard.removeObject(forKey: "GirlDaily")
+            UserDefaults.standard.removeObject(forKey: "GirlLeisure")
+            UserDefaults.standard.removeObject(forKey: "GirlHousing")
+            UserDefaults.standard.removeObject(forKey: "Girlothers")
+            
+            UserDefaults.standard.removeObject(forKey: "BothFoodTotal")
+            UserDefaults.standard.removeObject(forKey: "BothDailyTotal")
+            UserDefaults.standard.removeObject(forKey: "BothLeisureTotal")
+            UserDefaults.standard.removeObject(forKey: "BothHousingTotal")
+            UserDefaults.standard.removeObject(forKey: "BothOthersTotal")
+            
             let storyboard: UIStoryboard = self.storyboard!
             let breakView = storyboard.instantiateViewController(withIdentifier: "break")as! BreakViewController
             breakView.modalPresentationStyle = .fullScreen
             self.present(breakView, animated: true, completion: nil)
+            
+
 
         })
         
@@ -86,57 +158,78 @@ class SetViewController: UIViewController{
     
     
     
+    // ふたりの家計（食費）
+    let bothFoodTotalSum = UserDefaults.standard.object(forKey: "BothFoodTotal")as! String
+    // ふたりの家計（日用品）
+    let bothDailyTotalSum = UserDefaults.standard.object(forKey: "BothDailyTotal")as! String
+    // ふたりの家計（娯楽費）
+    let bothLeisureTotalSum = UserDefaults.standard.object(forKey: "BothLeisureTotal")as! String
+    // ふたりの家計（固定費）
+    let bothHousingTotalSum = UserDefaults.standard.object(forKey: "BothHousingTotal")as! String
+    // ふたりの家計（その他）
+    let bothOthersTotalSum = UserDefaults.standard.object(forKey: "BothOthersTotal")as! String
+    
+    // ふたりの家計（合計）
+    
+    let TotalSum = UserDefaults.standard.object(forKey: "BothTotalSum") as! String
+    
+    // 彼氏の家計（合計）bothTotalSumをいじってる。全部０に
+    
+    let boyTotalSum = UserDefaults.standard.object(forKey: "BoyTotalSumSecond") as! String
+    
+    // 彼女の家計（合計）
+    
+    let girlTotalSum = UserDefaults.standard.object(forKey: "GirlTotalSumSecond")as! String
     
     
- // UITapGestureRecognizer
+    
+    // UITapGestureRecognizer
     // シェアのタップジェスチャー
     @IBAction func tapShare(_ sender: Any) {
         // 共有する項目
-        let shareText = "▼ふたりの家計\n食費：¥(食費合計の変数)\n日用品費：¥(日用品費合計の変数)\n娯楽費：¥(娯楽費合計の変数)\n固定費：¥(固定費合計の変数)\nその他：¥(その他合計の変数)\n合計：¥(合計の変数)\n\n▼彼氏の家計\n合計：¥(合計の変数)\n\n▼彼女の家計\n合計：¥(合計の変数)"
+        let shareText = "▼ふたりの家計\n食費：¥\(bothFoodTotalSum)\n日用品費：¥|\(bothDailyTotalSum)\n娯楽費：¥\(bothLeisureTotalSum)\n固定費：¥\(bothHousingTotalSum)\nその他：¥\(bothOthersTotalSum)\n合計：¥\(TotalSum)\n▼彼氏の家計\n合計：¥\(boyTotalSum)\n▼彼女の家計\n合計：¥\(girlTotalSum)"
         
         let activityItems = [shareText] as [Any]
-
+        
         let activityVC = UIActivityViewController(activityItems: activityItems, applicationActivities: nil)
-
-
-         // 使用しないアクティビティタイプ
-         let excludedActivityTypes = [
-         UIActivity.ActivityType.postToFacebook,
-         UIActivity.ActivityType.postToTwitter,
-         UIActivity.ActivityType.message,
-         UIActivity.ActivityType.saveToCameraRoll,
-         UIActivity.ActivityType.print
-         ]
-
-         activityVC.excludedActivityTypes = excludedActivityTypes
-
+        
+        
+        // 使用しないアクティビティタイプ
+        let excludedActivityTypes = [
+            UIActivity.ActivityType.postToFacebook,
+            UIActivity.ActivityType.postToTwitter,
+            UIActivity.ActivityType.message,
+            UIActivity.ActivityType.saveToCameraRoll,
+            UIActivity.ActivityType.print
+        ]
+        
+        activityVC.excludedActivityTypes = excludedActivityTypes
+        
         // UIActivityViewControllerを表示
         self.present(activityVC, animated: true, completion: nil)
     }
     
-        // リセットのタップジェスチャー
+    // リセットのタップジェスチャー
     @IBAction func tapReset(_ sender: Any) {
         // アラートを出す
         resetShowAlert()
     }
-        
+    
     // 破局のタップジェスチャー
-   @IBAction func tapBreak(_ sender: Any) {
+    @IBAction func tapBreak(_ sender: Any) {
         // アラートを出す
         breakShowAlert()
     }
     
-    
-    
-    
-    
-    
+   
     // // // // // // // // // // // // // // // // // // // //
     
     // 画面遷移
     // 00:戻る（ホームへ）の画面遷移
     @IBAction func tapBack(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        let HomeVC = self.storyboard?.instantiateViewController(withIdentifier: "Home") as! HomeViewController
+        HomeVC.modalPresentationStyle = .fullScreen
+        self.present(HomeVC, animated: false, completion: nil)
     }
     
     

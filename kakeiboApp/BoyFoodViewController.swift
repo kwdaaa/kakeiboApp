@@ -19,26 +19,34 @@ class BoyFoodViewController: UIViewController,UITableViewDataSource,UITableViewD
     //    彼氏の食費の合計を格納する変数を宣言
     var boyFoodTotal = 0
     
-    
+  
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
         
-        
-        if UserDefaults.standard.object(forKey: "BoyFood") == nil{
-            
-           print("登録されていません。")
-            
-        }
     }
     
     
     override func viewWillAppear(_ animated: Bool) {
         //        登録画面での食費の値を持ってくる　ちゃんとStringからIntに変換されてる？
-        let boyFoodValue:Int =  UserDefaults.standard.object(forKey: "BoyFood") as! Int
+    
+        
+        var boyFoodValue:Int =  0
+        let boyFoodStr = UserDefaults.standard.string(forKey:"BoyFood")
+        
+        boyFoodValue = Int(boyFoodStr!)!
         //        持ってきた値を配列に格納
-        boyFoodArray.append(boyFoodValue)
+        
+        
+        
+      if UserDefaults.standard.object(forKey: "BoyFoodArray") != nil{
+            
+            self.boyFoodArray = UserDefaults.standard.object(forKey: "BoyFoodArray") as! [Int]
+            
+            self.boyFoodArray.append(boyFoodValue)
+            
+        }
         
         //        彼氏の食費の配列の合計を計算
         boyFoodTotal = boyFoodArray.reduce(0){
@@ -48,17 +56,18 @@ class BoyFoodViewController: UIViewController,UITableViewDataSource,UITableViewD
             
         }
         
+        UserDefaults.standard.set(boyFoodArray, forKey: "BoyFoodArray")
         
-//       //        彼氏の食費の合計を保存
-              UserDefaults.standard.set(boyFoodTotal, forKey: "BoyFoodTotal")
-
+        print(boyFoodTotal)
+        
+        //        彼氏の食費の合計を保存
+        UserDefaults.standard.set(boyFoodTotal, forKey: "BoyFoodTotal")
+        
         boyFoodTableView.dataSource = self
         boyFoodTableView.delegate = self
         
     }
     
-    
- 
     
     //    彼氏の食費の配列分のセルを作る
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -69,6 +78,7 @@ class BoyFoodViewController: UIViewController,UITableViewDataSource,UITableViewD
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let boyFoodCell = tableView.dequeueReusableCell(withIdentifier: "BoyFoodCell", for: indexPath)
         boyFoodCell.textLabel?.text = "\(boyFoodArray[indexPath.row])"
+        
         return boyFoodCell
         
     }

@@ -13,18 +13,15 @@ class HomeViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let boyTotalSum = UserDefaults.standard.object(forKey: "boyTotalSumSecond") as? Int
-        let girlTotalSum = UserDefaults.standard.object(forKey: "girlTotalSecond") as? Int
+        let boyTotalSum = UserDefaults.standard.object(forKey: "BoyTotalSumSecond") as? Int
+        let girlTotalSum = UserDefaults.standard.object(forKey: "GirlTotalSumSecond") as? Int
         
         
         
-        if UserDefaults.standard.object(forKey: "boyTotalSumSecond") == nil,UserDefaults.standard.object(forKey: "girlTotalSecond") == nil{
+        if UserDefaults.standard.object(forKey: "BoyTotalSumSecond") == nil,UserDefaults.standard.object(forKey: "GirlTotalSecond") == nil{
             
-            UserDefaults.standard.set(0,forKey:"boyTotalSumSecond")
-            UserDefaults.standard.set(0,forKey:"girlTotalSumSecond")
-            
-            
-            
+            UserDefaults.standard.set(0,forKey:"BoyTotalSumSecond")
+            UserDefaults.standard.set(0,forKey:"GirlTotalSumSecond")
             
             
         }
@@ -47,25 +44,37 @@ class HomeViewController: UIViewController{
     
     override func viewWillAppear(_ animated: Bool) {
         //     食費
-        let bothFoodTotalSum =  UserDefaults.standard.object(forKey: "bothFoodTotal")
+        let bothFoodTotalSum =  UserDefaults.standard.object(forKey: "BothFoodTotal")
         //        日用品
-        let bothDailyTotalSum = UserDefaults.standard.object(forKey: "bothDailyTotal")
+        let bothDailyTotalSum = UserDefaults.standard.object(forKey: "BothDailyTotal")
         //        娯楽費
-        let bothLeisureTotalSum = UserDefaults.standard.object(forKey: "bothLeisureTotal")
+        let bothLeisureTotalSum = UserDefaults.standard.object(forKey: "BothLeisureTotal")
         //        固定費
-        let bothHousingTotalSum = UserDefaults.standard.object(forKey: "bothHousingTotal")
+        let bothHousingTotalSum = UserDefaults.standard.object(forKey: "BothHousingTotal")
         //        その他
-        let bothOthersTotalSum = UserDefaults.standard.object(forKey: "bothOthersTotal")
+        let bothOthersTotalSum = UserDefaults.standard.object(forKey: "BothOthersTotal")
         //        合計を持ってくる
         
         
         //        let bothtest = testStruct()
         
-        let boyTotalSum = UserDefaults.standard.object(forKey: "boyTotalSumSecond") as! Int
-        let girlTotalSum = UserDefaults.standard.object(forKey: "girlTotalSumSecond") as! Int
+        let boyTotalSum = UserDefaults.standard.object(forKey: "BoyTotalSumSecond") as! Int
+        let girlTotalSum = UserDefaults.standard.object(forKey: "GirlTotalSumSecond") as! Int
+        
+        if UserDefaults.standard.object(forKey: "BoyTotalSumSecond") == nil{
+            boyTotalSum == 0
+            
+        }
+        if UserDefaults.standard.object(forKey: "GirlTotalSumSecond") == nil{
+            girlTotalSum == 0
+        }
+        
+        
         
         //        足し算
         let bothTotalSum = boyTotalSum + girlTotalSum
+        
+        UserDefaults.standard.set(bothTotalSum, forKey: "BothTotalSum")
         
         //        型変換
         let bothTotalSumThird:String = String("\(bothTotalSum)")
@@ -89,9 +98,9 @@ class HomeViewController: UIViewController{
     // 画面遷移
     // 00:設計の画面遷移
     @IBAction func tapSet(_ sender: Any) {
-        
-        // セグエで紐付けています
-        
+   let SetVC = self.storyboard?.instantiateViewController(withIdentifier: "Set") as! SetViewController
+        SetVC.modalPresentationStyle = .fullScreen
+        self.present(SetVC, animated: true, completion: nil)
     }
     
     

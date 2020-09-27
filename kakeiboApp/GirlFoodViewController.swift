@@ -30,18 +30,32 @@ class GirlFoodViewController: UIViewController,UITableViewDataSource,UITableView
                }
     }
     override func viewWillAppear(_ animated: Bool) {
-        //        登録画面での食費の値を持ってくる　ちゃんとStringからIntに変換されてる？
-        let girlFoodValue:Int =  UserDefaults.standard.object(forKey: "girlFood") as! Int
-        //        持ってきた値を配列に格納
-        girlFoodArray.append(girlFoodValue)
         
-        //        彼女の食費の配列の合計を計算
+        var girlFoodValue:Int = 0
+        let girlFoodStr = UserDefaults.standard.string(forKey: "GirlFood")
+        
+        girlFoodValue = Int(girlFoodStr!)!
+        
+        if UserDefaults.standard.object(forKey: "GirlFoodArray") != nil{
+            
+            self.girlFoodArray = UserDefaults.standard.object(forKey: "GirlFoodArray") as! [Int]
+            
+            self.girlFoodArray.append(girlFoodValue)
+            
+        }
+        
+        //        彼氏の食費の配列の合計を計算
         girlFoodTotal = girlFoodArray.reduce(0){
             
             ( num1:Int, num2:Int ) -> Int in
             return num1 + num2
+            
         }
         
+        
+        UserDefaults.standard.set(girlFoodArray, forKey: "GirlFoodArray")
+        
+    
         //        彼女の食費の合計を保存
         UserDefaults.standard.set(girlFoodTotal, forKey: "GirlFoodTotal")
         

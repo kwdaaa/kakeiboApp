@@ -31,17 +31,28 @@ class GirlOthersViewController: UIViewController,UITableViewDataSource,UITableVi
     
     
     override func viewWillAppear(_ animated: Bool) {
-        //        登録画面でのその他の値を持ってくる　ちゃんとStringからIntに変換されてる？
-        let girlOthersValue:Int =  UserDefaults.standard.object(forKey: "GirlOthers") as! Int
-        //        持ってきた値を配列に格納
-        girlOthersArray.append(girlOthersValue)
+        var girlOthersValue:Int = 0
+        let girlOthersStr = UserDefaults.standard.string(forKey: "GirlOthers")
         
-        //        彼氏のその他の配列の合計を計算
-        girlOthersTotal = girlOthersArray.reduce(0){
+        girlOthersValue = Int(girlOthersStr!)!
+        
+        if UserDefaults.standard.object(forKey: "GirlOthersArray") != nil{
+                    
+                    self.girlOthersArray = UserDefaults.standard.object(forKey: "GirlOthersArray") as! [Int]
+                    self.girlOthersArray.append(girlOthersValue)
+                    
+                }
+               //        彼氏のその他の配列の合計を計算
+               girlOthersTotal = girlOthersArray.reduce(0){
+                   
+                   ( num1:Int, num2:Int ) -> Int in
+                   return num1 + num2
+                   
+               }
+               
+                UserDefaults.standard.set(girlOthersArray, forKey: "GirlOthersArray")
             
-            ( num1:Int, num2:Int ) -> Int in
-            return num1 + num2
-        }
+        
         //        彼女のその他の合計を保存
         UserDefaults.standard.set(girlOthersTotal, forKey: "GirlOthersTotal")
         

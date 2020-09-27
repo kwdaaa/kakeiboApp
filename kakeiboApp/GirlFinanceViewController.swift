@@ -33,12 +33,12 @@ class GirlFinanceViewController: UIViewController {
         let girlFinance = testStruct()
         //        食費をラベルに表示その前に型変換。持ってきてるのは、testFilelからだよ 以下同じ
         
-        let girlFinanceFoodSecond:String = String("\(girlFinance.girlFoodTotal)")
-        let girlFinanceDailySecond:String = String("\(girlFinance.girlDailyTotal)")
-        let girlFinanceLeisureSecond:String = String("\(girlFinance.girlLeisureTotal)")
-        let girlFinanceHousingSecond:String = String("\(girlFinance.girlHousingTotal)")
-        let girlFinanceOthersSecond:String = String("\(girlFinance.girlOthersTotal)")
-        let girlFinanceTotalSecond:String = String("\(girlFinance.girlTotalTotal)")
+        let girlFinanceFoodSecond:String = String("\(girlFinance.girlFoodTotal!)")
+        let girlFinanceDailySecond:String = String("\(girlFinance.girlDailyTotal!)")
+        let girlFinanceLeisureSecond:String = String("\(girlFinance.girlLeisureTotal!)")
+        let girlFinanceHousingSecond:String = String("\(girlFinance.girlHousingTotal!)")
+        let girlFinanceOthersSecond:String = String("\(girlFinance.girlOthersTotal!)")
+        let girlFinanceTotalSecond:String = String("\(girlFinance.girlTotalTotal!)")
         
         
         

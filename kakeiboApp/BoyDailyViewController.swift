@@ -34,11 +34,23 @@ class BoyDailyViewController: UIViewController,UITableViewDataSource,UITableView
     
     override func viewWillAppear(_ animated: Bool) {
         
+    
         //        登録画面での日用品の値を持ってくる　ちゃんとStringからIntに変換されてる？
-        let boyDailyValue:Int =  UserDefaults.standard.object(forKey: "BoyDaily") as! Int
-        //        持ってきた値を配列に格納
-        boyDailyArray.append(boyDailyValue)
+        var boyDailyValue:Int =  0
+        let boyDailyStr = UserDefaults.standard.string(forKey:"BoyDaily")
         
+        boyDailyValue = Int(boyDailyStr!)!
+        
+        
+        
+        
+        if UserDefaults.standard.object(forKey: "BoyDailyArray") != nil{
+            
+            self.boyDailyArray = UserDefaults.standard.object(forKey: "BoyDailyArray") as! [Int]
+            
+            self.boyDailyArray.append(boyDailyValue)
+            
+        }
         //        彼氏の食費の配列の合計を計算
         boyDailyTotal = boyDailyArray.reduce(0){
             
@@ -46,6 +58,9 @@ class BoyDailyViewController: UIViewController,UITableViewDataSource,UITableView
             return num1 + num2
             
         }
+        
+        UserDefaults.standard.set(boyDailyArray,forKey: "BoyDailyArray")
+        
         //        彼氏の食費の合計を保存
         UserDefaults.standard.set(boyDailyTotal, forKey: "BoyDailyTotal")
         

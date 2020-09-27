@@ -30,11 +30,31 @@ class BoyOthersViewController: UIViewController,UITableViewDelegate,UITableViewD
                }
     }
     override func viewWillAppear(_ animated: Bool) {
-        //        登録画面でのその他の値を持ってくる　ちゃんとStringからIntに変換されてる？
-        let boyOthersValue:Int =  UserDefaults.standard.object(forKey: "BoyOthers") as! Int
-        //        持ってきた値を配列に格納
-        boyOthersArray.append(boyOthersValue)
+        //
+               //        var boyFoodValue:Int =  0
+               //        let boyFoodStr = UserDefaults.standard.string(forKey:"boyFood")
+               //        print(boyFoodStr)
+               //
+               //        boyFoodValue = Int(boyFoodStr!)!
+               //        //        持ってきた値を配列に格納
+               //        boyFoodArray.append(boyFoodValue)
+               //
+                       
+                
+               //        登録画面での娯楽費の値を持ってくる　ちゃんとStringからIntに変換されてる？
+               
+        var boyOthersValue:Int = 0
+        let boyOthersStr = UserDefaults.standard.string(forKey: "BoyOthers")
         
+        boyOthersValue = Int(boyOthersStr!)!
+        
+        
+         if UserDefaults.standard.object(forKey: "BoyOthersArray") != nil{
+             
+             self.boyOthersArray = UserDefaults.standard.object(forKey: "BoyOthersArray") as! [Int]
+             self.boyOthersArray.append(boyOthersValue)
+             
+         }
         //        彼氏のその他の配列の合計を計算
         boyOthersTotal = boyOthersArray.reduce(0){
             
@@ -42,6 +62,8 @@ class BoyOthersViewController: UIViewController,UITableViewDelegate,UITableViewD
             return num1 + num2
             
         }
+        
+         UserDefaults.standard.set(boyOthersArray, forKey: "BoyOthersArray")
         
         //        彼氏のその他の合計を保存
         UserDefaults.standard.set(boyOthersTotal, forKey: "BoyOthersTotal")

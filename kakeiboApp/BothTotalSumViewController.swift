@@ -22,7 +22,7 @@ class BothTotalSumViewController: UIViewController {
         
         let bothTotal = testStruct()
         
-        if bothTotal.boyFoodTotal == nil{
+        if bothTotal.boyFoodTotal == 0{
             
             bothTotal.boyFoodTotal == 0
         }
@@ -49,41 +49,91 @@ class BothTotalSumViewController: UIViewController {
             
         }
         
+        
+        //        ここここ
         if bothTotal.girlFoodTotal == nil{
-           
-           bothTotal.girlFoodTotal == 0
-           
-           }
+            
+            bothTotal.girlFoodTotal == 0
+            
+        }
+        
+        if bothTotal.girlDailyTotal == nil{
+            
+            bothTotal.girlDailyTotal == 0
+            
+        }
+        
+        if bothTotal.girlLeisureTotal == nil{
+            
+            bothTotal.girlLeisureTotal == 0
+            
+        }
+        
+        
+        if bothTotal.girlHousingTotal == nil{
+            
+            bothTotal.girlHousingTotal == 0
+            
+        }
+        
+        if bothTotal.girlOthersTotal == nil{
+            
+            bothTotal.girlOthersTotal == 0
+            
+        }
         
     }
-
+    
     
     
     override func viewWillAppear(_ animated: Bool) {
         
-        let bothTotal = testStruct()
+//                let bothTotal = testStruct()
+
+        viewDidLoad()
+        
+        
+        let boyFoodTotal = UserDefaults.standard.object(forKey: "BoyFoodTotal") as! Int
+        let boyDailyTotal = UserDefaults.standard.object(forKey: "BoyDailyTotal") as! Int
+        let boyLeisureTotal = UserDefaults.standard.object(forKey: "BoyLeisureTotal") as! Int
+        let boyHousingTotal = UserDefaults.standard.object(forKey: "BoyHousingTotal")as! Int
+        let boyOthersTotal = UserDefaults.standard.object(forKey: "BoyOthersTotal")as! Int
+        
+        
         
         //        彼氏分の合計を計算
-        let boyTotalSum = bothTotal.boyFoodTotal! + bothTotal.boyDailyTotal! + bothTotal.boyLeisureTotal! + bothTotal.boyHousingTotal! + bothTotal.boyOthersTotal!
+        let boyTotalSum = boyFoodTotal + boyDailyTotal + boyLeisureTotal + boyHousingTotal + boyOthersTotal
+        
+        print(boyTotalSum)
+        
         //       　彼氏の合計の型をIntからStringに変換
         let boyTotalSumSecond:String = String("\(boyTotalSum)")
         //        ラベルに表示
         boyTotalSumLabel.text = boyTotalSumSecond
         //        ユーザーデフォルトでセット　ホームに持って
-        UserDefaults.standard.set(boyTotalSum, forKey: "boyTotalSumSecond")
+        UserDefaults.standard.set(boyTotalSum, forKey: "BoyTotalSumSecond")
         
         
         
         
-        //        彼女の合計を計算
-        let girlTotalSum = bothTotal.girlFoodTotal! + bothTotal.girlDailyTotal! + bothTotal.girlLeisureTotal! + bothTotal.girlLeisureTotal! + bothTotal.girlOthersTotal!
+        let girlFoodTotal = UserDefaults.standard.object(forKey: "GirlFoodTotal") as! Int
+        let girlDailyTotal = UserDefaults.standard.object(forKey: "GirlDailyTotal") as! Int
+        let girlLeisureTotal = UserDefaults.standard.object(forKey: "GirlLeisureTotal") as! Int
+        let girlHousingTotal = UserDefaults.standard.object(forKey: "GirlHousingTotal")as! Int
+        let girlOthersTotal = UserDefaults.standard.object(forKey: "GirlOthersTotal")as! Int
+        
+        
+        //               彼女の合計を計算
+        let girlTotalSum = girlFoodTotal + girlDailyTotal + girlLeisureTotal + girlHousingTotal + girlOthersTotal
+        
+        
         //        彼女の合計の型をIntからStringに変換
         let girlTotalSumSecond:String = String("\(girlTotalSum)")
         //        ラベルに表示
         girlTotalSumLabel.text = girlTotalSumSecond
         //        ユーザーデフォルトでセット　ホームに持っていく
         UserDefaults.standard.set(girlTotalSum, forKey: "girlTotalSumSecond")
-        
+
     }
     
     
@@ -93,7 +143,9 @@ class BothTotalSumViewController: UIViewController {
     // 画面遷移
     // 00:戻る（ホームへ）の画面遷移
     @IBAction func tapBack(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        let HomeVC = self.storyboard?.instantiateViewController(withIdentifier: "Home") as! HomeViewController
+        HomeVC.modalPresentationStyle = .fullScreen
+        self.present(HomeVC, animated: false, completion: nil)
     }
     
     

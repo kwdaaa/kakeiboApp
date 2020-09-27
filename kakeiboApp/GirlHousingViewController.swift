@@ -29,18 +29,30 @@ class GirlHousingViewController: UIViewController,UITableViewDataSource,UITableV
                      }
     }
     override func viewWillAppear(_ animated: Bool) {
-         //        登録画面での固定費の値を持ってくる　ちゃんとStringからIntに変換されてる？
-            let girlHousingValue:Int =  UserDefaults.standard.object(forKey: "girlHousing") as! Int
-            //        持ってきた値を配列に格納
-            girlHousingArray.append(girlHousingValue)
+        var girlHousingValue:Int = 0
+        let girlHousingStr = UserDefaults.standard.string(forKey: "GirlHousing")
+        
+        girlHousingValue = Int(girlHousingStr!)!
+        
+       if UserDefaults.standard.object(forKey: "GirlHousingArray") != nil{
+                  
+                  self.girlHousingArray = UserDefaults.standard.object(forKey: "GirlHousingArray") as! [Int]
+                  self.girlHousingArray.append(girlHousingValue)
+                  
+              }
+             
+              
+              //        彼氏の固定費の配列の合計を計算
+              girlHousingTotal = girlHousingArray.reduce(0){
+                  
+                  ( num1:Int, num2:Int ) -> Int in
+                  return num1 + num2
+                  
+              }
+              
+               UserDefaults.standard.set(girlHousingArray, forKey: "GirlHousingArray")
             
-            //        彼女の固定費の配列の合計を計算
-            girlHousingTotal = girlHousingArray.reduce(0){
-                
-                ( num1:Int, num2:Int ) -> Int in
-                return num1 + num2
-                
-            }//        彼女の固定費の合計を保存
+        //        彼女の固定費の合計を保存
             UserDefaults.standard.set(girlHousingTotal, forKey: "GirlHousingTotal")
             
             girlHousingTableView.dataSource = self

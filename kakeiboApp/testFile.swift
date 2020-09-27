@@ -31,8 +31,8 @@ struct testStruct {
     let girlOthersTotal = UserDefaults.standard.object(forKey: "GirlOthersTotal") as? Int
     
     
-    let boyTotalTotal = UserDefaults.standard.object(forKey: "boyTotalSumSecond") as? Int
-    let girlTotalTotal = UserDefaults.standard.object(forKey: "girlTotalSecond") as? Int
+    let boyTotalTotal = UserDefaults.standard.object(forKey: "BoyTotalSumSecond") as? Int
+    let girlTotalTotal = UserDefaults.standard.object(forKey: "GirlTotalSumSecond") as? Int
     
     
 }

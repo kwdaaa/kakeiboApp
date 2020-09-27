@@ -36,20 +36,22 @@ class BothDailyViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         
         //       //        それぞれの日用品の合計を変数に入れた！
-        //       let boyDailyTotal = UserDefaults.standard.object(forKey: "BoyDailyTotal") as? Int
-        //       let girlDailyTotal = UserDefaults.standard.object(forKey: "GirlDailyTotal") as? Int
-        //
+               let boyDailyTotal = UserDefaults.standard.object(forKey: "BoyDailyTotal") as? Int
+               let girlDailyTotal = UserDefaults.standard.object(forKey: "GirlDailyTotal") as? Int
         
-        //    構造体にアクセス
-        let bothDaily = testStruct()
+        
+//        //    構造体にアクセス
+//        let bothDaily = testStruct()
+        
+        viewDidLoad()
         
         //        BothTotalSumで使うために足し算！
-        let bothDailyTotal = bothDaily.boyDailyTotal! + bothDaily.girlDailyTotal!
-        UserDefaults.standard.set(bothDailyTotal, forKey: "bothDailyTotal")
+        let bothDailyTotal = boyDailyTotal! + girlDailyTotal!
+        UserDefaults.standard.set(bothDailyTotal, forKey: "BothDailyTotal")
         //
         //        型変換
-        let boyDailyTotalSecond:String = String("\(bothDaily.boyDailyTotal)")
-        let girlDailyTotalSecond:String = String("\(bothDaily.girlDailyTotal)")
+        let boyDailyTotalSecond:String = String("\(boyDailyTotal)")
+        let girlDailyTotalSecond:String = String("\(girlDailyTotal)")
         
         //        それぞれの日用品をラベルに表示
         bothDailyBoy.text = boyDailyTotalSecond
@@ -67,7 +69,9 @@ class BothDailyViewController: UIViewController {
     // 画面遷移
     // 00:戻る（ホームへ）の画面遷移
     @IBAction func tapBack(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        let HomeVC = self.storyboard?.instantiateViewController(withIdentifier: "Home") as! HomeViewController
+        HomeVC.modalPresentationStyle = .fullScreen
+        self.present(HomeVC, animated: false, completion: nil)
     }
     
     

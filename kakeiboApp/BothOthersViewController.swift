@@ -35,20 +35,21 @@ class BothOthersViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         
         //           //        それぞれのその他の合計を変数に入れた！
-        //           let boyOthersTotal = UserDefaults.standard.object(forKey: "BoyOthersTotal") as! Int
-        //           let girlOthersTotal = UserDefaults.standard.object(forKey: "GirlOthersTotal") as! Int
+                   let boyOthersTotal = UserDefaults.standard.object(forKey: "BoyOthersTotal") as! Int
+                   let girlOthersTotal = UserDefaults.standard.object(forKey: "GirlOthersTotal") as! Int
         
-        //構造体にアクセス
-        let bothOthers = testStruct()
+//        //構造体にアクセス
+//        let bothOthers = testStruct()
+        viewDidLoad()
         
         
         //                BothTotalSumで使うために足し算！
-        let bothOthersTotal = bothOthers.boyOthersTotal! + bothOthers.girlOthersTotal!
-        UserDefaults.standard.set(bothOthersTotal, forKey: "bothOthersTotal")
+        let bothOthersTotal = boyOthersTotal + girlOthersTotal
+        UserDefaults.standard.set(bothOthersTotal, forKey: "BothOthersTotal")
         
         //        型変換
-        let boyOthersTotalSecond:String = String("\(bothOthers.boyOthersTotal)")
-        let girlOthersTotalSecond:String = String("\(bothOthers.girlOthersTotal)")
+        let boyOthersTotalSecond:String = String("\(boyOthersTotal)")
+        let girlOthersTotalSecond:String = String("\(girlOthersTotal)")
         
         //        それぞれのその他をラベルに表示
         bothOthersBoy.text = boyOthersTotalSecond
@@ -65,7 +66,9 @@ class BothOthersViewController: UIViewController {
     // 画面遷移
     // 00:戻る（ホームへ）の画面遷移
     @IBAction func tapBack(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        let HomeVC = self.storyboard?.instantiateViewController(withIdentifier: "Home") as! HomeViewController
+        HomeVC.modalPresentationStyle = .fullScreen
+        self.present(HomeVC, animated: false, completion: nil)
     }
     
     

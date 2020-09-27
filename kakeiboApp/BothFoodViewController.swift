@@ -40,20 +40,23 @@ class BothFoodViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         
         //        それぞれの食費の合計を変数に入れた！
-        //        let boyFoodTotal = UserDefaults.standard.object(forKey: "BoyFoodTotal") as? Int
-        //        let girlFoodTotal = UserDefaults.standard.object(forKey: "GirlFoodTotal") as? Int
-        //
+                let boyFoodTotal = UserDefaults.standard.object(forKey: "BoyFoodTotal") as? Int
+                let girlFoodTotal = UserDefaults.standard.object(forKey: "GirlFoodTotal") as? Int
         
-        //構造体にアクセス
-        let bothFood = testStruct()
+//
+//        //構造体にアクセス
+//        let bothFood = testStruct()
+//
+        viewDidLoad()
         
         //        BothTotalSumで使うために足し算！
-        let bothfoodTotal = bothFood.boyFoodTotal! + bothFood.girlFoodTotal!
-        UserDefaults.standard.set(bothfoodTotal, forKey: "bothFoodTotal")
+        let bothfoodTotal = boyFoodTotal! + girlFoodTotal!
+        
+        UserDefaults.standard.set(bothfoodTotal, forKey: "BothFoodTotal")
         
         //        型変換
-        let boyFoodTotalSecond:String = String("\(bothFood.boyFoodTotal)")
-        let girlFoodTotalSecond:String = String("\(bothFood.girlFoodTotal)")
+        let boyFoodTotalSecond:String = String("\(boyFoodTotal)")
+        let girlFoodTotalSecond:String = String("\(girlFoodTotal)")
         
         //        それぞれの食費をラベルに表示
         bothFoodBoy.text = boyFoodTotalSecond
@@ -67,7 +70,9 @@ class BothFoodViewController: UIViewController {
     // 画面遷移
     // 00:戻る（ホームへ）の画面遷移
     @IBAction func tapBack(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        let HomeVC = self.storyboard?.instantiateViewController(withIdentifier: "Home") as! HomeViewController
+        HomeVC.modalPresentationStyle = .fullScreen
+        self.present(HomeVC, animated: false, completion: nil)
     }
     
     

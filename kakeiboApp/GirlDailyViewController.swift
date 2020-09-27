@@ -31,19 +31,31 @@ class GirlDailyViewController: UIViewController,UITableViewDataSource,UITableVie
                      }
     }
     override func viewWillAppear(_ animated: Bool) {
-        //        登録画面での日用品の値を持ってくる　ちゃんとStringからIntに変換されてる？
-        let girlDailyValue:Int =  UserDefaults.standard.object(forKey: "GirlDaily") as! Int
-        //        持ってきた値を配列に格納
-        girlDailyArray.append(girlDailyValue)
+        var girlDailyValue:Int = 0
+        let girlDailyStr = UserDefaults.standard.string(forKey: "GirlDaily")
         
-        //        彼女の食費の配列の合計を計算
+        girlDailyValue = Int(girlDailyStr!)!
+        
+       
+        
+        if UserDefaults.standard.object(forKey: "GirlDailyArray") != nil{
+            
+            self.girlDailyArray = UserDefaults.standard.object(forKey: "GirlDailyArray") as! [Int]
+            
+            self.girlDailyArray.append(girlDailyValue)
+            
+        }
+        //        彼氏の食費の配列の合計を計算
         girlDailyTotal = girlDailyArray.reduce(0){
             
             ( num1:Int, num2:Int ) -> Int in
             return num1 + num2
             
         }
-        //        彼女の食費の合計を保存
+        
+        UserDefaults.standard.set(girlDailyArray,forKey: "GirlDailyArray")
+       
+        //        彼女の日用品の合計を保存
         UserDefaults.standard.set(girlDailyTotal, forKey: "GirlDailyTotal")
         
         girlDailyTableView.dataSource = self

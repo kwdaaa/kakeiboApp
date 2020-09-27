@@ -38,20 +38,20 @@ class BothLeisureViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         
 //       //        それぞれの娯楽費の合計を変数に入れた！
-//       let boyLeisureTotal = UserDefaults.standard.object(forKey: "BoyLeisureTotal") as? Int
-//       let girlLeisureTotal = UserDefaults.standard.object(forKey: "GirlLeisureTotal") as? Int
+       let boyLeisureTotal = UserDefaults.standard.object(forKey: "BoyLeisureTotal") as? Int
+       let girlLeisureTotal = UserDefaults.standard.object(forKey: "GirlLeisureTotal") as? Int
     
-//    構造体にアクセス
-    let bothLeisure = testStruct()
+////    構造体にアクセス
+//    let bothLeisure = testStruct()
     
-       
+       viewDidLoad()
        //        BothTotalSumで使うために足し算！
-    let bothLeisureTotal = bothLeisure.boyLeisureTotal! + bothLeisure.girlLeisureTotal!
-       UserDefaults.standard.set(bothLeisureTotal, forKey: "bothLeisureTotal")
+    let bothLeisureTotal = boyLeisureTotal! + girlLeisureTotal!
+       UserDefaults.standard.set(bothLeisureTotal, forKey: "BothLeisureTotal")
 //
        //        型変換
-    let boyLeisureTotalSecond:String = String("\(bothLeisure.boyLeisureTotal)")
-    let girlLeisureTotalSecond:String = String("\(bothLeisure.girlLeisureTotal)")
+    let boyLeisureTotalSecond:String = String("\(boyLeisureTotal)")
+    let girlLeisureTotalSecond:String = String("\(girlLeisureTotal)")
        
        //        それぞれの娯楽費をラベルに表示
        bothLeisureBoy.text = boyLeisureTotalSecond
@@ -69,7 +69,9 @@ class BothLeisureViewController: UIViewController {
     // 画面遷移
     // 00:戻る（ホームへ）の画面遷移
     @IBAction func tapBack(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        let HomeVC = self.storyboard?.instantiateViewController(withIdentifier: "Home") as! HomeViewController
+        HomeVC.modalPresentationStyle = .fullScreen
+        self.present(HomeVC, animated: false, completion: nil)
     }
     
     

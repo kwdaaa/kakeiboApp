@@ -31,10 +31,21 @@ class BoyLeisureViewController: UIViewController,UITableViewDataSource,UITableVi
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        //        登録画面での娯楽費の値を持ってくる　ちゃんとStringからIntに変換されてる？
-        let boyLeisureValue:Int =  UserDefaults.standard.object(forKey: "BoyLeisure") as! Int
-        //        持ってきた値を配列に格納
-        boyLeisureArray.append(boyLeisureValue)
+        
+        
+        var boyLeisureValue = 0
+        let boyLeisureStr = UserDefaults.standard.string(forKey: "BoyLeisure")
+        
+        boyLeisureValue = Int(boyLeisureStr!)!
+        
+        if UserDefaults.standard.object(forKey: "BoyLeisureArray") != nil{
+            
+            self.boyLeisureArray = UserDefaults.standard.object(forKey: "BoyLeisureArray") as! [Int]
+            
+            self.boyLeisureArray.append(boyLeisureValue)
+            
+        }
+        
         
         //        彼氏の娯楽費の配列の合計を計算
         boyLeisureTotal = boyLeisureArray.reduce(0){
@@ -43,13 +54,15 @@ class BoyLeisureViewController: UIViewController,UITableViewDataSource,UITableVi
             return num1 + num2
         }
         
+        UserDefaults.standard.set(boyLeisureArray, forKey: "BoyLeisureArray")
+        
         //        彼氏の娯楽費の合計を保存
         UserDefaults.standard.set(boyLeisureTotal, forKey: "BoyLeisureTotal")
         
         boyLeisureTableView.dataSource = self
         boyLeisureTableView.delegate = self
-        
     }
+    
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

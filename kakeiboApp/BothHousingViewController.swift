@@ -38,20 +38,21 @@ class BothHousingViewController: UIViewController {
      override func viewWillAppear(_ animated: Bool) {
          
 //         //        それぞれの固定費の合計を変数に入れた！
-//         let boyHousingTotal = UserDefaults.standard.object(forKey: "BoyHousingTotal") as? Int
-//         let girlHousingTotal = UserDefaults.standard.object(forKey: "GirlHousingTotal") as? Int
-//
-//        構造体にアクセス
-        let bothHousing = testStruct()
+         let boyHousingTotal = UserDefaults.standard.object(forKey: "BoyHousingTotal") as? Int
+         let girlHousingTotal = UserDefaults.standard.object(forKey: "GirlHousingTotal") as? Int
+
+////        構造体にアクセス
+//        let bothHousing = testStruct()
+        viewDidLoad()
     
         
          //        BothTotalSumで使うために足し算！
-        let bothHousingTotal = bothHousing.boyHousingTotal! + bothHousing.girlHousingTotal!
-        UserDefaults.standard.set(bothHousingTotal, forKey: "bothHousingTotal")
+        let bothHousingTotal = boyHousingTotal! + girlHousingTotal!
+        UserDefaults.standard.set(bothHousingTotal, forKey: "BothHousingTotal")
 //
          //        型変換
-        let boyHousingTotalSecond:String = String("\(bothHousing.boyHousingTotal)")
-        let girlHousingTotalSecond:String = String("\(bothHousing.girlHousingTotal)")
+        let boyHousingTotalSecond:String = String("\(boyHousingTotal)")
+        let girlHousingTotalSecond:String = String("\(girlHousingTotal)")
          
          //        それぞれの娯楽費をラベルに表示
          bothHousingBoy.text = boyHousingTotalSecond
@@ -67,7 +68,9 @@ class BothHousingViewController: UIViewController {
     // 画面遷移
     // 00:戻る（ホームへ）の画面遷移
     @IBAction func tapBack(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        let HomeVC = self.storyboard?.instantiateViewController(withIdentifier: "Home") as! HomeViewController
+        HomeVC.modalPresentationStyle = .fullScreen
+        self.present(HomeVC, animated: false, completion: nil)
     }
     
     
